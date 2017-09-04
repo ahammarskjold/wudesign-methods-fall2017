@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Charette</title>
+<style type="text/css">
+	
+img{
+	height: 300px;
+}
+
+
+</style>
+
+
+</head>
+<body>
+<button class="btn1">Fade out</button>
+<button class="btn2">Fade in</button>
+<div>
+	<img id="cupid" src="Cupid-PNG-Pic.png">
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+
+
+ 
+// With the element initially hidden, we can show it slowly:
+$( ".btn1" ).click(function() {
+  $( "#cupid" ).fadeOut( "slow", function() {
+    // Animation complete
+  });
+});
+$( ".btn2" ).click(function() {
+  $( "#cupid" ).fadeIn( "slow", function() {
+    // Animation complete
+  });
+});
+</script>
+</body>
+</html>

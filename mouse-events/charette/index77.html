@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<title>Charette</title>
+		<style>
+		div.flex{
+     		width: 100%;
+     		height: 100%;
+     		display:inline-flex;
+     		padding:0px;
+     		margin: 0px;
+     		border:0px;  
+     		float:left; 
+
+		}
+		div.square{
+			width: 100%;
+     		height: 100%;
+     		display:inline-flex;
+     		padding:0px;
+     		margin: 0px;
+     		border:0px;  
+     		float:left; 
+		}
+		body{
+			padding: 0px;
+			margin:20px;
+			border:0px;
+		}
+		
+		.square { transition: all .9s ease-in-out; }
+		p{
+			color: red;
+		}
+	
+		</style>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	</head>
+	<body>
+	<div id="random_color" class="flex">
+		<p>Craft beer taiyaki bushwick, lo-fi typewriter DIY photo booth bespoke austin semiotics direct trade chia edison bulb. Ethical trust fund venmo, prism cardigan master cleanse cronut. Shabby chic vinyl art party brooklyn umami heirloom enamel pin. Palo santo mixtape mustache, helvetica microdosing paleo cloud bread. Celiac portland kitsch taiyaki cray cliche. Pour-over tacos coloring book, raw denim sriracha 3 wolf moon selfies fashion axe. Asymmetrical crucifix jianbing iPhone, DIY sartorial lyft polaroid godard thundercats banh mi. Cray normcore jianbing, hexagon sartorial retro coloring book tote bag adaptogen pour-over. Disrupt fashion axe jianbing cold-pressed, single-origin coffee cardigan godard waistcoat street art blog helvetica lomo copper mug. Tilde tote bag meh, coloring book marfa sustainable affogato VHS activated charcoal banjo tumeric hammock. Forage put a bird on it seitan subway tile twee beard tote bag heirloom. Kitsch 8-bit paleo, vape cardigan tbh kale chips bespoke plaid hoodie hot chicken hexagon glossier brooklyn. Drinking vinegar adaptogen distillery flexitarian, listicle viral tote bag heirloom normcore ramps neutra fixie four dollar toast man bun lo-fi. Jean shorts retro dreamcatcher vape woke fixie.</p>
+	</div>
+
+	<script type="text/javascript">
+		
+		// $(document).click(function () {
+		// 	var back = ["#ff0000","blue","gray"];
+		// 	var rand = back[Math.floor(Math.random() * back.length)];
+		// 	$('div').css('background',rand);
+		// })
+		$(function() {
+  			$("#random_color").click(function() {
+	    		$("p").each(function(index) {
+	      			var colorR = Math.floor((Math.random() * 256));
+	      			var colorG = Math.floor((Math.random() * 256));
+	      			var colorB = Math.floor((Math.random() * 256));
+	      			$(this).css("color", "rgb(" + colorR + "," + colorG + "," + colorB + ")");
+    			});
+  			});
+		});
+	</script>
+	<script type="text/javascript">
+		$('*').on('click', function(event){
+			console.log("event");
+		});
+		
+	</script>
+	
+
+	</body>
+</html>

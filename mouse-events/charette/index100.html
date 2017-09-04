@@ -1,0 +1,49 @@
+
+<html>
+	<head>
+		<title>Charette</title>
+		<style>
+		body{
+			background-color: lightyellow;
+		}
+		div {
+    		font-size: 70px;
+    		color: red;
+    		font-weight: bold;
+    		text-align: center;
+    		cursor: pointer;
+    		font-family: sans-serif;
+    		margin-left: 2000px;
+    		transition: all .9s ease-in-out;
+    		margin-top: 30px;
+  		}
+  		div.slide{
+  			margin-left: 0px;
+  		}
+  		img{
+  			height: 250px;
+  		}
+  		p{
+  			font-family: sans-serif;
+  		}
+
+	
+		</style>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	</head>
+	<body>
+	<p>click anywhere</p>
+	<div>
+		<p>WHERES THE <br>CHAPSTICK?!?</p>
+		<img src="0036600813310_CF_hyvee_default_large.png">
+	</div>
+	<script type="text/javascript">
+		$( "*" ).click(function() {
+  		$( "div" ).addClass("slide");
+		});
+	</script>
+
+	
+
+	</body>
+</html>

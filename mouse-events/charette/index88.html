@@ -1,0 +1,38 @@
+
+	<html>
+	<head>
+		<title>Charette</title>
+		<style>
+		#rec {
+		    float:left;
+		    width:200px;
+		    height:200px;
+		    background:coral;
+		    border-radius:50%;
+		    -webkit-transition: border-radius 1s, width 1s;
+		    transition: border-radius 1s, width 1s;
+		    cursor:pointer;
+		}
+		#rec.animate {
+		    border-radius:0%;
+		    width:300px;
+		}
+					
+		
+		</style>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<div> click on the cricle to make it a rectangle!</div>
+
+		<div id="rec"></div>
+		
+	<script type="text/javascript">
+		$('div').click(function () {
+    $(this).toggleClass('animate');
+});
+	</script>
+	</body>
+</html>
+
+

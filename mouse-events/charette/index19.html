@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>Charette</title>
+		<style>
+		div.pop-no{	
+			position: absolute; 
+  			cursor: pointer;
+  			left: 50%; 
+			top: 50%; 
+			transform: translate(-50%, -50%);
+			border-radius: 50%;
+			text-align: center;
+			z-index: 10;
+			font-family: sans-serif;
+			color:black;
+			font-size: 20px;
+			} 
+		.pop-no { transition: all 7s ease-in-out; }
+		</style>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<div class="pop">
+			<div class="pop-no">
+				<p>bye forever</p>
+			</div>
+		</div>
+	<script type="text/javascript">
+
+	$("p").click(function(){
+			$ (this) .animate({
+				opacity: 0,
+				height: "800px",
+
+	
+			});
+		});
+
+	</script>
+	</body>
+</html>

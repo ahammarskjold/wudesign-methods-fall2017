@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title>Charette</title>
+		<style>
+		div.flex-rectangle {
+     		width: 25%;
+     		height: 25%;
+     		display:inline-flex;
+     		padding:0px;
+     		margin: 0px;
+     		border:0px;  
+     		float:left; 
+     		background-color: honeydew;
+
+		}
+		body{
+			padding: 0px;
+			margin:0px;
+			border:0px;
+			background-color: black;
+		}
+		
+		.flex-rectangle { 
+			transition: width 3s, height 7s;
+			transition-timing-function: ease-in-out;
+		}
+
+
+		.flex-rectangle.grow{
+			height:100%;
+			width: 100%;
+
+		}
+		
+	
+		</style>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	</head>
+	<body>
+	<div class="flex-rectangle"></div>
+
+	<script>
+		$(".flex-rectangle").click(function(){
+			$(this).toggleClass("grow");
+		});
+	</script>
+
+	</body>
+</html>
+

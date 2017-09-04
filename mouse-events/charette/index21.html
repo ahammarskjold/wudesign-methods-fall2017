@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>Charette</title>
+		<style>
+		button{
+			align-items:flex-start;
+			text-align: center;
+			box-sizing: border-box;
+		}
+
+		span{
+			
+			font-size: 30;
+		}
+		
+		</style>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	</head>
+	<body>
+	
+	
+	<button id="hide_button">Hide</button>
+	<button id="show_button">Show</button>
+
+	
+	<div>
+		<span>MY</span>&nbsp; <span>NAME</span> &nbsp;<span>IS</span>&nbsp; <span>ALEX</span>
+	</div>
+
+	<script type="text/javascript">
+		$( "#hide_button" ).click(function() {
+			// alert("this is a test");
+	  		$( "span" ).hide( "fast");
+		});
+	  $( "#show_button" ).click(function() {
+  			$( "span" ).show( "fast" );
+		});
+	
+	
+	</script>
+
+	</body>
+</html>

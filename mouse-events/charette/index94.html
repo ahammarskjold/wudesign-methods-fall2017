@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Charette</title>
+<style type="text/css">
+
+button#btn1{
+	color:green;
+}
+button#btn2{
+	color:red;
+}
+</style>
+
+
+</head>
+<body>
+<p>Click these buttons to open and close a new window</p>
+
+
+<button id="btn1" onclick="openWin()">Open "newWindow"</button>
+<button id="btn2" onclick="closeWin()">Close "newWindow"</button>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+var newWindow;
+
+function openWin() {
+    newWindow = window.open("", "newWindow", "width=200,height=600");
+    newWindow.document.write("<p>This is 'newWindow'</p>");
+}
+
+function closeWin() {
+    newWindow.close();
+}
+</script>
+
+</body>
+</html>

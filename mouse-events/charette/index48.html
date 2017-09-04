@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>Charette</title>
+		<style>
+			div{
+				height: 100px;
+				width: 100px;
+				margin: auto;
+				background-color: maroon;
+				transition-duration: .5s
+
+			}
+		</style>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<div class="rec"></div>
+	<script type="text/javascript">			
+		$("div.rec").click(function(){
+			var size = Math.floor(20+Math.random()*400);
+			$(this).css("height",size);
+		})
+	
+
+	</script>
+	</body>
+</html>

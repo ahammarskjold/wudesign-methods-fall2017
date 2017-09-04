@@ -1,0 +1,27 @@
+	<html>
+	<head>
+		<title>Charette</title>
+		<style>
+		.square{
+			width:300px;
+    		height: 300px;
+    	}	
+		.square.selected {
+    		animation-name: box;
+    		animation-duration: 1s;
+    		box-shadow: 10px 10px 5px lightblue;
+    			
+		}
+		</style>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<div class="square" style="background-color: red">
+		</div> 
+	<script type="text/javascript">
+		$( ".square" ).click(function() {
+			$(this).toggleClass("selected");
+	    });
+	</script>
+	</body>
+</html>

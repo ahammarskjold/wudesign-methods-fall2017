@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Charette</title>
+</head>
+<body>
+
+
+<button onclick="openWin()">open a new blank window here!</button>
+
+<script>
+var myWindow;
+
+function openWin() {
+    myWindow = window.open("", "", "width=500, height=500");
+}
+
+function resizeWin() {
+   
+    myWindow.focus();
+}
+</script>
+
+</body>
+</html>

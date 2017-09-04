@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Charette</title>
+		<style>
+		div.flex-rect{
+			height: 300px;
+			width:300px;
+			float:center;
+			background-color:navy;
+			margin: 200px;
+		}
+		.border{
+			border-radius: 100px;
+
+		}
+		
+		.flex-rect { transition: all .9s ease-in-out; }
+	
+		</style>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	</head>
+	<body>
+	<div class="flex-rect">
+	</div>
+	<script type="text/javascript">
+  	$("div.flex-rect").click(function(){
+ 		$(this).toggleClass("border");
+  	});
+
+	</script>
+	</body>
+</html>

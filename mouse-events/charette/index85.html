@@ -1,0 +1,29 @@
+	<html>
+	<head>
+		<title>Charette</title>
+		<style>
+		.texter{
+			width:500px;
+			text-shadow: 10px 10px 5px red;
+    	}	
+		.texter.selected {
+    		animation-name: box;
+    		animation-duration: 1s;
+    		text-shadow: 0px 0px 0px red;
+    		transition: all 2s ease-in-out;
+
+    			
+		}
+		</style>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<p class="texter">Craft beer taiyaki bushwick, lo-fi typewriter DIY photo booth bespoke austin semiotics direct trade chia edison bulb. Ethical trust fund venmo, prism cardigan master cleanse cronut. Shabby chic vinyl art party brooklyn umami heirloom enamel pin. Palo santo mixtape mustache, helvetica microdosing paleo cloud bread. Celiac portland kitsch taiyaki cray cliche. Pour-over tacos coloring book, raw denim sriracha 3 wolf moon selfies fashion axe. Asymmetrical crucifix jianbing iPhone, DIY sartorial lyft polaroid godard thundercats banh mi. Cray normcore jianbing, hexagon sartorial retro coloring book tote bag adaptogen pour-over. Disrupt fashion axe jianbing cold-pressed, single-origin coffee cardigan godard waistcoat street art blog helvetica lomo copper mug. Tilde tote bag meh, coloring book marfa sustainable affogato VHS activated charcoal banjo tumeric hammock. Forage put a bird on it seitan subway tile twee beard tote bag heirloom. Kitsch 8-bit paleo, vape cardigan tbh kale chips bespoke plaid hoodie hot chicken hexagon glossier brooklyn. Drinking vinegar adaptogen distillery flexitarian, listicle viral tote bag heirloom normcore ramps neutra fixie four dollar toast man bun lo-fi. Jean shorts retro dreamcatcher vape woke fixie.
+		</p> 
+	<script type="text/javascript">
+		$( ".texter" ).click(function() {
+			$(this).toggleClass("selected");
+	    });
+	</script>
+	</body>
+</html>

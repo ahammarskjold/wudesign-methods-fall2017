@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>Charette</title>
+		<style>
+			p{
+				font-family: Impact, Charcoal, sans-serif;
+				font-size: 100px;
+				text-align: center;
+				margin: auto;
+				color: pink;
+				margin-top: 25%;
+			}
+			*{transition: all .9s ease-in-out;}
+			.rotate{
+				transform: rotate(360deg);
+			}
+		</style>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<div>
+			<p>WEEEEEEEEEEEEE!!</p>
+		</div>
+	<script type="text/javascript">
+			$(document).ready(function(){
+				$("p").click(function(){
+					$(this).toggleClass("rotate");
+				})
+			})
+
+	</script>
+	</body>
+</html>

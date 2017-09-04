@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <title>Charette</title>
+  <style>
+  div {
+    position: absolute;
+    left: 50px;
+    width: 90px;
+    height: 90px;
+    margin: 5px;
+  }
+  </style>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+<h2>Help Cupid dance to the lyrics</h2>
+<p>To the right, to the right, to the right, to the right
+To the left, to the left, to the left, to the left
+Now kick, now kick, now kick, now kick
+Now walk it by yourself, now walk it by yourself</p>
+<p>-Cupid Shuffle by Cupid</p> 
+
+<button id="left">&laquo;</button>
+<button id="right">&raquo;</button>
+<div class="cupid"><img src="Cupid-PNG-Pic.png" height="80"</div>
+ 
+<script>
+$( "#right" ).click(function() {
+  $( ".cupid" ).animate({ "left": "+=50px" }, "slow" );
+});
+ 
+$( "#left" ).click(function(){
+  $( ".cupid" ).animate({ "left": "-=50px" }, "slow" );
+});
+</script>
+ 
+</body>
+</html>

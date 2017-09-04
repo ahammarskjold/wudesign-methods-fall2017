@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<title>Charette</title>
+		<style>
+		div.flex{
+     		width: 100%;
+     		height: 100%;
+     		display:inline-flex;
+     		padding:0px;
+     		margin: 0px;
+     		border:0px;  
+     		float:left; 
+
+		}
+		div.square{
+			width: 100%;
+     		height: 100%;
+     		display:inline-flex;
+     		padding:0px;
+     		margin: 0px;
+     		border:0px;  
+     		float:left; 
+		}
+		body{
+			padding: 0px;
+			margin:0px;
+			border:0px;
+			transition: all .9s ease-in-out;
+		}
+		
+		.square { transition: all .9s ease-in-out; }
+		
+	
+		</style>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	</head>
+	<body>
+	<div id="random_color" class="flex">
+		<div class="square">
+	</div>
+
+	<script type="text/javascript">
+		
+		$(function() {
+  			$("#random_color").click(function() {
+	    		$("body").each(function(index) {
+	      			var colorR = Math.floor((Math.random() * 256));
+	      			var colorG = Math.floor((Math.random() * 256));
+	      			var colorB = Math.floor((Math.random() * 256));
+	      			$(this).css("background-color", "rgb(" + colorR + "," + colorG + "," + colorB + ")");
+    			});
+  			});
+		});
+	</script>
+	<script type="text/javascript">
+		$('*').on('click', function(event){
+			console.log("event");
+		});
+		
+	</script>
+	
+
+	</body>
+</html>

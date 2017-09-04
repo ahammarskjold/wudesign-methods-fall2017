@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Charette</title>
+</head>
+<body>
+
+<p>1. Open a new window <br>2. Resize it by clicking the buttons</p>
+
+<button onclick="openWin()">NEW WINDOW</button>
+<button onclick="resizeWin()">SMALLER NEW WINDOW</button>
+<button onclick="resizeWin2()">BIGGER NEW WINDOW</button>
+
+<script>
+var myWindow;
+
+function openWin() {
+    myWindow = window.open("", "", "width=400, height=400");
+}
+
+function resizeWin() {
+    myWindow.resizeTo(250, 250);
+    myWindow.focus();
+}
+function resizeWin2() {
+    myWindow.resizeTo(750, 750);
+    myWindow.focus();
+}
+</script>
+
+</body>
+</html>

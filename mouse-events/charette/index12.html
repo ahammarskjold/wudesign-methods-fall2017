@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>Charette</title>
+		<style>
+		div.flex-rect{
+			height: 300px;
+			width:300px;
+			float:center;
+			background-color:lavender;
+			margin: auto;
+			margin-top: 200px;
+		}
+		.spinEffect{
+			transform: rotate(360deg) scale(3,3);
+			-webkit-transform:rotate(360deg) scale(3,3);
+			-ms-transform:rotate(360deg) scale(3,3);
+			
+		}
+		.flex-rect { transition: all .9s ease-in-out; }
+	
+		</style>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	</head>
+	<body>
+	<div class="flex-rect">
+	</div>
+	<script type="text/javascript">
+	$(function(){
+  	$("div.flex-rect").click(function(){
+ 
+    $("div.flex-rect").toggleClass("spinEffect");
+  	});
+	});
+	</script>
+	</body>
+</html>

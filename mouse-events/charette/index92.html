@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Charette</title>
+<style type="text/css">
+	
+img{
+	height: 300px;
+}
+
+
+</style>
+
+
+</head>
+<body>
+
+<div id="clickme">
+  Click here
+</div>
+<img id="cupid" src="Cupid-PNG-Pic.png">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+
+
+// With the element initially shown, we can dim it slowly:
+$( "#clickme" ).click(function() {
+  $( "#cupid" ).fadeTo( "slow" , 0.0, function() {
+    // Animation complete.
+  });
+});
+
+</script>
+</body>
+</html>
