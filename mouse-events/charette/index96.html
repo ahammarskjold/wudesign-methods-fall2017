@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Charette</title>
+<style type="text/css">
+	
+span {
+    color: red;
+    cursor: pointer;
+    float: left;
+    width:258px;
+  }
+  div#stack {
+    margin: 3px;
+    width: 80px;
+    display: none;
+    height: 80px;
+    float: left;
+   
+  }
+  /*#one {
+    background: #f00;
+  }
+  #two {
+    background: #0f0;
+  }
+  #three {
+    background: #00f;
+  }*/
+
+</style>
+
+
+</head>
+<body>
+<span id="random_color">1. Click here to add a box<br>
+2. Click here again to add a new box and to make the colors change randomly on all of the existing boxes<br>3. Click on a colored box to add a new random colored box without changing the color of the previous boxes.</span>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+<div id="stack"></div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+
+$( document.body ).click(function() {
+  $( "div:hidden:first" ).fadeIn( "slow" );
+});
+
+$(function() {
+  			$("#random_color").click(function() {
+	    		$("div").each(function(index) {
+	      			var colorR = Math.floor((Math.random() * 256));
+	      			var colorG = Math.floor((Math.random() * 256));
+	      			var colorB = Math.floor((Math.random() * 256));
+	      			$(this).css("background-color", "rgb(" + colorR + "," + colorG + "," + colorB + ")");
+    			});
+  			});
+		});
+</script>
+</body>
+</html>

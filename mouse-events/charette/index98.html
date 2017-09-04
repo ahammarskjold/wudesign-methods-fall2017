@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Charette</title>
+<style type="text/css">
+	
+span {
+    color: black;
+    cursor: pointer;
+    float: left;
+    width:258px;
+  }
+  p#stack {
+    margin: 3px;
+    width: 80px;
+    display: none;
+    height: 80px;
+    float: left;
+    font-size: 20px;
+   
+  }
+  /*#one {
+    background: #f00;
+  }
+  #two {
+    background: #0f0;
+  }
+  #three {
+    background: #00f;
+  }*/
+
+</style>
+
+
+</head>
+<body>
+<span id="random_color">1. Click here to add text<br>
+2. Click here again to add new text and to make the colors change randomly on all of the existing texts<br>3. Click on a colored text to add a new random colored text without changing the color of the previous texts.</span>
+
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+<p id="stack">text</p>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+
+$( document.body ).click(function() {
+  $( "p:hidden:first" ).fadeIn( "slow" );
+});
+
+$(function() {
+  			$("#random_color").click(function() {
+	    		$("p").each(function(index) {
+	      			var colorR = Math.floor((Math.random() * 256));
+	      			var colorG = Math.floor((Math.random() * 256));
+	      			var colorB = Math.floor((Math.random() * 256));
+	      			$(this).css("color", "rgb(" + colorR + "," + colorG + "," + colorB + ")");
+    			});
+  			});
+		});
+</script>
+</body>
+</html>
