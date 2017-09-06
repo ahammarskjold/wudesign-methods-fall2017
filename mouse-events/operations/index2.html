@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Manipulation</title>
+<style type="text/css">
+	
+div{
+  background-color: red;
+  height: 50px;
+  width: 100px;
+  transition: all .2s ease-in-out; 
+  margin: auto;
+  margin-top: 50px;
+}
+.rotate{
+  transform: rotate(360deg);
+  transition: all .5s ease-in-out; 
+  }
+
+</style>
+
+
+</head>
+<body>
+
+<div class="container">
+</div>
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+
+$("div.container").click(function(){
+      var size = Math.floor(20+Math.random()*700);
+      $(this).css("height",size);
+      $(this).toggleClass("rotate");
+    })
+
+  
+</script>
+</body>
+</html>
+
+

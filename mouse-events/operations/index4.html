@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<title>Iteration</title>
+		<style>
+		div.pop-no{	
+  			cursor: pointer;
+			background: greenyellow;
+			width: 60px; 
+			height: 60px;  
+			border-radius: 50%;
+			display: inline-block;
+			margin: 10px;
+			position: absolute;
+			
+			} 
+		.pop-no { transition: all .2s ease-in-out; }
+		</style>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<div class="pop">
+			<div class="pop-no" style="left: 10px"></div>
+			<div class="pop-no" style="left: 110px"></div>
+			<div class="pop-no" style="left: 210px"></div>
+			<div class="pop-no" style="left: 310px"></div>
+			<div class="pop-no" style="left: 410px"></div>
+			<div class="pop-no" style="left: 510px"></div>
+			<div class="pop-no" style="left: 610px"></div>
+			<div class="pop-no" style="left: 710px"></div>
+			<div class="pop-no" style="left: 810px"></div>
+			<div class="pop-no" style="left: 910px"></div>
+			<div class="pop-no" style="left: 1010px"></div>
+			<div class="pop-no" style="left: 1110px"></div>
+			<div class="pop-no" style="left: 1210px"></div>
+			<div class="pop-no" style="left: 1310px"></div>
+			
+		</div>
+	<script type="text/javascript">
+
+	$(document).ready(function(){
+			$ ("div.pop-no") .each(function(){
+				$(this).delay(Math.random()*5000).animate({
+				opacity: 0,
+				width: "100%",
+				height: "100%",
+			})
+			});
+			
+		});
+
+	</script>
+	</body>
+</html>
+
