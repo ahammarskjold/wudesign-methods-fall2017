@@ -1,0 +1,203 @@
+	<html>
+	<head>
+		<title>Round-1:8</title>
+		<style>
+		body{
+			background-color: black;
+		}
+		#tri{
+		    position:relative;    
+		    cursor:pointer;    
+		    width:200px;
+		    height:200px;
+		    display: inline-block;
+		}
+		#tri:before, #tri:after{
+		    content:'';
+		    position:absolute;
+		}
+		#tri:before{
+		    top:0; left:0;
+		    background:lime;
+		    border-radius:50%;
+		    width:100%;
+		    height:100%;
+		    transition: width 1s, height 1s, left 1s, top 1s;
+		}
+		#tri:after{
+		    left:50%;
+		    top:50%;
+		    border-left:0px solid transparent;
+		    border-right:0px solid transparent;
+		    border-bottom:0px solid magenta;
+		    transition: border-left 1s, border-right 1s, border-bottom 1s,left 1s, top 1s;
+		}
+		#tri.animate:before{
+		    width:0;
+		    height:0;
+		    top:50%; left:50%;
+		}
+		#tri.animate:after{
+		    top:0; left:0;
+		    border-left:100px solid transparent;
+		    border-right:100px solid transparent;
+		    border-bottom:200px solid magenta;
+		}
+
+		
+		</style>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	</head>
+	<body>
+	
+
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+		<div id="tri"></div>
+
+
+	<script type="text/javascript">
+		$('div').mouseover(function () {
+    $(this).toggleClass('animate');
+});
+
+
+		
+
+	</script>
+	</body>
+</html>
+
+

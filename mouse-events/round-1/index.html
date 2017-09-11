@@ -1,0 +1,81 @@
+<html>
+	<head>
+		<title>Round-1:1</title>
+		<style>
+		
+		body{
+			padding: 0px;
+			margin:0px;
+			border:0px;
+			position: relative;
+		}
+	
+
+		.image-wrapper {
+			position: absolute;
+			transform: translate(-50%, -50%);
+		    opacity: 1;
+		}
+
+		.image-wrapper.fade-out {
+			opacity: 0;
+			transition: opacity 1s ease-in-out;
+		}
+
+		.here{
+			height: 300px;
+			width:300px;
+			background-color: white;
+			border-radius: 300px;
+		}
+	
+		</style>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	</head>
+	<body>
+	<div class="image-wrapper">
+     </div>
+
+
+	<script type="text/javascript">
+		$("body").css("transition","all 3s");
+var arr = ["#f00","#0f0","#00f"];
+function changeColor(){
+   $("body").css({
+        backgroundColor : arr[parseInt(Math.random() * 3)]
+      });
+	}
+	changeColor();
+	setInterval(changeColor,1000);
+
+
+$(function(){
+	var fadeDelay = 1000;
+	var fadeDuration = 1000;
+    $(document).click(function(e){
+		var div = $('<div class="image-wrapper">')
+			.css({
+				"left": e.pageX + 'px',
+				"top": e.pageY + 'px'
+			})
+			.append($('<div class="here">'))
+			.appendTo(document.body);
+				
+		setTimeout(function() {
+			div.addClass('fade-out');			
+			setTimeout(function() { div.remove(); }, fadeDuration);
+		}, fadeDelay);
+    });
+});
+
+	</script>
+	<script type="text/javascript">
+		$('*').on('click', function(event){
+			console.log("event");
+		});
+		
+	</script>
+	
+
+	</body>
+</html>
