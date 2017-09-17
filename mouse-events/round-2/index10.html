@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>Round-2:10</title>
+		
+		<style>
+
+			body {
+				margin: 0;
+				padding:0;
+			}
+			.row {
+				height: 60px;
+				position: relative;
+			}
+
+			.dot {
+				width: 60px;
+				height: 60px;
+				border-radius: 50%;
+				background-color: #f7f7f7;
+				display: inline-block;
+				transition: all .5s ease-in;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index:1;
+			}
+
+			.dot:hover {
+				/*background-color: blue;*/
+			}
+
+			.hidden {
+				background-color: blue;
+				width: 1px;
+				height: 1px;
+				left: 50% !important;
+				top: 50% !important;
+				position: fixed !important;
+			}
+
+		</style>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+
+		var mywindwidth = $(window).width();
+		var mywindheight = $(window).height();
+		var cols = Math.floor(mywindwidth/60);
+		var rows = Math.floor(mywindheight/60);
+		var horCenter = mywindwidth/2+"px";
+		var vertCenter = mywindheight/2+"px";
+		var currentZIndex = 1;		
+
+		// RANDOM COLOR GENERATOR
+
+		var safeColors = ['00','33','66','99','cc','ff'];
+		var rand = function() {
+		    return Math.floor(Math.random()*6);
+		};
+		var randomColor = function() {
+		    var r = safeColors[rand()];
+		    var g = safeColors[rand()];
+		    var b = safeColors[rand()];
+		    return "#"+r+g+b;
+		};
+
+
+
+
+		function makeRowsAndDots() {
+			thisRowPos = 0;
+			
+			for (i = 0; i < rows; i++) { 
+		    	
+		    	thisLeftPos = 0;
+				
+				for (c = 0; c < cols; c++) { 
+				    $("#mainContainer").append("<div class='dot' style='left:"+thisLeftPos+"px; top:"+thisRowPos+"px;'></div>");
+				    thisLeftPos = thisLeftPos + 60;
+				}
+				
+				thisRowPos = thisRowPos + 60;
+
+			}	
+			
+		}
+
+
+		$(document).ready(function(){
+			makeRowsAndDots();							// First make all of the rows and dots
+			
+			$(".dot").hover(function() {		// Once all of the rows and dots are made, attach click handler to animate them
+				  currentZIndex++;							// increment current top z-index value
+				  $(this).css('z-index',currentZIndex)		// set z-index of this above everything
+				  $(this).addClass("hidden");				// add the "hidden" class to hide element
+				  $(this).css('background',randomColor);	// apply randomized color while we're at it
+			});
+		});
+
+		</script>
+
+	</head>
+	<body>
+		<div id="mainContainer">
+		</div>
+	</body>
+</html>

@@ -1,0 +1,111 @@
+<html>
+	<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  		<link rel="stylesheet" href="/resources/demos/style.css">
+  		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
+		<title>Round-2:11</title>
+		<style>
+		
+		body{
+			padding: 0px;
+			margin:0px;
+			border:0px;
+			position: relative;
+		}
+	
+
+		.image-wrapper {
+			position: absolute;
+			transform: translate(-50%, -50%);
+		    opacity: 1;
+		    width: 200px;
+		    height: 200px;
+
+		}
+
+		.image-wrapper.fade-out {
+			transition: 7s ease-in-out;
+		}
+
+		.here{
+		    background-image: url("Asset 2@4x.png");
+		    background-image: no-repeat;
+		    height: 200px;
+		    width: 232px;
+		    z-index: 1;
+		    opacity: 1;
+		    background-size: cover;
+		    -webkit-animation: myfirst 7s ; /* Chrome, Safari, Opera */
+    		animation: myfirst 7s ;
+  }
+
+  /* Chrome, Safari, Opera */
+  @-webkit-keyframes myfirst {
+    from {opacity: 1;}
+    to {opacity: 0;}
+  }
+
+  /* Standard syntax */
+  @keyframes myfirst {
+    from {opacity: 1;}
+    to {opacity: 0;}
+  }
+		}
+		
+		
+
+		</style>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	</head>
+	<body>
+	<div class="image-wrapper">
+     </div>
+
+
+	<script type="text/javascript">
+		$("body").css("transition","all 3s");
+var arr = ["#f00","#0f0","#00f"];
+function changeColor(){
+   $("body").css({
+        backgroundColor : arr[parseInt(Math.random() * 3)]
+      });
+	}
+	changeColor();
+	setInterval(changeColor,1000);
+
+
+$(function(){
+	var fadeDelay = 1000;
+	var fadeDuration = 1000;
+    $(document).click(function(e){
+		var div = $('<div class="image-wrapper">')
+			.css({
+				"left": e.pageX + 'px',
+				"top": e.pageY + 'px'
+			})
+			.append($('<div class="here">'))
+			.appendTo(document.body);
+				
+		setTimeout(function() {
+			div.addClass('fade-out');			
+			setTimeout(function() { div.remove(); }, fadeDuration);
+		}, fadeDelay);
+    });
+});
+
+	</script>
+	<!-- <script type="text/javascript">
+		$('*').on('click', function(event){
+			console.log("event");
+		});
+		
+	</script> -->
+	
+
+	</body>
+</html>

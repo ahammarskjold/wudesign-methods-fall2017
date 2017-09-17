@@ -1,0 +1,66 @@
+{
+	"entrypoints" : [
+	{
+		"name" : "Hexagon-1",
+		"file" : "index.html"
+
+	},
+	{
+		"name" : "Hexagon-2",
+		"file" : "index2.html"
+
+	},
+	{
+		"name" : "Circle Hover-1",
+		"file" : "index3.html"
+
+	},
+	{
+		"name" : "Circle Hover-2",
+		"file" : "index4.html"
+
+	},
+	{
+		"name" : "Circle Hover-3",
+		"file" : "index9.html"
+
+	},
+	{
+		"name" : "Circle Hover-4",
+		"file" : "index10.html"
+
+	},
+	{
+		"name" : "Appear/Fade-1",
+		"file" : "index6.html"
+
+	},
+	{
+		"name" : "Appear/Fade-2",
+		"file" : "index11.html"
+
+	},
+	{
+		"name" : "Radiate From Center-1",
+		"file" : "index5.html"
+
+	},
+	{
+		"name" : "Radiate From Center-2",
+		"file" : "index12.html"
+
+	},
+	{
+		"name" : "Fist Bump",
+		"file" : "index13.html"
+
+	},
+	{
+		"name" : "L-I-V-I-N",
+		"file" : "index14.html"
+
+	}
+
+
+	]
+}

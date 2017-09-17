@@ -1,0 +1,194 @@
+<html>
+	<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  		<link rel="stylesheet" href="/resources/demos/style.css">
+  		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
+		<title>Round-2:12</title>
+		<style>
+		body{
+			background-color: black;
+		}
+
+		.bar{
+			width: 35px;
+     		height: 130px;
+     		margin: 0px;
+     		border:0px;  
+     		float:left; 
+     		transition: .7s ease;
+     		background-color: pink;
+			position: fixed;
+			opacity: 1;
+			border-radius: 300px;
+			z-index:2; 
+
+		}
+
+		.everything{
+			overflow: visible;
+			position: fixed;
+  			height: 20px;
+  			width: 20px;
+  			left: 50%;
+  			top: 50%;
+  			z-index: 1;
+  			background-color: yellow;
+		}
+
+		.rot{
+			transform-origin:top left;
+
+		}
+		.one{
+			transform: rotate(90deg) translate(10px, -10px);
+		}
+		.two{
+			transform: rotate(180deg) translate(-10px, -10px);
+		}
+		.three{
+			transform: rotate(270deg) translate(-10px, 10px);
+		}
+		.four{
+			transform: rotate(0deg) translate(10px, 10px);
+		}
+		.five{
+			transform: rotate(45deg) translate(14px, 0px);
+		}
+		.six{
+			transform: rotate(135deg) translate(0px, -14px);
+		}
+		.seven{
+			transform: rotate(225deg) translate(-14px, 0px);
+		}
+		.eight{
+			transform: rotate(315deg) translate(0px, 14px);
+		}
+		.nine{
+			transform: rotate(22.5deg) translate(13px, 5px);
+		}
+		.ten{
+			transform: rotate(67.5deg) translate(13px, -5px);
+		}
+		.eleven{
+			transform: rotate(112.5deg) translate(5px, -13px);
+		}
+		.twelve{
+			transform: rotate(157.5deg) translate(-5px, -13px);
+		}
+		.thirteen{
+			transform: rotate(202.5deg) translate(-13px, -5px);
+		}
+		.fourteen{
+			transform: rotate(247.5deg) translate(-13px, 5px);
+		}
+		.fifteen{
+			transform: rotate(292.5deg) translate(-5px, 13px);
+		}
+		.sixteen{
+			transform: rotate(337.5deg) translate(5px, 13px);
+		}
+
+
+		
+	
+		</style>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	</head>
+	<body>
+	
+	
+	<div class="everything">
+		<div class="rot one">
+			<div class="bar"></div>
+		</div>
+		<div class="rot two">
+			<div class="bar"></div>
+		</div>
+		<div class="rot three">
+			<div class="bar"></div>
+		</div>
+		<div class="rot four">
+			<div class="bar"></div>
+		</div>
+		<div class="rot five">
+			<div class="bar"></div>
+		</div>
+		<div class="rot six">
+			<div class="bar"></div>
+		</div>
+		<div class="rot seven">
+			<div class="bar"></div>
+		</div>
+		<div class="rot eight">
+			<div class="bar"></div>
+		</div>
+		<div class="rot nine">
+			<div class="bar"></div>
+		</div>
+		<div class="rot ten">
+			<div class="bar"></div>
+		</div>
+		<div class="rot eleven">
+			<div class="bar"></div>
+		</div>
+		<div class="rot twelve">
+			<div class="bar"></div>
+		</div>
+		<div class="rot thirteen">
+			<div class="bar"></div>
+		</div>
+		<div class="rot fourteen">
+			<div class="bar"></div>
+		</div>
+		<div class="rot fifteen">
+			<div class="bar"></div>
+		</div>
+		<div class="rot sixteen">
+			<div class="bar"></div>
+		</div>
+	</div>
+
+
+
+
+	
+
+	
+
+
+	<script type="text/javascript">
+	
+
+		$( ".bar" ).mouseover(function() {
+			  $(this).css("background-color", getRandomColor());
+			});
+			
+			function getRandomColor() {
+			  var letters = '0123456789ABCDEF';
+			  var color = '#F';
+			  for (var i = 0; i < 5; i++) {
+			    color += letters[Math.floor(Math.random() * 16)];
+			  }
+			  return color;
+			}
+
+			$(".bar").mouseover(function(){
+				var size = Math.floor(130+Math.random()*200);
+				$(this).css("height",size);
+		});
+	</script>
+	<!-- <script type="text/javascript">
+		$('*').on('click', function(event){
+			console.log("event");
+		});
+		
+	</script> -->
+	
+
+	</body>
+</html>
