@@ -4,6 +4,16 @@
 		"name" : "1",
 		"file" : "index.html"
 
+	},
+	{
+		"name" : "2",
+		"file" : "index2.html"
+
+	},
+	{
+		"name" : "3",
+		"file" : "index3.html"
+
 	}
 	]
 }
