@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
+<style type="text/css">
+body{
+   height: 500px;
+   width:100%;
+   background-color: black;
+    padding: 0px;
+  margin:0px;
+  border:0px;
+  background-color: black;
+  transition: all 1s ease-in-out;
+  overflow: hidden;
+}
+
+.area-in {
+   width: 100%;
+   height: 100%;
+   top:0px;
+   left: 0px;
+
+ 
+
+}
+
+.area-in,
+.area-in .tab .shape {
+   position: absolute;
+   /*transform: translate(-50%, -50%);*/
+}
+
+.tab,.static {
+   width: 25%;
+   height: 25%;
+   float: right;
+   position: relative;
+}
+
+.shape {
+   width: 40%;
+   height: 2%;
+   background: lightpink;
+   float: right;
+   border-radius: 100%;
+   transition: all 1s ease-in-out;
+}
+
+
+*,
+*:after,
+*::before {
+   margin: 0;
+   padding: 0;
+}
+
+.pop-no-2{
+  position: absolute;
+}
+.pop-no-2 .shape{
+  background: yellow;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 1;
+  transition: all 1s ease-in-out;
+}
+
+
+/*.pop-no{
+  background: yellow;
+  width: 25%;
+  height: 25%;
+  border-radius: 50%;
+  display: block;
+  opacity: 1;
+  position: absolute;
+}
+*/
+
+.c01.pop-no-2{
+  left: 0px;
+}
+.c02.pop-no-2{
+  left: 25%;
+}
+.c03.pop-no-2{
+  left: 50%;
+}
+.c04.pop-no-2{
+  left: 75%;
+}
+.c05.pop-no-2{
+  left: 0px;
+  top: 25%;
+}
+.c06.pop-no-2{
+  left: 25%;
+  top: 25%;
+}
+.c07.pop-no-2{
+  left: 50%;
+  top: 25%;
+}
+.c08.pop-no-2{
+  left: 75%;
+  top: 25%;
+}
+.c09.pop-no-2{
+  left: 0px;
+  top: 50%;
+}
+.c10.pop-no-2{
+  left: 25%;
+  top: 50%;
+}
+.c11.pop-no-2{
+  left: 50%;
+  top: 50%;
+}
+.c12.pop-no-2{
+  left: 75%;
+  top: 50%;
+}
+.c13.pop-no-2{
+  left: 0px;
+  top: 75%;
+}
+.c14.pop-no-2{
+  left: 25%;
+  top: 75%;
+}
+.c15.pop-no-2{
+  left: 50%;
+  top: 75%;
+}
+.c16.pop-no-2{
+  left: 75%;
+  top: 75%;
+}
+
+
+span#destination{
+  position: fixed;
+  cursor: pointer;
+}
+
+
+.everything{
+  overflow: visible;
+  transform-origin:top left;
+  left: 50% !important;
+  position: fixed;
+  top:50% !important;
+  transition: all 1s;
+  z-index: 2;
+  overflow: visible;
+  margin-top:-10px;
+  margin-left:-10px;
+  border-radius: 0px;
+  width: 10px;
+  height: 300px;
+  float:left; 
+  transition: .7s ease;
+  background-color: pink;
+  position: fixed;
+  opacity: 1;
+  border-radius: 100px;
+}
+.everything .shape{
+  background-color: transparent;
+}
+
+.pop-no-2.c01.move_1{
+  transform: rotate(135deg) translate(0px, -14px);
+  z-index: 3;
+}
+
+.pop-no-2.c02.move_2{
+  transform: rotate(157.5deg) translate(-5px, -13px);
+  z-index: 4;
+}
+
+.pop-no-2.c03.move_3{
+  transform: rotate(180deg) translate(-10px, -10px);
+  z-index: 5;
+}
+
+.pop-no-2.c04.move_4{
+  transform: rotate(202.5deg) translate(-13px, -5px);
+  z-index: 6;
+}
+
+.pop-no-2.c05.move_5{
+  transform: rotate(112.5deg) translate(5px, -13px);
+  z-index: 18;
+}
+
+.pop-no-2.c06.move_6{
+  transform: rotate(90deg) translate(10px, -10px);
+  z-index: 17;
+}
+
+.pop-no-2.c07.move_7{
+  transform: rotate(225deg) translate(-14px, 0px);
+  z-index: 7;
+}
+
+.pop-no-2.c08.move_8{
+  transform: rotate(247.5deg) translate(-13px, 5px);
+  z-index: 8;
+}
+
+.pop-no-2.c09.move_9{
+  transform: rotate(67.5deg) translate(13px, -5px);
+  z-index: 16;
+}
+
+.pop-no-2.c10.move_10{
+  transform: rotate(45deg) translate(14px, 0px);
+  z-index: 15;
+}
+
+.pop-no-2.c11.move_11{
+  transform: rotate(270deg) translate(-10px, 10px);
+  z-index: 9;
+}
+
+.pop-no-2.c12.move_12{
+  transform: rotate(292.5deg) translate(-5px, 13px);
+  z-index: 10;
+}
+
+.pop-no-2.c13.move_13{
+ transform: rotate(22.5deg) translate(13px, 5px);
+ z-index: 14;
+}
+
+.pop-no-2.c14.move_14{
+ transform: rotate(0deg) translate(10px, 10px);
+ z-index: 13;
+}
+
+.pop-no-2.c15.move_15{
+ transform: rotate(337.5deg) translate(5px, 13px);
+ z-index: 12;
+}
+
+.pop-no-2.c16.move_16{
+ transform: rotate(315deg) translate(0px, 14px);
+ z-index: 11;
+}
+
+
+
+div.all{
+  height: 100%;
+  width: 100%;
+  
+
+}
+
+.spinEffect{
+  transform: rotate(360deg);
+  transition: all 2s ease-in-out;
+}
+.show{
+  height: 30px;
+  width: 30px;
+  left: 50%;
+  border-radius: 100px;
+  margin-left:-15px;
+  top: 50%;
+  margin-top:-15px;
+  z-index: 100;
+  background-color: white;
+}
+
+.everything.massive{
+  width: 200px !important;
+  transition: all 2s ease-in-out;
+  height: 900px !important;
+}
+button{
+  z-index: 100;
+  position: relative;
+}
+
+</style>	
+</head>
+<body id="demo"> 
+
+
+	<div class="area">
+   		<div class="area-in">
+       
+<div class="all">
+<span class="tab c01"><span class="shape"></span></span>
+<span class="tab c02"><span class="shape"></span></span>
+<span class="tab c03"><span class="shape"></span></span>
+<span class="tab c04"><span class="shape"></span></span>
+<span class="tab c05"><span class="shape"></span></span>
+<span class="tab c06"><span class="shape"></span></span>
+<span class="tab c07"><span class="shape"></span></span>
+<span class="tab c08"><span class="shape"></span></span>
+<span class="tab c09"><span class="shape"></span></span>
+<span class="tab c10"><span class="shape"></span></span>
+<span class="tab c11"><span class="shape"></span></span>
+<span class="tab c12"><span class="shape"></span></span>
+<span class="tab c13"><span class="shape"></span></span>
+<span class="tab c14"><span class="shape"></span></span>
+<span class="tab c15"><span class="shape"></span></span>
+<span class="tab c16"><span class="shape"></span></span>
+</div>
+</div>
+</div>
+
+<span id="destination"></span>
+
+<button>Reload</button>
+<script>
+document.getElementById("demo").addEventListener("mousemove", myFunction);
+function myFunction(e) {
+
+      for (var l = 0; l < $(".tab").length; l++) {
+         $(".tab:nth-child(" + (l + 1) + ")").each(function() {
+            var offset = $(this).offset(),
+               center_x = (offset.left) + ($(this).width() / 2),
+               center_y = (offset.top) + ($(this).height() / 2),
+               mouse_x = e.pageX,
+               mouse_y = e.pageY,
+               radians = Math.atan2(mouse_x - center_x, mouse_y - center_y),
+               degree = (radians * (180 / Math.PI) * -1) + 90;
+            $(this).css('transform', 'rotate(' + degree + 'deg)');
+         })
+      }
+  
+}
+
+
+
+$("body").on("click",function(){
+      
+      $(".tab").attr(
+      		"style",""
+      	);
+      $(".tab").each(function(){
+      	$(this).removeClass("tab").addClass("static");
+      })
+      $("span.static").addClass("pop-no-2");
+      // hoverman();
+      $("span.static")
+      hoverman();
+ });
+function hoverman(){
+$(document).on("mouseover", ".c01",function() {
+    $(this).addClass("move_1");
+    $(this).addClass("everything");
+  });
+
+  $(document).on("mouseover", ".c02",function() {
+    $(this).addClass("move_2");
+    $(this).addClass("everything");
+  });
+
+  $(document).on("mouseover", ".c03",function() {
+    $(this).addClass("move_3");
+    $(this).addClass("everything");
+  });
+
+  $(document).on("mouseover", ".c04",function() {
+    $(this).addClass("move_4");
+    $(this).addClass("everything");
+  });
+
+  $(document).on("mouseover", ".c05",function() {
+    $(this).addClass("move_5");
+    $(this).addClass("everything");
+  });
+
+  $(document).on("mouseover", ".c06",function() {
+    $(this).addClass("move_6");
+    $(this).addClass("everything");
+  });
+
+  $(document).on("mouseover", ".c07",function() {
+    $(this).addClass("move_7");
+    $(this).addClass("everything");
+  });
+
+  $(document).on("mouseover", ".c08",function() {
+    $(this).addClass("move_8");
+    $(this).addClass("everything");
+  });
+
+  $(document).on("mouseover", ".c09",function() {
+    $(this).addClass("move_9");
+    $(this).addClass("everything");
+  });
+
+  $(document).on("mouseover", ".c10",function() {
+    $(this).addClass("move_10");
+    $(this).addClass("everything");
+  });
+
+  $(document).on("mouseover", ".c11",function() {
+    $(this).addClass("move_11");
+    $(this).addClass("everything");
+  });
+
+  $(document).on("mouseover", ".c12",function() {
+    $(this).addClass("move_12");
+    $(this).addClass("everything");
+  });
+
+  $(document).on("mouseover", ".c13",function() {
+    $(this).addClass("move_13");
+    $(this).addClass("everything");
+  });
+
+  $(document).on("mouseover", ".c14",function() {
+    $(this).addClass("move_14");
+    $(this).addClass("everything");
+  });
+
+  $(document).on("mouseover", ".c15",function() {
+    $(this).addClass("move_15");
+    $(this).addClass("everything");
+  });
+  $(document).on("mouseover", ".c16",function() {
+    $(this).addClass("move_16");
+    $(this).addClass("everything");
+    if ($(".everything").length<16) return;
+    $("#destination").addClass("show");
+  });
+var allthetings=$(".everything").length;
+console.log(allthetings);
+
+ 
+  
+
+
+
+  $( ".pop-no-2" ).mouseover(function() {
+    //if everything.length=16 then go ahead, otherwise dont
+    console.log("working");
+    if ($(".everything").length<16) return;
+
+    $(this).css("background-color", getRandomColor());
+    });
+      
+    function getRandomColor() {
+      var letters = '0123456789ABCDEF';
+      var color = '#F';
+      for (var i = 0; i < 5; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+      }
+
+
+    $(".pop-no-2").mouseover(function(){
+      if ($(".everything").length<16) return;
+      var size = Math.floor(200+Math.random()*500);
+      $(this).css("height",size);
+    });
+
+
+    $(".all").click(function(){
+      if ($(".everything").length<16) return;
+      $(this).toggleClass("spinEffect"); 
+    }); 
+
+
+    $("span#destination").click(function(){
+      $("span.everything").toggleClass("massive"); 
+
+    }); 
+
+}    
+
+$("button").click(function(){
+  console.log("whaaatttt is going on");
+  location.reload();
+})
+</script>
+</body>
+</html>

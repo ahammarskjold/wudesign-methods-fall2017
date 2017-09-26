@@ -1,0 +1,164 @@
+
+<DOCTYPE!html>
+<html>
+
+	<head>
+		<title>Round 3:16</title>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  		<link rel="stylesheet" href="/resources/demos/style.css">
+  		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
+
+	<style>
+
+body{
+   height: 100%;
+   width:100%;
+   background-color: black;
+}
+
+.area-in {
+   width: 100%;
+   height: 100%;
+   /*top:10%;
+   bottom:10%;
+   right: 10%;
+   left: 10%;*/
+   padding-top: 5%;
+   padding-right: 5%;
+   padding-bottom: 5%;
+   padding-left: 5%;
+ 
+
+}
+
+.area-in,
+.area-in .tab .shape {
+   position: absolute;
+   /*transform: translate(-50%, -50%);*/
+}
+
+.tab {
+   width: 25%;
+   height: 25%;
+   float: right;
+   position: relative;
+}
+
+.shape {
+   width: 40%;
+   height: 2%;
+   background: lime;
+   float: right;
+   border-radius: 100%;
+   transition: all 1s ease-in-out;
+}
+
+
+*,
+*:after,
+*::before {
+   margin: 0;
+   padding: 0;
+}
+
+
+.pop-no{
+  background: yellow;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 1;
+  position: absolute;
+  transition: all 1s ease-in-out;
+}
+
+	</style>
+
+	</head>
+
+	<body>
+
+
+	<div class="area">
+   		<div class="area-in">
+
+
+   <!-- <div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+   <div class="tab"></div>
+   <div class="tab"></div> -->
+
+
+
+
+
+   		</div>
+	</div>
+
+
+
+	<script>
+
+	$(function() {
+
+   for (var i = 0; i < 16; i++) {
+      $(".area-in").append('<span class="tab"><span class="shape"></span></span>')
+   }
+
+   document.addEventListener("mousemove", function(e) {
+      for (var l = 0; l < $(".tab").length; l++) {
+         $(".tab:nth-child(" + (l + 1) + ")").each(function() {
+            var offset = $(this).offset(),
+               center_x = (offset.left) + ($(this).width() / 2),
+               center_y = (offset.top) + ($(this).height() / 2),
+               mouse_x = e.pageX,
+               mouse_y = e.pageY,
+               radians = Math.atan2(mouse_x - center_x, mouse_y - center_y),
+               degree = (radians * (180 / Math.PI) * -1) + 90;
+            $(this).css('transform', 'rotate(' + degree + 'deg)');
+         })
+      }
+   })
+})
+
+
+ // $("body").click(function(){
+ //      $("span.shape").remove(); 
+      
+ //    }); 
+
+	</script>
+
+
+	</body>
+</html>
