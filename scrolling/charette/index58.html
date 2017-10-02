@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Charette-58</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
+<script src="randomColor.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.5.2/randomColor.js"></script>
+<style>
+#grad1 {
+    min-height: 100%;
+    min-width: 100%;
+    display: flex;
+    align-items: stretch;
+/*    position: relative;*/
+    background: aqua; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(aqua, fuchsia); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(aqua, fuchsia); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(aqua, fuchsia); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(aqua, fuchsia); /* Standard syntax (must be last) */
+}
+html,body{
+  margin:0;
+  padding: 0;
+  height: 100%;
+}
+
+/*These styles contain basic styles for fomatting along with our animation css*/
+
+body {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  background: #efefef;
+  line-height: 170%;
+  overflow-x: hidden;
+}
+
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+/*clearfixes*/
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.main-container {
+  position: relative;
+  width: 100%;
+}
+
+.container {
+  position: relative;
+  padding: 25px;
+  margin:auto;
+}
+
+.container:last-of-type {
+  padding-top: 0px;
+}
+/*animation element*/
+
+.animation-element {
+  position: relative;
+  width: 25%;
+  margin-top: 1000px;
+  margin-bottom: 1000px;
+
+}
+/*4 grid layout*/
+
+.animation-element:nth-of-type(4n-3) {
+  clear: left;
+}
+
+.animation-element:nth-of-type(4n-2) {}
+
+.animation-element:nth-of-type(4n-1) {}
+
+.animation-element:nth-of-type(4n-0) {
+  clear: right;
+}
+/*left fancy animastion*/
+
+@-moz-keyframes left_animation {
+  0% {
+    opacity: 0;
+    -moz-transform: rotate(180deg) translate3d(100%, 100%, 0);
+  }
+  75% {
+    opacity: 0.8;
+    -moz-transform: rotate(-40deg);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: rotate(0deg) translate3d(0%, 0%, 0);
+  }
+}
+
+@-webkit-keyframes left_animation {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(180deg) translate3d(100%, 100%, 0);
+  }
+  75% {
+    opacity: 0.8;
+    -webkit-transform: rotate(-40deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotate(0deg) translate3d(0%, 0%, 0);
+  }
+}
+
+@keyframes left_animation {
+  0% {
+    opacity: 0;
+    transform: rotate(180deg) translate3d(100%, 100%, 0);
+  }
+  75% {
+    opacity: 0.8;
+    transform: rotate(-40deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg) translate3d(0%, 0%, 0);
+  }
+}
+/*right fancy animation*/
+
+@-moz-keyframes right_animation {
+  0% {
+    opacity: 0;
+    -moz-transform: rotate(180deg) translate3d(-100%, -100%, 0);
+  }
+  75% {
+    opacity: 0.8;
+    -moz-transform: rotate(40deg);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: rotate(0deg) translate3d(0%, 0%, 0);
+  }
+}
+
+@-webkit-keyframes right_animation {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(180deg) translate3d(-100%, 100%, 0);
+  }
+  75% {
+    opacity: 0.8;
+    -webkit-transform: rotate(40deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotate(0deg) translate3d(0%, 0%, 0);
+  }
+}
+
+@keyframes right_animation {
+  0% {
+    opacity: 0;
+    transform: rotate(180deg) translate3d(-100%, -100%, 0);
+  }
+  75% {
+    opacity: 0.8;
+    transform: rotate(40deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg) translate3d(0%, 0%, 0);
+  }
+}
+/*Multi-step animation*/
+
+.multi-step-left .gallery,
+.multi-step-right .gallery {
+  position: relative;
+  opacity: 0;
+  /*prevents flicker as animation occurs*/
+}
+
+.multi-step-left.in-view .gallery {
+  -moz-animation: left_animation 1300ms ease-in both;
+  -webkit-animation: left_animation 1300ms ease-in both;
+  animation: left_animation 1300ms ease-in both;
+}
+
+.multi-step-right.in-view .gallery {
+  -moz-animation: right_animation 1300ms linear both;
+  -webkit-animation: right_animation 1300ms linear both;
+  animation: right_animation 1300ms linear both;
+}
+
+.gallery {
+  width: 100%;
+  height: 200px;
+  background-color: white;
+
+}
+
+
+
+
+}
+/*media queries for small devices*/
+
+@media screen and (max-width: 678px) {
+  .main-container {
+    margin: 25px;
+  }
+  .animation-element,
+  .animation-element:nth-of-type(4n-3),
+  .animation-element:nth-of-type(4n-2),
+  .animation-element:nth-of-type(4n-1),
+  .animation-element:nth-of-type(4n-0) {
+    width: 100%;
+    
+  }
+}
+
+</style>
+</head>
+<body>
+
+
+<div id="grad1">
+
+<div class="main-container">
+  <div class="container cf">
+    <div class="animation-element multi-step-left cf">
+      <div class="gallery">
+      </div>
+    </div>
+    <div class="animation-element multi-step-right cf">
+      <div class="gallery">
+      </div>
+    </div>
+    
+
+  </div>
+ 
+</div>
+<script>
+var $animation_elements = $('.animation-element');
+var $window = $(window);
+
+function check_if_in_view() {
+  var window_height = $window.height();
+  var window_top_position = $window.scrollTop();
+  var window_bottom_position = (window_top_position + window_height);
+
+  $.each($animation_elements, function() {
+    var $element = $(this);
+    var element_height = $element.outerHeight();
+    var element_top_position = $element.offset().top;
+    var element_bottom_position = (element_top_position + element_height);
+
+    //check to see if this current container is within viewport
+    if ((element_bottom_position >= window_top_position) &&
+      (element_top_position <= window_bottom_position)) {
+      $element.addClass('in-view');
+    } else {
+      $element.removeClass('in-view');
+    }
+  });
+}
+
+$window.on('scroll resize', check_if_in_view);
+$window.trigger('scroll');
+</script>
+
+
+</body>
+</html>

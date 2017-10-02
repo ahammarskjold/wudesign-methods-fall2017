@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Charette-56</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
+<script src="randomColor.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.5.2/randomColor.js"></script>
+<style>
+#grad1 {
+    min-height: 100%;
+    min-width: 100%;
+    display: flex;
+    align-items: stretch;
+/*    position: relative;*/
+    background: aqua; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(aqua, fuchsia); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(aqua, fuchsia); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(aqua, fuchsia); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(aqua, fuchsia); /* Standard syntax (must be last) */
+}
+html,body{
+  margin:0;
+  padding: 0;
+  height: 100%;
+}
+/*These styles contain basic styles for fomatting along with our animation css*/
+
+body {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  background: #efefef;
+  line-height: 170%;
+}
+
+
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+/*clearfixes*/
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.main-container {
+  width: 100%;
+  margin: 25px;
+  position: relative;
+}
+
+.container {
+  position: relative;
+  padding: 25px;
+}
+
+.container:last-of-type {
+  padding-top: 0px;
+}
+/*animation element*/
+
+.animation-element {
+  position: relative;
+  width: 30%;
+  height:30%;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 20%;  
+  float: left;
+}
+
+
+.bounce-up .subject {
+  opacity: 0;
+  -moz-transition: all 700ms ease-out;
+  -webkit-transition: all 700ms ease-out;
+  -o-transition: all 700ms ease-out;
+  transition: all 700ms ease-out;
+  -moz-transform: translate3d(0px, 200px, 0px);
+  -webkit-transform: translate3d(0px, 200px, 0px);
+  -o-transform: translate(0px, 200px);
+  -ms-transform: translate(0px, 200px);
+  transform: translate3d(0px, 200, 0px);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.bounce-up.in-view .subject {
+  opacity: 1;
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+}
+
+.subject {
+  float: left;
+  width: 100%;
+  background: #F5F5F5;
+  padding: 15px;
+  border: solid 1px #EAEAEA;
+}
+
+
+
+</style>
+</head>
+<body>
+
+
+<div id="grad1">
+
+ 
+<div class="main-container">
+
+  <div class="container cf">
+    <div class="animation-element bounce-up cf">
+      <div class="subject development"></div>
+    </div>
+    <div class="animation-element bounce-up cf">
+      <div class="subject design"></div>
+    </div>
+    <div class="animation-element bounce-up">
+      <div class="subject photography"></div>
+    </div>
+    <div class="animation-element bounce-up cf">
+      <div class="subject design"></div>
+    </div>
+    <div class="animation-element bounce-up cf">
+      <div class="subject development"></div>
+    </div>
+    <div class="animation-element bounce-up cf">
+      <div class="subject development"></div>
+    </div>
+    <div class="animation-element bounce-up">
+      <div class="subject photography"></div>
+    </div>
+  </div>
+ 
+</div>
+<script>
+var $animation_elements = $('.animation-element');
+var $window = $(window);
+
+function check_if_in_view() {
+  var window_height = $window.height();
+  var window_top_position = $window.scrollTop();
+  var window_bottom_position = (window_top_position + window_height);
+
+  $.each($animation_elements, function() {
+    var $element = $(this);
+    var element_height = $element.outerHeight();
+    var element_top_position = $element.offset().top;
+    var element_bottom_position = (element_top_position + element_height);
+
+    //check to see if this current container is within viewport
+    if ((element_bottom_position >= window_top_position) &&
+      (element_top_position <= window_bottom_position)) {
+      $element.addClass('in-view');
+    } else {
+      $element.removeClass('in-view');
+    }
+  });
+}
+
+$window.on('scroll resize', check_if_in_view);
+$window.trigger('scroll');
+</script>
+
+
+</body>
+</html>

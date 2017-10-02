@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Charette-89</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
+<script src="randomColor.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.5.2/randomColor.js"></script>
+<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
+  <script src="bower_components/aos/dist/aos.js"></script>
+<style>
+#grad1 {
+    min-height: 1000px;
+    min-width: 100%;
+    display: flex;
+    align-items: stretch;
+/*    position: relative;*/
+    background: aqua; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(aqua, fuchsia); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(aqua, fuchsia); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(aqua, fuchsia); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(aqua, fuchsia); /* Standard syntax (must be last) */
+}
+html,body{
+	margin:0;
+	padding: 0;
+	height: 100%;
+    font-family: sans-serif;
+    color:white;
+    font-size: 20px;
+
+}
+
+#spnTop {
+    position: fixed;
+    top: 10px;
+    left: 100px;
+    cursor: pointer;
+}
+#spnbottom {
+    position: fixed;
+    top: 10px;
+    right: 100px;
+    cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+
+
+<div id="grad1">
+	<span id="spnbottom">Bottom</span>
+    
+    <span id="spnTop">Top</span>
+</div>
+<script>
+$('#spnTop').on("click", function () {
+    var percentageToScroll = 89;
+    var percentage = percentageToScroll / 100;
+    var height = $(document).scrollTop();
+    var scrollAmount = height * (1 - percentage);
+
+    console.log('scrollAmount: ' + scrollAmount);
+    $('html,body').animate({
+        scrollTop: scrollAmount
+    }, 'slow', function () {
+        console.log("reached top");
+    });
+
+});
+$('#spnbottom').on("click", function () {
+    var percentageToScroll = 89;
+    var percentage = percentageToScroll / 100;
+    var height = $(document).height() - $(window).height();
+    var scrollAmount = height * percentage;
+    console.log('scrollAmount: ' + scrollAmount);
+    jQuery("html, body").animate({
+        scrollTop: scrollAmount
+    }, 900);
+});
+</script>
+
+
+</body>
+</html>

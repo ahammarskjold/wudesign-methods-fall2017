@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Charette-87</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
+<script src="randomColor.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.5.2/randomColor.js"></script>
+<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
+  <script src="bower_components/aos/dist/aos.js"></script>
+
+
+<style>
+#grad1 {
+    min-height: 100%;
+    min-width: 100%;
+    display: flex;
+    align-items: stretch;
+/*    position: relative;*/
+    background: aqua; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(aqua, fuchsia); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(aqua, fuchsia); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(aqua, fuchsia); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(aqua, fuchsia); /* Standard syntax (must be last) */
+}
+html,body{
+    margin:0;
+    padding: 0;
+    height: 2000px;
+    width: 2000px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    overflow: auto;
+}
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 30px;
+    height: 30px;
+}
+::-webkit-scrollbar-button {
+    background-size: 100%;
+    height: 30px;
+    width: 30px;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+
+
+::-webkit-scrollbar-button:end {
+    display: block;
+}
+
+::-webkit-scrollbar-button:start {
+    display: none;
+}
+
+::-webkit-scrollbar-button:horizontal:increment { /* Right */
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAV0lEQVQ4T73TwQoAIAgD0Pnn9eWFh27qFlJCt3wFU0OzLOkfAPzQyoAFYCpIBfjrFGEARRSgRFQgRW6AEPkKhImoP0jjVIByFhjQGiTa7LE8Wya6hefCBhILGhGzGTl7AAAAAElFTkSuQmCC);
+}
+
+::-webkit-scrollbar-button:horizontal:decrement { /* Left */
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAWUlEQVQ4T72TQQoAIAgEt5fX08ODYJbgKiR4c0YUHWjGIPgFQPKIrEDACeCqzwgUls60wMK0wMOU4AWnBRH8TyCdWiPoobSWGEnoO/DjlARWUhaopPxM4dNugpQOESmtVbwAAAAASUVORK5CYII=);
+}
+
+::-webkit-scrollbar-button:vertical:increment { /* Down */
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAVklEQVQ4T93S0QoAEAwF0OvLzZ+LwrCN5Y0XJfeoawGPKzzm8RFAAKKzjwSAeAcepIbLg2uJN0gPS0A5s5AprAEasoUtYEXE8AloCN+3j/poEp1DOK5nfmcNES1z5SIAAAAASUVORK5CYII=);
+}
+
+::-webkit-scrollbar-button:vertical:decrement { /* Up */
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAVUlEQVQ4T2NkoBAwUqifYfAb0AD1IozG8DE+L4A01UN1NDIwMGA1BJcByJphtmI1BJsB2DTjNATdAHyasRqCbAAxmjEMgRlAimYUQwZ/QiKYVQbeCwBFhQ0RcSHRhgAAAABJRU5ErkJggg==);
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.1);
+}
+::-webkit-scrollbar-thumb {
+    background: black;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #989898;
+}
+::-webkit-scrollbar-thumb:active {
+    background: #808080;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.3);
+}
+::-webkit-scrollbar-corner{
+    background: black;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+</style>
+</head>
+<body>
+
+
+<div id="grad1">
+
+
+
+
+
+
+</div>
+<script>
+AOS.init({
+  duration: 1200,
+})
+
+</script>
+
+
+</body>
+</html>

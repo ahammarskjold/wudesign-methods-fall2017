@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+	<title>Charette-9</title>
+
+	<style type="text/css">
+	#grad1 {
+    min-height: 2000px;
+    min-width: 100%;
+    display: flex;
+    align-items: stretch;
+/*    position: relative;*/
+    background: aqua; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(aqua, fuchsia); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(aqua, fuchsia); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(aqua, fuchsia); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(aqua, fuchsia); /* Standard syntax (must be last) */
+}
+html,body{
+	margin:0;
+	padding: 0;
+	height: 100%;
+}
+
+	body {font-family:sans-serif;}
+
+	#red, #blue {
+		width:128px;
+		height:128px;
+		background:fuchsia;
+	}
+
+	#red {
+		float:left;
+		margin:1em;
+	}
+
+	#blue {
+		background:aqua 0 bottom;
+		margin-top:20px;
+	}
+
+	#blue_wrapper {
+		position:fixed;
+		top:0;
+		right:20px;
+	}
+	</style>
+</head>
+
+<body>
+<div id="grad1">	
+	<div id="skrollr-body">
+
+
+
+
+		<!--RED (buddy)-->
+		<div id="red" data-bottom="transform:rotate(0deg);transform-origin:center;" data-top="transform:rotate(360deg);"></div>
+
+
+	</div>
+
+	
+</div>
+	<script type="text/javascript" src="../dist/skrollr.min.js"></script>
+
+	<script type="text/javascript">
+	skrollr.init({
+		forceHeight: false,
+		easing: {
+			vibrate: function(p) {
+				return Math.sin(p * 10 * Math.PI);
+			}
+		}
+	});
+	</script>
+</body>
+
+</html>
