@@ -1,0 +1,1912 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Round 1:9</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
+<script src="randomColor.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.5.2/randomColor.js"></script>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
+<script src="randomColor.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.5.2/randomColor.js"></script>
+<script src="dist/skrollr.stylesheets.min.js"></script>
+<script type="text/javascript" src="skrollr.min.js"></script>
+<script type="text/javascript" src="../../dist/skrollr.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
+  <script src="bower_components/aos/dist/aos.js"></script>
+
+<style>
+#grad1 {
+    min-height: 5000px;
+    min-width: 100%;
+    display: flex;
+    align-items: stretch;
+/*    position: relative;*/
+    background: aqua; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(aqua, fuchsia); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(aqua, fuchsia); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(aqua, fuchsia); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(aqua, fuchsia); /* Standard syntax (must be last) */
+}
+html,body{
+  margin:0;
+  padding: 0;
+  height: 100%;
+}
+
+/*These styles contain basic styles for fomatting along with our animation css*/
+
+body {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  background: #efefef;
+  line-height: 170%;
+  overflow-x: hidden;
+}
+
+/*
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}*/
+/*clearfixes*/
+/*
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}*/
+
+/*.cf{
+  margin-top: 200px;
+  z-index: 11;
+}*/
+.main-container {
+  position: relative;
+  width: 100%;
+}
+
+.container {
+  position: relative;
+/*  padding: 25px;
+*/  /*padding-top: 25px;*/
+/*padding-bottom: 25px;*/
+  margin:auto;
+  z-index: 10;
+
+}
+
+.container:last-of-type {
+  padding-top: 0px;
+}
+/*animation element*/
+
+.animation-element {
+  position: relative;
+  width: 100%;
+  margin-top: 100px;
+/*  margin-bottom: 1400px;
+*/  float: left;
+
+}
+
+
+/*4 grid layout*/
+
+.animation-element:nth-of-type(4n-3) {
+  clear: left;
+}
+
+.animation-element:nth-of-type(4n-2) {}
+
+.animation-element:nth-of-type(4n-1) {}
+
+.animation-element:nth-of-type(4n-0) {
+  clear: right;
+}
+/*left fancy animastion*/
+
+@-moz-keyframes left_animation {
+  0% {
+    opacity: 0;
+    -moz-transform: rotate(180deg) translate3d(100%, 100%, 0);
+  }
+  75% {
+    opacity: 0.8;
+    -moz-transform: rotate(-40deg);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: rotate(0deg) translate3d(0%, 0%, 0);
+  }
+}
+
+@-webkit-keyframes left_animation {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(180deg) translate3d(100%, 100%, 0);
+  }
+  75% {
+    opacity: 0.8;
+    -webkit-transform: rotate(-40deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotate(0deg) translate3d(0%, 0%, 0);
+  }
+}
+
+@keyframes left_animation {
+  0% {
+    opacity: 0;
+    transform: rotate(180deg) translate3d(100%, 100%, 0);
+  }
+  75% {
+    opacity: 0.8;
+    transform: rotate(-40deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg) translate3d(0%, 0%, 0);
+  }
+}
+/*right fancy animation*/
+
+@-moz-keyframes right_animation {
+  0% {
+    opacity: 0;
+    -moz-transform: rotate(180deg) translate3d(-100%, -100%, 0);
+  }
+  75% {
+    opacity: 0.8;
+    -moz-transform: rotate(40deg);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: rotate(0deg) translate3d(0%, 0%, 0);
+  }
+}
+
+@-webkit-keyframes right_animation {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(180deg) translate3d(-100%, 100%, 0);
+  }
+  75% {
+    opacity: 0.8;
+    -webkit-transform: rotate(40deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotate(0deg) translate3d(0%, 0%, 0);
+  }
+}
+
+@keyframes right_animation {
+  0% {
+    opacity: 0;
+    transform: rotate(180deg) translate3d(-100%, -100%, 0);
+  }
+  75% {
+    opacity: 0.8;
+    transform: rotate(40deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg) translate3d(0%, 0%, 0);
+  }
+}
+/*Multi-step animation*/
+
+.multi-step-left .gallery,
+.multi-step-right .gallery {
+  position: relative;
+  opacity: 0;
+  /*prevents flicker as animation occurs*/
+}
+
+.multi-step-left.in-view .gallery {
+  -moz-animation: left_animation 1300ms ease-in both;
+  -webkit-animation: left_animation 1300ms ease-in both;
+  animation: left_animation 1300ms ease-in both;
+}
+
+.multi-step-right.in-view .gallery {
+  -moz-animation: right_animation 1300ms linear both;
+  -webkit-animation: right_animation 1300ms linear both;
+  animation: right_animation 1300ms linear both;
+}
+
+.gallery {
+  float: left;
+  width: 100%;
+  height: 100px;
+  background-color: black;
+  color:white;
+
+}
+
+
+
+
+
+div.line{
+	position: absolute;
+	/*margin-top: 75px;*/
+	height: 1500px;
+	width: 1%;
+  z-index: 6;
+  background-color: black;
+}
+.bar{
+	margin-left: .5%;
+}
+.bar2{
+    margin-left: 2.5%;
+}
+.bar3{
+    margin-left: 4.5%;
+}
+.bar4{
+    margin-left: 6.5%;
+}
+.bar5{
+    margin-left: 8.5%;
+}
+.bar6{
+    margin-left: 10.5%;
+}
+.bar7{
+    margin-left: 12.5%;
+}
+.bar8{
+    margin-left: 14.5%;
+}
+.bar9{
+    margin-left: 16.5%;
+}
+.bar10{
+    margin-left: 18.5%;
+}
+.bar11{
+    margin-left: 20.5%;
+}
+.bar12{
+    margin-left: 22.5%;
+}
+.bar13{
+    margin-left: 24.5%;
+}
+.bar14{
+    margin-left: 26.5%;
+}
+.bar15{
+    margin-left: 28.5%;
+}
+.bar16{
+    margin-left: 30.5%;
+}
+.bar17{
+    margin-left: 32.5%;
+}
+.bar18{
+    margin-left: 34.5%;
+}
+.bar19{
+    margin-left: 36.5%;
+}
+.bar20{
+    margin-left: 38.5%;
+}
+.bar21{
+    margin-left: 40.5%;
+}
+.bar22{
+    margin-left: 42.5%;
+}
+.bar23{
+    margin-left: 44.5%;
+}
+.bar24{
+    margin-left: 46.5%;
+}
+.bar25{
+    margin-left: 48.5%;
+}
+.bar26{
+    margin-left: 50.5%;
+}
+.bar27{
+    margin-left: 52.5%;
+}
+.bar28{
+    margin-left: 54.5%;
+}
+.bar29{
+    margin-left: 56.5%;
+}
+.bar30{
+    margin-left: 58.5%;
+}
+.bar31{
+    margin-left: 60.5%;
+}
+.bar32{
+    margin-left: 62.5%;
+}
+.bar33{
+    margin-left: 64.5%;
+}
+.bar34{
+    margin-left: 66.5%;
+}
+.bar35{
+    margin-left: 68.5%;
+}
+.bar36{
+    margin-left: 70.5%;
+}
+.bar37{
+    margin-left: 72.5%;
+}
+.bar38{
+    margin-left: 74.5%;
+}
+.bar39{
+    margin-left: 76.5%;
+}
+.bar40{
+    margin-left: 78.5%;
+}
+.bar41{
+    margin-left: 80.5%;
+}
+.bar42{
+    margin-left: 82.5%;
+}
+.bar43{
+    margin-left: 84.5%;
+}
+.bar44{
+    margin-left: 86.5%;
+}
+.bar45{
+    margin-left: 88.5%;
+}
+.bar46{
+    margin-left: 90.5%;
+}
+.bar47{
+    margin-left: 92.5%;
+}
+.bar48{
+    margin-left: 94.5%;
+}
+.bar49{
+    margin-left: 96.5%;
+}
+.bar50{
+    margin-left: 98.5%;
+}
+
+
+	body {font-family:sans-serif;}
+
+.item {
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  color: fuchsia;
+  font-size: 2em;
+  box-sizing: border-box;
+  margin-top: 36px;
+  margin-left: 45%;
+  margin-right: 45%;
+  position: absolute;
+  z-index: 2;
+}
+
+
+.movbarcont{
+  margin-top: 600px;
+}
+.movbar_l{
+
+    float:left;
+    position: relative;
+    display: inline-block;
+    padding: 0px;
+    z-index: 4;
+    margin-top: 30px;
+
+}
+
+.movbar_r{
+    float:right;
+    position: relative;
+    display: inline-block;
+    padding: 0px;
+    z-index: 4;
+    margin-top:30px;
+
+}
+
+
+div.r_gradient{
+  height: 1500px;
+  position: relative;
+  margin-top: -600px;
+  z-index: 1;
+}
+
+div.r_gradient2{
+  height: 1500px;
+  position: relative;
+  margin-top:-100px;
+  z-index: 12;
+  display: flex;
+
+}
+
+
+/*.skrollable {
+    position:fixed;
+    z-index:100;
+}
+
+.skrollr-mobile .skrollable {
+    position:absolute;
+}
+
+.skrollable .skrollable {
+    position:absolute;
+}
+
+.skrollable .skrollable .skrollable {
+    position:static;
+}*/
+#osc {
+        height:30px;
+        width:30px;
+        background:white;
+        z-index: 7;
+        position: absolute;
+        margin-top:850px;
+        border-radius: 1000px;
+
+        
+    }
+.osc1{
+  margin-left:10%;
+}    
+.osc2 {
+    margin-right:10%;
+    }
+.osc3 {
+  margin-left:20%;
+    } 
+
+.osc4 {
+  margin-right:20%;
+    }   
+.osc5 {
+  margin-left:30%;
+    }     
+.osc6 {
+  margin-right:30%;
+    } 
+.osc7 {
+  margin-left:40%;
+    }     
+.osc8 {
+  margin-right:40%;
+    }     
+.osc9 {
+  margin-left:50%;
+    }     
+.osc10 {
+  margin-right:50%;
+    }  
+.osc11 {
+  margin-left:60%;
+    }     
+.osc12 {
+  margin-right:60%;
+    }  
+.osc13 {
+  margin-left:70%;
+    }     
+.osc14 {
+  margin-right:70%;
+    }            
+
+
+#osc_grp2 {
+        height:30px;
+        width:30px;
+        background:white;
+        z-index: 7;
+        position: absolute;
+        margin-top:950px;
+        border-radius: 1000px;
+
+        
+    }
+
+#osc_grp3 {
+        height:30px;
+        width:30px;
+        background:white;
+        z-index: 7;
+        position: absolute;
+        margin-top:1050px;
+        border-radius: 1000px;
+
+        
+    }
+#osc_grp4 {
+        height:30px;
+        width:30px;
+        background:white;
+        z-index: 7;
+        position: absolute;
+        margin-top:1150px;
+        border-radius: 1000px;
+
+        
+    }    
+
+#osc_grp5 {
+        height:30px;
+        width:30px;
+        background:white;
+        z-index: 7;
+        position: absolute;
+        margin-top:1250px;
+        border-radius: 1000px;
+
+        
+    } 
+#osc_grp6 {
+        height:30px;
+        width:30px;
+        background:white;
+        z-index: 7;
+        position: absolute;
+        margin-top:1350px;
+        border-radius: 1000px;
+
+        
+    }       
+/*.animation-element {
+  position: relative;
+  width: 30%;
+  height:30%;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 20%;  
+  float: left;
+}
+
+*/
+.bounce-up .subject {
+  opacity: 0;
+  -moz-transition: all 700ms ease-out;
+  -webkit-transition: all 700ms ease-out;
+  -o-transition: all 700ms ease-out;
+  transition: all 700ms ease-out;
+  -moz-transform: translate3d(0px, 200px, 0px);
+  -webkit-transform: translate3d(0px, 200px, 0px);
+  -o-transform: translate(0px, 200px);
+  -ms-transform: translate(0px, 200px);
+  transform: translate3d(0px, 200, 0px);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.bounce-up.in-view .subject {
+  opacity: 1;
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+}
+
+.subject {
+  float: left;
+  width: 100%;
+  background: fuchsia;
+  padding: 15px;
+  border: solid 1px #EAEAEA;
+}         
+.topone{
+  margin-top: 500px;
+}
+
+.twirl{
+    float:right;
+    position: relative;
+    display: inline-block;
+    padding: 0px;
+    margin-top: -600px;
+    border-radius: 100px;
+}
+
+</style>
+</head>
+<body>
+
+
+<div id="grad1">
+
+<div class="main-container">
+ 	<!-- <div class="item" data-aos="flip-down">SCROLL</div> -->
+
+  <div class="container cf">
+    
+        <div class="animation-element multi-step-left cf">
+          <!-- <div class="gallery">
+          </div> -->
+        </div>
+        <div class="animation-element multi-step-right cf">
+          <!-- <div class="gallery">
+          </div> -->
+        </div>
+        <div class="animation-element multi-step-left cf">
+          <!-- <div class="gallery">
+          </div> -->
+        </div>
+        <div class="animation-element multi-step-right cf">
+          <!-- <div class="gallery">
+          </div> -->
+        
+  </div>
+  
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+	data-450="transform:rotate(90deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+	class="bar line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(270deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+	class="bar2 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(90deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+	class="bar3 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(270deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+	class="bar4 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(90deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+	class="bar5 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(270deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+	class="bar6 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(90deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar7 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(270deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar8 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(90deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar9 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(270deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar10 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(90deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar11 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(270deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar12 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(90deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar13 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(270deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar14 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(90deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar15 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(270deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar16 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(90deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar17 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(270deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar18 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(90deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar19 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(270deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar20 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(90deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar21 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(270deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar22 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(90deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar23 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(270deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar24 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(90deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar25 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(270deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar26 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(90deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar27 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(270deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar28 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(90deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar29 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(270deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar30 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(90deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar31 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(270deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar32 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(90deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar33 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(270deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar34 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(90deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar35 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(270deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar36 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(90deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar37 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(270deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar38 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(90deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar39 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(270deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar40 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(90deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar41 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(270deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar42 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(90deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar43 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(270deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar44 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(90deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar45 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(270deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar46 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(90deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar47 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(270deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar48 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(90deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar49 line"></div>
+
+	<div 
+	data-200="background-color:rgb(0,0,0);box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+  data-450="transform:rotate(270deg);box-shadow: 0 0 0px black;"
+  data-460="opacity:0;"
+  class="bar50 line"></div>
+ 
+
+  <div class="movbarcont">
+
+    <div class="movbar_l" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-500="background-color:black;width:0%;height:100px;opacity:0;" 
+    data-900="background-color:white;width:50%;height:0px;opacity:1;"></div>
+
+    <!-- <div id="osc" class="osc1" 
+    data-800="left[cos]:20%;top[sin]:60%;" 
+    data-1400="right:10%;top:10%;"></div> -->
+    <div id="osc" class="osc1" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;"
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc" class="osc2" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc" class="osc3" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc" class="osc4" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc" class="osc5" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc" class="osc6" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc" class="osc7" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc" class="osc8" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc" class="osc9" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc" class="osc10" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc" class="osc11" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc" class="osc12" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc" class="osc13" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc" class="osc14" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc_grp2" class="osc1" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;"
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc_grp2" class="osc2" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc_grp2" class="osc3" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc_grp2" class="osc4" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc_grp2" class="osc5"
+    data-790="opacity:0;"
+    data-799="opacity:1;" 
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc_grp2" class="osc6" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc_grp2" class="osc7" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc_grp2" class="osc8" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc_grp2" class="osc9" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc_grp2" class="osc10" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc_grp2" class="osc11" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc_grp2" class="osc12" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc_grp2" class="osc13" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc_grp2" class="osc14" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc_grp3" class="osc1"
+    data-790="opacity:0;"
+    data-799="opacity:1;" 
+    data-800="left[cos]:60%;top[sin]:20%;"
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc_grp3" class="osc2" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc_grp3" class="osc3" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc_grp3" class="osc4" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc_grp3" class="osc5" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc_grp3" class="osc6" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc_grp3" class="osc7" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc_grp3" class="osc8" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc_grp3" class="osc9" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc_grp3" class="osc10" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc_grp3" class="osc11" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc_grp3" class="osc12" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc_grp3" class="osc13" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc_grp3" class="osc14" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc_grp4" class="osc1" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;"
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc_grp4" class="osc2" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc_grp4" class="osc3" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc_grp4" class="osc4" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc_grp4" class="osc5" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc_grp4" class="osc6" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc_grp4" class="osc7" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc_grp4" class="osc8" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc_grp4" class="osc9" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc_grp4" class="osc10" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc_grp4" class="osc11" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc_grp4" class="osc12" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc_grp4" class="osc13" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc_grp4" class="osc14" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc_grp5" class="osc1" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;"
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc_grp5" class="osc2" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc_grp5" class="osc3" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc_grp5" class="osc4" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc_grp5" class="osc5" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc_grp5" class="osc6" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc_grp5" class="osc7" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc_grp5" class="osc8" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc_grp5" class="osc9" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc_grp5" class="osc10" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc_grp5" class="osc11" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc_grp5" class="osc12" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc_grp5" class="osc13" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc_grp5" class="osc14" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc_grp6" class="osc1" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;"
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc_grp6" class="osc2" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc_grp6" class="osc3" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc_grp6" class="osc4" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc_grp6" class="osc5" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc_grp6" class="osc6" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc_grp6" class="osc7" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc_grp6" class="osc8" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc_grp6" class="osc9" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc_grp6" class="osc10" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc_grp6" class="osc11" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc_grp6" class="osc12" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+
+    <div id="osc_grp6" class="osc13" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="left[cos]:60%;top[sin]:20%;" 
+    data-1400="left:3%;top:3%;"></div>
+
+    <div id="osc_grp6" class="osc14" 
+    data-790="opacity:0;"
+    data-799="opacity:1;"
+    data-800="right[cos]:60%;top[sin]:20%;" 
+    data-1400="right:3%;top:3%;"></div>
+    
+    <div class="container cf">
+      <div class="erythang">
+        <div class="animation-element bounce-up cf topone" data-1000="opacity:0;" data-1050="opacity:1;">
+          <div class="subject"></div>
+        </div>
+        <div class="animation-element bounce-up cf" data-1000="opacity:0;" data-1050="opacity:1">
+          <div class="subject"></div>
+        </div>
+        <div class="animation-element bounce-up" data-1000="opacity:0;" data-1050="opacity:1">
+          <div class="subject"></div>
+        </div>
+        <div class="animation-element bounce-up cf" data-1000="opacity:0;" data-1050="opacity:1">
+          <div class="subject"></div>
+        </div>
+        <div class="animation-element bounce-up cf" data-1000="opacity:0;" data-1050="opacity:1">
+          <div class="subject"></div>
+        </div>
+        <div class="animation-element bounce-up cf" data-1000="opacity:0;" data-1050="opacity:1">
+          <div class="subject"></div>
+        </div>
+        <div class="animation-element bounce-up" data-1000="opacity:0;" data-1050="opacity:1">
+          <div class="subject"></div>
+        </div>
+      </div>  
+    
+
+  </div>
+
+  </div>  
+
+
+
+<div 
+data-00="background:repeating-radial-gradient(fuchsia 10%, black 35%, aqua 70%);" 
+data-600="background:radial-gradient(fuchsia 100%, black 100%, aqua 100%);opacity:1" 
+data-650="opacity:0"
+class="r_gradient"></div>
+
+<div 
+data-2400="background:repeating-linear-gradient(fuchsia 10%, black 35%, aqua 70%);opacity:0;width:100%;height:0px;" 
+data-2600="opacity:1"
+data-2900="background:linear-gradient(fuchsia 100%, black 100%, aqua 100%);opacity:1;width: 100%;height:1500px;" 
+data-3100="opacity:0;"
+class="r_gradient2"></div>
+
+
+
+
+<div class="twirl"
+ data-2900="background-color:rgb(255,0,255); width:0%; height:0px; opacity:0; transform:rotate(0deg);right:50%"
+ data-3100="background-color:rgb(0,255,255);width:100%;height:100px;opacity:1; transform:rotate(360deg);right:0%;" > 
+</div>
+
+<div class="twirl"
+ data-2900="background-color:rgb(255,0,255); width:0%; height:0px; opacity:0; transform:rotate(0deg);right:50%"
+ data-3100="background-color:rgb(0,255,255);width:100%;height:100px;opacity:1; transform:rotate(315deg);right:0%;" > 
+</div>
+
+<div class="twirl"
+ data-2900="background-color:rgb(255,0,255); width:0%; height:0px; opacity:0; transform:rotate(0deg);right:50%"
+ data-3100="background-color:rgb(0,255,255);width:100%;height:100px;opacity:1; transform:rotate(270deg);right:0%;" > 
+</div>
+
+<div class="twirl"
+ data-2900="background-color:rgb(255,0,255); width:0%; height:0px; opacity:0; transform:rotate(0deg);right:50%"
+ data-3100="background-color:rgb(0,255,255);width:100%;height:100px;opacity:1; transform:rotate(225deg);right:0%;" > 
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+<script type="text/javascript" src="../dist/skrollr.min.js"></script>
+	<script type="text/javascript" src="skrollr.min.js"></script>
+
+<script>
+AOS.init({
+  duration: 1200,
+  delay: 1300,
+})
+
+
+var $animation_elements = $('.animation-element');
+var $window = $(window);
+
+function check_if_in_view() {
+  var window_height = $window.height();
+  var window_top_position = $window.scrollTop();
+  var window_bottom_position = (window_top_position + window_height);
+
+  $.each($animation_elements, function() {
+    var $element = $(this);
+    var element_height = $element.outerHeight();
+    var element_top_position = $element.offset().top;
+    var element_bottom_position = (element_top_position + element_height);
+
+    //check to see if this current container is within viewport
+    if ((element_bottom_position >= window_top_position) &&
+      (element_top_position <= window_bottom_position)) {
+      $element.addClass('in-view');
+    } else {
+      $element.removeClass('in-view');
+    }
+  });
+}
+
+$window.on('scroll resize', check_if_in_view);
+$window.trigger('scroll');
+
+
+
+skrollr.init({
+        easing: {
+            sin: function(p) {
+                return (Math.sin(p * Math.PI * 2 - Math.PI/2) + 1) / 2;
+            },
+            cos: function(p) {
+                return (Math.cos(p * Math.PI * 2 - Math.PI/2) + 1) / 2;
+            },
+        },
+        render: function(data) {
+            //Loop
+            if(data.curTop === data.maxTop) {
+                this.setScrollTop(0, true);
+            }
+        }
+    });
+
+
+var s = skrollr.init();
+
+// require(['skrollr'], function(skrollr){
+//     var s = skrollr.init();
+// });
+
+
+
+skrollr.init();
+
+
+$(document).ready(function(){
+
+    $(window).resize(function(e){
+        console.log(e);                   
+    });
+
+    $(window).scroll(function (event) {
+        var sc = $(window).scrollTop();
+        console.log(sc);
+    });
+
+})
+
+var s = skrollr.init();
+
+require(['skrollr'], function(skrollr){
+    var s = skrollr.init();
+});
+
+</script>
+
+
+</body>
+</html>
