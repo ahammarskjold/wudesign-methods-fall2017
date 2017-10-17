@@ -1,0 +1,60 @@
+{
+	"entrypoints" : [
+	{
+		"name" : "1: Linear Gradient-Horizontal Rotate",
+		"file" : "index7.html"
+
+	},
+	{
+		"name" : "2: Linear Gradient-Horizontal Vibrate",
+		"file" : "index9.html"
+
+	},
+	{
+		"name" : "3: Linear Gradient-Vertical Rotate",
+		"file" : "index8.html"
+
+	},
+	{
+		"name" : "4: Linear Gradient-Vertical Vibrate",
+		"file" : "index10.html"
+
+	},
+	{
+		"name" : "5: Horizontal Linear Gradient- Interacting Bars",
+		"file" : "index12.html"
+
+	},
+	{
+		"name" : "6: Vertical Linear Gradient- Interacting Bars",
+		"file" : "index13.html"
+
+	},
+	{
+		"name" : "7: Vertical Linear Gradient- Interacting Bars and Gradient",
+		"file" : "index18.html"
+
+	},
+	{
+		"name" : "8: Radial Gradient- Flower Rotate",
+		"file" : "index14.html"
+
+	},
+	{
+		"name" : "9: Radial Gradient-Oscillating Dots",
+		"file" : "index15.html"
+
+	},
+	{
+		"name" : "10: Horizontal Gradient-Oscillating Dots",
+		"file" : "index16.html"
+
+	},
+	{
+		"name" : "11: Vertical Gradient-Oscillating Dots",
+		"file" : "index17.html"
+
+	}
+
+	]
+}

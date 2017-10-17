@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Round 2: Linear Gradient-Horizontal Rotate</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
+<script src="randomColor.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.5.2/randomColor.js"></script>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
+<script src="randomColor.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.5.2/randomColor.js"></script>
+<script src="dist/skrollr.stylesheets.min.js"></script>
+<script type="text/javascript" src="skrollr.min.js"></script>
+<script type="text/javascript" src="../../dist/skrollr.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
+  <script src="bower_components/aos/dist/aos.js"></script>
+
+<style>
+html,body{
+  margin:0;
+  padding: 0;
+  height: 100%;
+}
+
+div.line{
+	position: fixed;
+	height: 7px;
+	width: 100%;
+  	z-index: 6;
+  	background-color: black;
+}
+
+.bar{
+	margin-top: .5%;
+}
+.bar2{
+    margin-top: 2.5%;
+}
+.bar3{
+    margin-top: 4.5%;
+}
+.bar4{
+    margin-top: 6.5%;
+}
+.bar5{
+    margin-top: 8.5%;
+}
+.bar6{
+    margin-top: 10.5%;
+}
+.bar7{
+    margin-top: 12.5%;
+}
+.bar8{
+    margin-top: 14.5%;
+}
+.bar9{
+    margin-top: 16.5%;
+}
+.bar10{
+    margin-top: 18.5%;
+}
+.bar11{
+    margin-top: 20.5%;
+}
+.bar12{
+    margin-top: 22.5%;
+}
+.bar13{
+    margin-top: 24.5%;
+}
+.bar14{
+    margin-top: 26.5%;
+}
+.bar15{
+    margin-top: 28.5%;
+}
+.bar16{
+    margin-top: 30.5%;
+}
+.bar17{
+    margin-top: 32.5%;
+}
+.bar18{
+    margin-top: 34.5%;
+}
+.bar19{
+    margin-top: 36.5%;
+}
+.bar20{
+    margin-top: 38.5%;
+}
+.bar21{
+    margin-top: 40.5%;
+}
+.bar22{
+    margin-top: 42.5%;
+}
+.bar23{
+    margin-top: 44.5%;
+}
+.bar24{
+    margin-top: 46.5%;
+}
+.bar25{
+    margin-top: 48.5%;
+}
+.bar26{
+    margin-top: 50.5%;
+}
+.bar27{
+    margin-top: 52.5%;
+}
+.bar28{
+    margin-top: 54.5%;
+}
+.bar29{
+    margin-top: 56.5%;
+}
+.bar30{
+    margin-top: 58.5%;
+}
+.bar31{
+    margin-top: 60.5%;
+}
+.bar32{
+    margin-top: 62.5%;
+}
+.bar33{
+    margin-top: 64.5%;
+}
+.bar34{
+    margin-top: 66.5%;
+}
+.bar35{
+    margin-top: 68.5%;
+}
+.bar36{
+    margin-top: 70.5%;
+}
+.bar37{
+    margin-top: 72.5%;
+}
+.bar38{
+    margin-top: 74.5%;
+}
+.bar39{
+    margin-top: 76.5%;
+}
+.bar40{
+    margin-top: 78.5%;
+}
+.bar41{
+    margin-top: 80.5%;
+}
+.bar42{
+    margin-top: 82.5%;
+}
+.bar43{
+    margin-top: 84.5%;
+}
+.bar44{
+    margin-top: 86.5%;
+}
+.bar45{
+    margin-top: 88.5%;
+}
+.bar46{
+    margin-top: 90.5%;
+}
+.bar47{
+    margin-top: 92.5%;
+}
+.bar48{
+    margin-top: 94.5%;
+}
+.bar49{
+    margin-top: 96.5%;
+}
+.bar50{
+    margin-top: 98.5%;
+}
+
+
+
+div.r_gradient{
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  margin-top: 0%;
+}
+
+
+
+</style>
+</head>
+<body>
+<div 
+data-00="background:repeating-linear-gradient(yellow 100%, cyan 100%, fuchsia 100%, yellow 100%);" 
+data-500="background:repeating-linear-gradient(yellow 0%, cyan 25%, fuchsia 50%,yellow 75%);opacity:1" 
+data-1000="background:repeating-linear-gradient(yellow 100%, cyan 100%, fuchsia 100%, yellow 100%);opacity:1"
+class="r_gradient"></div>
+	<div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(180deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(360deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar2 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(180deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar3 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(360deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar4 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(180deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar5 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(360deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar6 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(180deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar7 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(360deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar8 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(180deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar9 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(360deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar10 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(180deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar11 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(360deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar12 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(180deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar13 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(360deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar14 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(180deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar15 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(360deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar16 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(180deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar17 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(360deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar18 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(180deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar19 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(360deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar20 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(180deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar21 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(360deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar22 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(180deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar23 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(360deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar24 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(180deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar25 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(360deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar26 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(180deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar27 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(360deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar28 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(180deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar29 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(360deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar30 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(180deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar31 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(360deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar32 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(180deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar33 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(360deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar34 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(180deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar35 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(360deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar36 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(180deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar37 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(360deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar38 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(180deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar39 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(360deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar40 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(180deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar41 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(360deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar42 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(180deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar43 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(360deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar44 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(180deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar45 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(360deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar46 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(180deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar47 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(360deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar48 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(180deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar49 line"></div>
+
+    <div 
+    data-400="box-shadow: 0 0 0px black;transform:rotate(0deg);opacity:1;" 
+    data-600="transform:rotate(360deg);box-shadow: 0 0 0px black;"
+    data-990="opacity:1;"
+    data-1000="opacity:0;"
+    class="bar50 line"></div>
+
+
+
+
+
+
+<script type="text/javascript" src="../dist/skrollr.min.js"></script>
+	<script type="text/javascript" src="skrollr.min.js"></script>
+
+<script>
+
+var s = skrollr.init();
+
+require(['skrollr'], function(skrollr){
+    var s = skrollr.init();
+});
+
+
+$window.on('scroll resize', check_if_in_view);
+$window.trigger('scroll');
+
+
+
+
+
+</script>
+
+
+
+</body>	

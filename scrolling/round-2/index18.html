@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Round 2: Vertical Linear Gradient- Interacting Bars and Gradient</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
+<script src="randomColor.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.5.2/randomColor.js"></script>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
+<script src="randomColor.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.5.2/randomColor.js"></script>
+<script src="dist/skrollr.stylesheets.min.js"></script>
+<script type="text/javascript" src="skrollr.min.js"></script>
+<script type="text/javascript" src="../../dist/skrollr.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
+  <script src="bower_components/aos/dist/aos.js"></script>
+
+<style>
+#grad1 {
+    min-height: 3130px;
+    min-width: 100%;
+    display: flex;
+    align-items: stretch;
+    background: black;
+/*    position:fixed;
+*/    /*background: aqua;
+    background: -webkit-linear-gradient(aqua, fuchsia);
+    background: -o-linear-gradient(aqua, fuchsia); 
+    background: -moz-linear-gradient(aqua, fuchsia); 
+    background: linear-gradient(aqua, fuchsia);*/
+}
+html,body{
+  margin:0;
+  padding: 0;
+  height: 100%;
+}
+
+/*These styles contain basic styles for fomatting along with our animation css*/
+
+body {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  background: #efefef;
+  line-height: 170%;
+  overflow-x: hidden;
+}
+
+.main-container {
+  position: relative;
+  width: 100%;
+}
+
+.container {
+  position: relative;
+
+  z-index: 10;
+
+}
+
+.container:last-of-type {
+  padding-top: 0px;
+}
+
+
+.animation-element {
+  position: relative;
+  margin-bottom: -4%;
+  margin-left: -4%;
+  margin-right: -4%;
+  float: left;
+
+}
+
+
+
+
+.movbar_l{
+
+    float:left;
+    position: static;
+    display: inline-block;
+    padding: 0px;
+    z-index: 4;
+    margin-top: 30px;
+
+}
+
+.movbar_r{
+    float:right;
+    position: static;
+    display: inline-block;
+    padding: 0px;
+    z-index: 4;
+    margin-top:30px;
+
+}
+
+
+div.r_gradient{
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  width: 50%;
+  margin-left: 0px;
+}
+div.r_gradient2{
+  height: 100%;
+  position: fixed;
+  width: 50%;
+  margin-left: 50%;
+}
+
+
+
+.movbarcont{
+  height:100%;
+}
+
+</style>
+</head>
+<body>
+
+
+<div id="grad1">
+
+<div class="main-container">
+ 	<!-- <div class="item" data-aos="flip-down">SCROLL</div> -->
+
+  <div class="container">
+    
+        <div class="animation-element multi-step-left">
+          <!-- <div class="gallery">
+          </div> -->
+        </div>
+        <div class="animation-element multi-step-right">
+          <!-- <div class="gallery">
+          </div> -->
+        </div>
+        <div class="animation-element multi-step-left">
+          <!-- <div class="gallery">
+          </div> -->
+        </div>
+        <div class="animation-element multi-step-right">
+          <!-- <div class="gallery">
+          </div> -->
+        
+  </div>
+  
+
+
+
+  <div class="movbarcont">
+
+    <div class="movbar_l" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_l" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+    <div class="movbar_r" 
+    data-0="background-color:black;width:0%;height:100px;opacity:1;" 
+    data-1200="background-color:black;width:50%;height:100px;opacity:1;"></div>
+
+
+
+  </div>
+
+  </div>  
+
+
+
+<div
+data-00="background:repeating-linear-gradient(right, yellow 100%, cyan 100%, fuchsia 100%, yellow 100%);" 
+data-3130="background:repeating-linear-gradient(right, yellow 0%, cyan 25%, fuchsia 50%,yellow 75%);opacity:1" 
+
+class="r_gradient"></div>
+
+<div
+data-00="background:repeating-linear-gradient(left, yellow 100%, cyan 100%, fuchsia 100%, yellow 100%);" 
+data-3130="background:repeating-linear-gradient(left, yellow 0%, cyan 25%, fuchsia 50%,yellow 75%);opacity:1" 
+
+class="r_gradient2"></div>
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+<script type="text/javascript" src="../dist/skrollr.min.js"></script>
+	<script type="text/javascript" src="skrollr.min.js"></script>
+
+<script>
+AOS.init({
+  duration: 1200,
+  delay: 1300,
+})
+
+
+var $animation_elements = $('.animation-element');
+var $window = $(window);
+
+function check_if_in_view() {
+  var window_height = $window.height();
+  var window_top_position = $window.scrollTop();
+  var window_bottom_position = (window_top_position + window_height);
+
+  $.each($animation_elements, function() {
+    var $element = $(this);
+    var element_height = $element.outerHeight();
+    var element_top_position = $element.offset().top;
+    var element_bottom_position = (element_top_position + element_height);
+
+    //check to see if this current container is within viewport
+    if ((element_bottom_position >= window_top_position) &&
+      (element_top_position <= window_bottom_position)) {
+      $element.addClass('in-view');
+    } else {
+      $element.removeClass('in-view');
+    }
+  });
+}
+
+$window.on('scroll resize', check_if_in_view);
+$window.trigger('scroll');
+
+
+
+skrollr.init({
+        easing: {
+            sin: function(p) {
+                return (Math.sin(p * Math.PI * 2 - Math.PI/2) + 1) / 2;
+            },
+            cos: function(p) {
+                return (Math.cos(p * Math.PI * 2 - Math.PI/2) + 1) / 2;
+            },
+        },
+        render: function(data) {
+            //Loop
+            if(data.curTop === data.maxTop) {
+                this.setScrollTop(0, true);
+            }
+        }
+    });
+
+
+var s = skrollr.init();
+
+// require(['skrollr'], function(skrollr){
+//     var s = skrollr.init();
+// });
+
+
+
+skrollr.init();
+
+
+$(document).ready(function(){
+
+    $(window).resize(function(e){
+        console.log(e);                   
+    });
+
+    $(window).scroll(function (event) {
+        var sc = $(window).scrollTop();
+        console.log(sc);
+    });
+
+})
+
+var s = skrollr.init();
+
+require(['skrollr'], function(skrollr){
+    var s = skrollr.init();
+});
+
+</script>
+
+
+</body>
+</html>

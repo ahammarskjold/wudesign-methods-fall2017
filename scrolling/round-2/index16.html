@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Round 2: Horizontal Gradient-Oscillating Dots</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
+<script src="randomColor.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.5.2/randomColor.js"></script>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
+<script src="randomColor.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.5.2/randomColor.js"></script>
+<script src="dist/skrollr.stylesheets.min.js"></script>
+<script type="text/javascript" src="skrollr.min.js"></script>
+<script type="text/javascript" src="../../dist/skrollr.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
+  <script src="bower_components/aos/dist/aos.js"></script>
+
+<style>
+
+html,body{
+  margin:0;
+  padding: 0;
+  height: 1500px;
+}
+
+/*These styles contain basic styles for fomatting along with our animation css*/
+
+
+
+
+.main-container {
+  position: relative;
+  width: 100%;
+}
+
+.container {
+  position: relative;
+ /* padding: 25px;*/
+/*  margin:auto;*/
+  z-index: 10;
+
+}
+
+.container:last-of-type {
+  padding-top: 0px;
+}
+/*animation element*/
+
+.animation-element {
+  position: relative;
+  margin-bottom: -4%;
+  margin-left: -4%;
+  margin-right: -4%;
+  float: left;
+
+}
+
+
+
+
+
+
+
+
+div.r_gradient{
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+
+
+.osc1{
+  margin-left:10%;
+}    
+.osc2 {
+    margin-right:10%;
+    }
+.osc3 {
+  margin-left:20%;
+    } 
+
+.osc4 {
+  margin-right:20%;
+    }   
+.osc5 {
+  margin-left:30%;
+    }     
+.osc6 {
+  margin-right:30%;
+    } 
+.osc7 {
+  margin-left:40%;
+    }     
+.osc8 {
+  margin-right:40%;
+    }     
+.osc9 {
+  margin-left:50%;
+    }     
+.osc10 {
+  margin-right:50%;
+    }  
+.osc11 {
+  margin-left:60%;
+    }     
+.osc12 {
+  margin-right:60%;
+    }  
+.osc13 {
+  margin-left:70%;
+    }     
+.osc14 {
+  margin-right:70%;
+    }            
+
+#osc {
+        height:30px;
+        width:30px;
+        background:black;
+        z-index: 7;
+        position: absolute;
+        margin-top:800px;
+        border-radius: 1000px;
+
+        
+    }
+#osc_grp2 {
+        height:30px;
+        width:30px;
+        background:black;
+        z-index: 7;
+        position: absolute;
+        margin-top:900px;
+        border-radius: 1000px;
+
+        
+    }
+
+#osc_grp3 {
+        height:30px;
+        width:30px;
+        background:black;
+        z-index: 7;
+        position: absolute;
+        margin-top:1000px;
+        border-radius: 1000px;
+
+        
+    }
+#osc_grp4 {
+        height:30px;
+        width:30px;
+        background:black;
+        z-index: 7;
+        position: absolute;
+        margin-top:1100px;
+        border-radius: 1000px;
+
+        
+    }    
+
+#osc_grp5 {
+        height:30px;
+        width:30px;
+        background:black;
+        z-index: 7;
+        position: absolute;
+        margin-top:1200px;
+        border-radius: 1000px;
+
+        
+    } 
+#osc_grp6 {
+        height:30px;
+        width:30px;
+        background:black;
+        z-index: 7;
+        position: absolute;
+        margin-top:1300px;
+        border-radius: 1000px;
+
+        
+    }       
+
+
+</style>
+</head>
+<body>
+
+
+<div id="grad1">
+
+<div class="main-container">
+ 	<!-- <div class="item" data-aos="flip-down">SCROLL</div> -->
+
+  <div class="container">
+    
+        <div class="animation-element multi-step-left">
+          <!-- <div class="gallery">
+          </div> -->
+        </div>
+        <div class="animation-element multi-step-right">
+          <!-- <div class="gallery">
+          </div> -->
+        </div>
+        <div class="animation-element multi-step-left">
+          <!-- <div class="gallery">
+          </div> -->
+        </div>
+        <div class="animation-element multi-step-right">
+          <!-- <div class="gallery">
+          </div> -->
+        
+  </div>
+  
+ 
+
+
+
+  <div class="movbarcont">
+
+
+    
+    <div id="osc" class="osc1" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;"
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc" class="osc2" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc" class="osc3" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc" class="osc4" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc" class="osc5" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc" class="osc6" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc" class="osc7" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc" class="osc8" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc" class="osc9" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc" class="osc10" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc" class="osc11" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc" class="osc12" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc" class="osc13" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc" class="osc14" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp2" class="osc1" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]820%;"
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp2" class="osc2" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp2" class="osc3" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp2" class="osc4" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp2" class="osc5"
+    data-0="opacity:0;left:30%;" 
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp2" class="osc6" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp2" class="osc7" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp2" class="osc8" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp2" class="osc9" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp2" class="osc10" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp2" class="osc11" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp2" class="osc12" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp2" class="osc13" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp2" class="osc14" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp3" class="osc1"
+    data-0="opacity:0;left:30%;" 
+    data-100="opacity:1;left[cos]:90%;top[sin]820%;"
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp3" class="osc2" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp3" class="osc3" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp3" class="osc4" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp3" class="osc5" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp3" class="osc6" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp3" class="osc7" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp3" class="osc8" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp3" class="osc9" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp3" class="osc10" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp3" class="osc11" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp3" class="osc12" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp3" class="osc13" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp3" class="osc14" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp4" class="osc1" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;"
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp4" class="osc2" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp4" class="osc3" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp4" class="osc4" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp4" class="osc5" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp4" class="osc6" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp4" class="osc7" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp4" class="osc8" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp4" class="osc9" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp4" class="osc10" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp4" class="osc11" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp4" class="osc12" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp4" class="osc13" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp4" class="osc14" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp5" class="osc1" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]820%;"
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp5" class="osc2" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp5" class="osc3" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp5" class="osc4" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp5" class="osc5" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp5" class="osc6" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp5" class="osc7" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp5" class="osc8" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp5" class="osc9" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp5" class="osc10" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp5" class="osc11" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp5" class="osc12" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp5" class="osc13" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp5" class="osc14" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp6" class="osc1" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]820%;"
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp6" class="osc2" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp6" class="osc3" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp6" class="osc4" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp6" class="osc5" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp6" class="osc6" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp6" class="osc7" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp6" class="osc8" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp6" class="osc9" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp6" class="osc10" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp6" class="osc11" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp6" class="osc12" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp6" class="osc13" 
+    data-0="opacity:0;left:30%;"
+    data-100="opacity:1;left[cos]:90%;top[sin]:80%;" 
+    data-1000="left:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+
+    <div id="osc_grp6" class="osc14" 
+    data-0="opacity:0;right:30%;"
+    data-100="opacity:1;right[cos]:90%;top[sin]:80%;" 
+    data-1000="right:3%;top:3%;"
+    data-1001="opacity:0;"></div>
+    
+    
+
+  
+
+
+  </div>
+
+  </div>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+<div
+data-00="background:repeating-linear-gradient(yellow 100%, cyan 100%, fuchsia 100%, yellow 100%);" 
+data-500="background:repeating-linear-gradient(yellow 0%, cyan 25%, fuchsia 50%,yellow 75%);opacity:1" 
+data-1000="background:repeating-linear-gradient(yellow 100%, cyan 100%, fuchsia 100%, yellow 100%);opacity:1"
+class="r_gradient"></div>
+
+
+<script type="text/javascript" src="../dist/skrollr.min.js"></script>
+	<script type="text/javascript" src="skrollr.min.js"></script>
+
+<script>
+AOS.init({
+  duration: 1200,
+  delay: 1300,
+})
+
+
+var $animation_elements = $('.animation-element');
+var $window = $(window);
+
+function check_if_in_view() {
+  var window_height = $window.height();
+  var window_top_position = $window.scrollTop();
+  var window_bottom_position = (window_top_position + window_height);
+
+  $.each($animation_elements, function() {
+    var $element = $(this);
+    var element_height = $element.outerHeight();
+    var element_top_position = $element.offset().top;
+    var element_bottom_position = (element_top_position + element_height);
+
+    //check to see if this current container is within viewport
+    if ((element_bottom_position >= window_top_position) &&
+      (element_top_position <= window_bottom_position)) {
+      $element.addClass('in-view');
+    } else {
+      $element.removeClass('in-view');
+    }
+  });
+}
+
+$window.on('scroll resize', check_if_in_view);
+$window.trigger('scroll');
+
+
+
+skrollr.init({
+        easing: {
+            sin: function(p) {
+                return (Math.sin(p * Math.PI * 2 - Math.PI/2) + 1) / 2;
+            },
+            cos: function(p) {
+                return (Math.cos(p * Math.PI * 2 - Math.PI/2) + 1) / 2;
+            },
+        },
+        render: function(data) {
+            //Loop
+            if(data.curTop === data.maxTop) {
+                this.setScrollTop(0, true);
+            }
+        }
+    });
+
+
+var s = skrollr.init();
+
+// require(['skrollr'], function(skrollr){
+//     var s = skrollr.init();
+// });
+
+
+
+skrollr.init();
+
+
+$(document).ready(function(){
+
+    $(window).resize(function(e){
+        console.log(e);                   
+    });
+
+    $(window).scroll(function (event) {
+        var sc = $(window).scrollTop();
+        console.log(sc);
+    });
+
+})
+
+var s = skrollr.init();
+
+require(['skrollr'], function(skrollr){
+    var s = skrollr.init();
+});
+
+</script>
+
+
+</body>
+</html>

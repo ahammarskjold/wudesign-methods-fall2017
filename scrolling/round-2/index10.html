@@ -1,0 +1,444 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
+<script src="randomColor.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.5.2/randomColor.js"></script>
+<script src="dist/skrollr.stylesheets.min.js"></script>
+<script type="text/javascript" src="skrollr.min.js"></script>
+<script type="text/javascript" src="../../dist/skrollr.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+	<title>Round 2: Linear Gradient-Vertical Vibrate</title>
+
+	<style type="text/css">
+html,body{
+	margin:0;
+	padding: 0;
+	height: 100%;
+}
+
+body {
+	font-family:sans-serif;
+	height:2000px;
+}
+
+
+
+div.r_gradient{
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  margin-top: 0%;
+}
+
+div.line{
+	position: fixed;
+	height: 100%;
+	width: 7px;
+  	z-index: 6;
+  	background-color: black;
+}
+
+.bar{
+	margin-left: .5%;
+}
+.bar2{
+    margin-left: 2.5%;
+}
+.bar3{
+    margin-left: 4.5%;
+}
+.bar4{
+    margin-left: 6.5%;
+}
+.bar5{
+    margin-left: 8.5%;
+}
+.bar6{
+    margin-left: 10.5%;
+}
+.bar7{
+    margin-left: 12.5%;
+}
+.bar8{
+    margin-left: 14.5%;
+}
+.bar9{
+    margin-left: 16.5%;
+}
+.bar10{
+    margin-left: 18.5%;
+}
+.bar11{
+    margin-left: 20.5%;
+}
+.bar12{
+    margin-left: 22.5%;
+}
+.bar13{
+    margin-left: 24.5%;
+}
+.bar14{
+    margin-left: 26.5%;
+}
+.bar15{
+    margin-left: 28.5%;
+}
+.bar16{
+    margin-left: 30.5%;
+}
+.bar17{
+    margin-left: 32.5%;
+}
+.bar18{
+    margin-left: 34.5%;
+}
+.bar19{
+    margin-left: 36.5%;
+}
+.bar20{
+    margin-left: 38.5%;
+}
+.bar21{
+    margin-left: 40.5%;
+}
+.bar22{
+    margin-left: 42.5%;
+}
+.bar23{
+    margin-left: 44.5%;
+}
+.bar24{
+    margin-left: 46.5%;
+}
+.bar25{
+    margin-left: 48.5%;
+}
+.bar26{
+    margin-left: 50.5%;
+}
+.bar27{
+    margin-left: 52.5%;
+}
+.bar28{
+    margin-left: 54.5%;
+}
+.bar29{
+    margin-left: 56.5%;
+}
+.bar30{
+    margin-left: 58.5%;
+}
+.bar31{
+    margin-left: 60.5%;
+}
+.bar32{
+    margin-left: 62.5%;
+}
+.bar33{
+    margin-left: 64.5%;
+}
+.bar34{
+    margin-left: 66.5%;
+}
+.bar35{
+    margin-left: 68.5%;
+}
+.bar36{
+    margin-left: 70.5%;
+}
+.bar37{
+    margin-left: 72.5%;
+}
+.bar38{
+    margin-left: 74.5%;
+}
+.bar39{
+    margin-left: 76.5%;
+}
+.bar40{
+    margin-left: 78.5%;
+}
+.bar41{
+    margin-left: 80.5%;
+}
+.bar42{
+    margin-left: 82.5%;
+}
+.bar43{
+    margin-left: 84.5%;
+}
+.bar44{
+    margin-left: 86.5%;
+}
+.bar45{
+    margin-left: 88.5%;
+}
+.bar46{
+    margin-left: 90.5%;
+}
+.bar47{
+    margin-left: 92.5%;
+}
+.bar48{
+    margin-left: 94.5%;
+}
+.bar49{
+    margin-left: 96.5%;
+}
+.bar50{
+    margin-left: 98.5%;
+}
+
+	
+	</style>
+</head>
+
+<body>
+<div
+data-00="background:repeating-linear-gradient(right, yellow 100%, cyan 100%, fuchsia 100%, yellow 100%);" 
+data-500="background:repeating-linear-gradient(right, yellow 0%, cyan 25%, fuchsia 50%,yellow 75%);opacity:1" 
+data-1000="background:repeating-linear-gradient(right, yellow 100%, cyan 100%, fuchsia 100%, yellow 100%);opacity:1"
+class="r_gradient"></div>
+
+	
+	<div class="line bar"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar2"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar3"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar4"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar5"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar6"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar7"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar8"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar9"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar10"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar11"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar12"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar13"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar14"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar15"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar16"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar17"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar18"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar19"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar20"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar21"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar22"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar23"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar24"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar25"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar26"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar27"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar28"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar29"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar30"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar31"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar32"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar33"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar34"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar35"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar36"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar37"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar38"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar39"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar40"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar41"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar42"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar43"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar44"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar45"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar46"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar47"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar48"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar49"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	<div class="line bar50"
+	data-300="left[vibrate]:0px;background-position:!0 0;"
+	data-700="left[vibrate]:20px;background-position:!0 bottom;"></div>
+
+	
+
+	<script type="text/javascript" src="../dist/skrollr.min.js"></script>
+
+	<script type="text/javascript">
+	skrollr.init({
+		forceHeight: false,
+		easing: {
+			vibrate: function(p) {
+				return Math.sin(p * 10 * Math.PI);
+			}
+		}
+	});
+
+	$(document).ready(function(){
+
+    $(window).resize(function(e){
+        console.log(e);                   
+    });
+
+    $(window).scroll(function (event) {
+        var sc = $(window).scrollTop();
+        console.log(sc);
+    });
+
+})
+	</script>
+</body>
+
+</html>
