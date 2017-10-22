@@ -1,0 +1,65 @@
+{
+	"entrypoints" : [
+	{
+		"name" : "1: Radial Gradient-Moving Black Circles",
+		"file" : "index1.html"
+
+	},
+	{
+		"name" : "2: Radial Gradient-Static Black Circles",
+		"file" : "index2.html"
+
+	},
+	{
+		"name" : "3: Radial Gradient-Rotating Black Circles",
+		"file" : "index3.html"
+
+	},
+	{
+		"name" : "4: 3D Looking Radial Gradient",
+		"file" : "index4.html"
+
+	},
+	{
+		"name" : "5: Linear Gradient-Moving Black Bars",
+		"file" : "index5.html"
+
+	},
+	{
+		"name" : "6: Linear Gradient-Rotating Black Bars",
+		"file" : "index6.html"
+
+	},
+	{
+		"name" : "7: Linear Gradient-Horizontal Rotate",
+		"file" : "index7.html"
+
+	},
+	{
+		"name" : "8: Linear Gradient-Horizontal Rotate X 1",
+		"file" : "index9.html"
+
+	},
+	{
+		"name" : "9: Linear Gradient-Horizontal Rotate X 2",
+		"file" : "index10.html"
+
+	},
+	{
+		"name" : "10: Linear Gradient-Horizontal Rotate Y",
+		"file" : "index11.html"
+
+	},
+	{
+		"name" : "11: Linear Gradient-Horizontal Skew Y",
+		"file" : "index12.html"
+
+	},
+	{
+		"name" : "12: Linear Gradient-Horizontal Skew X",
+		"file" : "index13.html"
+
+	}
+
+	]
+}

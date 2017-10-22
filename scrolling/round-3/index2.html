@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+
+		<title>Round 3:2 Radial Gradient-Static Black Circles</title>
+
+<style>
+
+html,body{
+  margin:0;
+  padding: 0;
+  height: 100%;
+}
+
+.circlegroup {
+	position: absolute;
+	display: cover;
+	z-index: 200;
+	top: 50%;
+	left:50%;
+}
+
+
+div.green1 {
+	width: 1%;
+	height: 1%;
+	display: inline-block;
+	padding: 0px;
+	border: 7px solid black;
+	border-radius: 100%;
+	z-index: -50;
+}
+div.green2 {
+	width: 10%;
+	height: 10%;
+	display: inline-block;
+	padding: 0px;
+	border: 7px solid black;
+	border-radius: 100%;
+	z-index: -50;
+}
+div.green3 {
+	width: 20%;
+	height: 20%;
+	display: inline-block;
+	padding: 0px;
+	border: 7px solid black;
+	border-radius: 100%;
+	z-index: -50;
+}
+div.green4 {
+	width: 30%;
+	height: 30%;
+	display: inline-block;
+	padding: 0px;
+	border: 7px solid black;
+	border-radius: 100%;
+	z-index: -50;
+}
+div.green5 {
+	width: 40%;
+	height: 40%;
+	display: inline-block;
+	padding: 0px;
+	border: 7px solid black;
+	border-radius: 100%;
+	z-index: -50;
+}
+div.green6 {
+	width: 50%;
+	height: 50%;
+	display: inline-block;
+	padding: 0px;
+	border: 7px solid black;
+	border-radius: 100%;
+	z-index: -50;
+}
+div.green7 {
+	width: 60%;
+	height:60%;
+	display: inline-block;
+	padding: 0px;
+	border: 7px solid black;
+	border-radius: 100%;
+	z-index: -50;
+}
+
+div.green8 {
+	width: 70%;
+	height:70%;
+	display: inline-block;
+	padding: 0px;
+	border: 7px solid black;
+	border-radius: 100%;
+	z-index: -50;
+}
+div.green9 {
+	width: 80%;
+	height:80%;
+	display: inline-block;
+	padding: 0px;
+	border: 7px solid black;
+	border-radius: 100%;
+	z-index: -50;
+}
+div.green10 {
+	width: 90%;
+	height:90%;
+	display: inline-block;
+	padding: 0px;
+	border: 7px solid black;
+	border-radius: 100%;
+	z-index: -50;
+}
+div.green11 {
+	width: 100%;
+	height:100%;
+	display: inline-block;
+	padding: 0px;
+	border: 7px solid black;
+	border-radius: 100%;
+	z-index: -50;
+}
+div.green12 {
+	width: 110%;
+	height:110%;
+	display: inline-block;
+	padding: 0px;
+	border: 7px solid black;
+	border-radius: 100%;
+	z-index: -50;
+}
+div.green13 {
+	width: 120%;
+	height:120%;
+	display: inline-block;
+	padding: 0px;
+	border: 7px solid black;
+	border-radius: 100%;
+	z-index: -50;
+}
+div.green14 {
+	width: 130%;
+	height:130%;
+	display: inline-block;
+	padding: 0px;
+	border: 7px solid black;
+	border-radius: 100%;
+	z-index: -50;
+}
+
+	.r_grad {
+		  height: 100%;
+  		position: fixed;
+ 		 z-index: -1;
+  		width: 100%;
+  		margin-top: 0%;
+
+	}
+
+.skrollable {
+	position:fixed;
+	z-index:100;
+}
+.skrollr-mobile .skrollable {
+	position:absolute;
+}
+.skrollable .skrollable {
+	position:absolute;
+}
+.skrollable .skrollable .skrollable {
+	position:static;
+}
+</style>
+
+</head>
+
+<body> 
+<div class="circlegroup" style="display:flex;justify-content:center;align-items:center;">
+		
+	<div class="green1" 
+		data-0="transform[swing]:scale(1)rotate(0deg);"
+		data-1500="transform[swing]:scale(1)rotate(0deg);"
+		data-2000="transform[swing]:scale(1)rotate(360deg);"></div>
+
+	<div class="green2" 
+		data-0="transform[swing]:scale(1)rotate(0deg);"
+		data-1500="transform[swing]:scale(1)rotate(0deg);"
+		data-2000="transform[swing]:scale(1)otate(360deg);"></div>
+
+	<div class="green3" 
+		data-0="transform[swing]:scale(1)rotate(0deg);"
+		data-1500="transform[swing]:scale(1)rotate(0deg);"
+		data-2000="transform[swing]:scale(1)rotate(360deg);"></div>	
+
+	<div class="green4" 
+		data-0="transform[swing]:scale(1)rotate(0deg);"
+		data-1500="transform[swing]:scale(1)rotate(0deg);"
+		data-2000="transform[swing]:scale(1)rotate(360deg);"></div>
+
+	<div class="green5" 
+		data-0="transform[swing]:scale(1)rotate(0deg);"
+		data-1500="transform[swing]:scale(1)rotate(0deg);"
+		data-2000="transform[swing]:scale(1)otate(360deg);"></div>
+
+	<div class="green6" 
+		data-0="transform[swing]:scale(1)rotate(0deg);"
+		data-1500="transform[swing]:scale(1)rotate(0deg);"
+		data-2000="transform[swing]:scale(1)rotate(360deg);"></div>	
+
+	<div class="green7" 
+		data-0="transform[swing]:scale(1)rotate(0deg);"
+		data-1500="transform[swing]:scale(1)rotate(0deg);"
+		data-2000="transform[swing]:scale(1)rotate(360deg);"></div>
+
+	<div class="green8" 
+		data-0="transform[swing]:scale(1)rotate(0deg);"
+		data-1500="transform[swing]:scale(1)rotate(0deg);"
+		data-2000="transform[swing]:scale(1)rotate(360deg);"></div>
+
+	<div class="green9" 
+		data-0="transform[swing]:scale(1)rotate(0deg);"
+		data-1500="transform[swing]:scale(1)rotate(0deg);"
+		data-2000="transform[swing]:scale(1)rotate(360deg);"></div>
+
+	<div class="green10" 
+		data-0="transform[swing]:scale(1)rotate(0deg);"
+		data-1500="transform[swing]:scale(1)rotate(0deg);"
+		data-2000="transform[swing]:scale(1)rotate(360deg);"></div>
+
+	<div class="green11" 
+		data-0="transform[swing]:scale(1)rotate(0deg);"
+		data-1500="transform[swing]:scale(1)rotate(0deg);"
+		data-2000="transform[swing]:scale(1)otate(360deg);"></div>
+
+	<div class="green12" 
+		data-0="transform[swing]:scale(1)rotate(0deg);"
+		data-1500="transform[swing]:scale(1)rotate(0deg);"
+		data-2000="transform[swing]:scale(1)rotate(360deg);"></div>	
+
+	<div class="green13" 
+		data-0="transform[swing]:scale(1)rotate(0deg);"
+		data-1500="transform[swing]:scale(1)rotate(0deg);"
+		data-2000="transform[swing]:scale(1)rotate(360deg);"></div>
+
+	<div class="green14" 
+		data-0="transform[swing]:scale(1)rotate(0deg);"
+		data-1500="transform[swing]:scale(1)rotate(0deg);"
+		data-2000="transform[swing]:scale(1)rotate(360deg);"></div>
+
+	<div class="green15" 
+		data-0="transform[swing]:scale(1)rotate(0deg);"
+		data-1500="transform[swing]:scale(1)rotate(0deg);"
+		data-2000="transform[swing]:scale(1)rotate(360deg);"></div>	
+
+	<div class="green16" 
+		data-0="transform[swing]:scale(1)rotate(0deg);"
+		data-1500="transform[swing]:scale(1)rotate(0deg);"
+		data-2000="transform[swing]:scale(1)rotate(360deg);"></div>
+
+	<div class="green17" 
+		data-0="transform[swing]:scale(1)rotate(0deg);"
+		data-1500="transform[swing]:scale(1)rotate(0deg);"
+		data-2000="transform[swing]:scale(1)rotate(360deg);"></div>
+
+	<div class="green18" 
+		data-0="transform[swing]:scale(1)rotate(0deg);"
+		data-1500="transform[swing]:scale(1)rotate(0deg);"
+		data-2000="transform[swing]:scale(1)rotate(360deg);"></div>								
+
+	
+</div>
+
+
+
+<div class="r_grad"
+data-00="background:repeating-radial-gradient(yellow 0%, cyan 25%, fuchsia 50%,yellow 75%);opacity:1" 
+data-2000="background:repeating-radial-gradient(yellow 100%, cyan 100%, fuchsia 100%, yellow 100%);opacity:1" 
+data-4000="background:repeating-radial-gradient(yellow 0%, cyan 25%, fuchsia 50%,yellow 75%);opacity:1"
+class="r_gradient"></div>
+
+<script type="text/javascript" src="skrollr.min.js"></script>
+
+	<script type="text/javascript">
+
+$(document).ready(function(){
+
+    $(window).resize(function(e){
+        console.log(e);                   
+    });
+
+    $(window).scroll(function (event) {
+        var sc = $(window).scrollTop();
+        console.log(sc);
+    });
+
+})
+
+
+	var s = skrollr.init({
+		edgeStrategy: 'set',
+		easing: {
+			WTF: Math.random,
+			inverted: function(p) {
+				return 1-p;
+			}
+		}
+	});
+
+$(document).ready(function(){
+
+    $(window).resize(function(e){
+        console.log(e);                   
+    });
+
+    $(window).scroll(function (event) {
+        var sc = $(window).scrollTop();
+        console.log(sc);
+    });
+
+})	
+	</script>
+
+	<script type="text/javascript">
+	var s = skrollr.init();
+	</script>
+</body>
+</html> 
