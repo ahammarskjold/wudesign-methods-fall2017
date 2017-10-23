@@ -2,7 +2,7 @@
 	"entrypoints" : [
 	{
 		"name" : "1: Radial Gradient-Moving Black Circles",
-		"file" : "index1.html"
+		"file" : "index.html"
 
 	},
 	{
@@ -58,6 +58,11 @@
 	{
 		"name" : "12: Linear Gradient-Horizontal Skew X",
 		"file" : "index13.html"
+
+	},
+	{
+		"name" : "14: 3D Looking Radial Gradient-Never Ending",
+		"file" : "index14.html"
 
 	}
 
