@@ -1,0 +1,56 @@
+{
+	"entrypoints" : [
+	{
+		"name" : "1: 3D Looking Radial Gradient-Hue Rotate",
+		"file" : "index.html"
+
+	},
+	{
+		"name" : "2: 3D Looking Radial Gradient-Cross Fade Between Gradients",
+		"file" : "index2.html"
+
+	},
+	{
+		"name" : "3: 3D Looking Radial Gradient-Scale Down Rings",
+		"file" : "index3.html"
+
+	},
+	{
+		"name" : "4: 3D Looking Radial Gradient-Scale Up Rings",
+		"file" : "index4.html"
+
+	},
+	{
+		"name" : "5: 3D Looking Radial Gradient-Invert",
+		"file" : "index5.html"
+
+	},
+	{
+		"name" : "6: 3D Looking Radial Gradient-Saturate",
+		"file" : "index6.html"
+
+	},
+	{
+		"name" : "7: 3D Looking Radial Gradient-Contrast/Brightness",
+		"file" : "index7.html"
+
+	},
+	{
+		"name" : "8: 3D Looking Radial Gradient-Contrast/Brightness, Hue Rotate, Saturate",
+		"file" : "index8.html"
+
+	},
+	{
+		"name" : "9: 3D Looking Radial Gradient-Hue Rotate, Saturate, and scaling of rings",
+		"file" : "index9.html"
+
+	},
+	{
+		"name" : "10: 3D Looking Radial Gradient-Hue Rotate, Saturate, and scaling of rings-slower",
+		"file" : "index10.html"
+
+	}
+
+
+	]
+}

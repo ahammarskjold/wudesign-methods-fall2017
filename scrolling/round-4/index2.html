@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+
+		<title>Round 4:2 3D Looking Radial Gradient-Cross Fade Between Gradients</title>
+
+<style>
+
+html,body{
+  margin:0;
+  padding: 0;
+  height: 100%;
+}
+
+.circlegroup {
+	position: absolute;
+	display: cover;
+	z-index: 200;
+/*	top: 50%;
+	left:50%;*/
+	height:100%;
+	width:100%;
+}
+
+div.layers{
+	display: inline-block;
+	padding: 0px;
+	border: 7px cyan;
+	border-radius: 100%;
+	z-index: -50;
+	box-shadow: 0 0 90px fuchsia;
+	transform:scale(1);
+	position: fixed;
+}
+div.green1 {
+	width: 1%;
+	height: 1%;
+}
+div.green2 {
+	width: 10%;
+	height: 10%;
+}
+div.green3 {
+	width: 20%;
+	height: 20%;
+}
+div.green4 {
+	width: 30%;
+	height: 30%;
+}
+div.green5 {
+	width: 40%;
+	height: 40%;
+}
+div.green6 {
+	width: 50%;
+	height: 50%;
+}
+div.green7 {
+	width: 60%;
+	height:60%;
+}
+
+div.green8 {
+	width: 70%;
+	height:70%;
+}
+div.green9 {
+	width: 80%;
+	height:80%;
+}
+div.green10 {
+	width: 90%;
+	height:90%;
+}
+div.green11 {
+	width: 100%;
+	height:100%;
+}
+div.green12 {
+	width: 110%;
+	height:110%;
+}
+div.green13 {
+	width: 120%;
+	height:120%;
+}
+div.green14 {
+	width: 130%;
+	height:130%;
+}
+div.green15 {
+	width: 140%;
+	height:140%;
+}
+/*div.green16 {
+	width: 150%;
+	height:150%;
+}
+div.green17 {
+	width: 160%;
+	height:160%;
+}
+div.green18 {
+	width: 170%;
+	height:170%;
+}
+div.green19 {
+	width: 180%;
+	height:180%;
+}
+div.green20 {
+	width: 190%;
+	height:190%;
+}*/
+
+	.r_grad {
+		  height: 100%;
+  		position: fixed;
+ 		 z-index: -1;
+  		width: 100%;
+  		margin-top: 0%;
+
+	}
+	.r_grad2 {
+		  height: 100%;
+  		position: fixed;
+ 		 z-index: -2;
+  		width: 100%;
+  		margin-top: 0%;
+
+	}
+
+.skrollable {
+	position:fixed;
+	z-index:100;
+}
+.skrollr-mobile .skrollable {
+	position:absolute;
+}
+.skrollable .skrollable {
+	position:absolute;
+}
+.skrollable .skrollable .skrollable {
+	position:static;
+}
+</style>
+
+</head>
+
+<body> 
+<div class="circlegroup" style="display:flex;justify-content:center;align-items:center;">
+		
+	<div class="green1 layers"></div>
+
+	<div class="green2 layers"></div>
+
+	<div class="green3 layers"></div>	
+
+	<div class="green4 layers"></div>
+
+	<div class="green5 layers"></div>
+
+	<div class="green6 layers"></div>	
+
+	<div class="green7 layers"></div>
+
+	<div class="green8 layers"></div>
+
+	<div class="green9 layers"></div>
+
+	<div class="green10 layers"></div>
+
+	<div class="green11 layers"></div>
+
+	<div class="green12 layers"></div>	
+
+	<div class="green13 layers"></div>
+
+	<div class="green14 layers"></div>
+
+	<div class="green15 layers"></div>	
+
+	<!-- <div class="green16 layers"></div>
+
+	<div class="green17 layers"></div>
+
+	<div class="green18 layers"></div>	
+
+	<div class="green19 layers"></div>
+
+	<div class="green20 layers"></div>	
+
+	<div class="green21 layers"></div>
+
+	<div class="green22 layers"></div>
+
+	<div class="green23 layers"></div>			 -->						
+
+	
+</div>
+
+
+
+<div class="r_grad"
+data-00="background:repeating-radial-gradient(fuchsia 0%, cyan 33%, lime 66%, yellow  100%);opacity:1;filter:hue-rotate(0deg);opacity:1;" 
+data-4000="background:repeating-radial-gradient(fuchsia 66.6667%, cyan 77.6667%, lime 88.6667%, yellow  100%);opacity:1;filter:hue-rotate(0deg);opacity:1;"  
+data-6000="background:repeating-radial-gradient(fuchsia 100%, cyan 100%, lime 100%, yellow  100%);opacity:1;filter:hue-rotate(0deg);opacity:0;" 
+data-6000="background:repeating-radial-gradient(fuchsia 66.6667%, cyan 77.6667%, lime 88.6667%, yellow  100%);opacity:1;filter:hue-rotate(0deg);opacity:0;"  
+data-10000="background:repeating-radial-gradient(fuchsia 0%, cyan 33%, lime 66%, yellow  100%);opacity:1;filter:hue-rotate(0deg);opacity:0;"
+></div>
+
+<div class="r_grad2"
+data-00="background:repeating-radial-gradient(yellow 0%, lime 33%, cyan 66%, fuchsia  100%);opacity:1;filter:hue-rotate(0deg);opacity:0;" 
+data-4000="background:repeating-radial-gradient(yellow 66.6667%, lime 77.6667%, cyan 88.6667%, fuchsia  100%);opacity:1;filter:hue-rotate(0deg);opacity:0;"  
+data-5000="background:repeating-radial-gradient(yellow 100%, lime 100%, cyan 100%, fuchsia  100%);opacity:1;filter:hue-rotate(0deg);opacity:1;" 
+data-6000="background:repeating-radial-gradient(yellow 66.6667%, lime 77.6667%, cyan 88.6667%, fuchsia  100%);opacity:1;filter:hue-rotate(0deg);opacity:1;"  
+data-10000="background:repeating-radial-gradient(yellow 0%, lime 33%, cyan 66%, fuchsia  100%);opacity:1;filter:hue-rotate(0deg);opacity:1;"
+></div>
+
+<script type="text/javascript" src="skrollr.min.js"></script>
+
+	<script type="text/javascript">
+skrollr.init({
+        // easing: {
+        //     sin: function(p) {
+        //         return (Math.sin(p * Math.PI * 2 - Math.PI/2) + 1) / 2;
+        //     },
+        //     cos: function(p) {
+        //         return (Math.cos(p * Math.PI * 2 - Math.PI/2) + 1) / 2;
+        //     },
+        // },
+        render: function(data) {
+            //Loop
+            if(data.curTop === data.maxTop) {
+                this.setScrollTop(0, true);
+            }
+        }
+    });
+
+$(document).ready(function(){
+
+    $(window).resize(function(e){
+        console.log(e);                   
+    });
+
+    $(window).scroll(function (event) {
+        var sc = $(window).scrollTop();
+        console.log(sc);
+    });
+
+})
+
+
+// 	var s = skrollr.init({
+// 		edgeStrategy: 'set',
+// 		easing: {
+// 			WTF: Math.random,
+// 			inverted: function(p) {
+// 				return 1-p;
+// 			}
+// 		}
+// 	});
+
+
+
+	</script>
+
+	<script type="text/javascript">
+	var s = skrollr.init();
+	</script>
+</body>
+</html> 
