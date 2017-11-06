@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Charette-21</title>
+  <style type="text/css">
+    html, body{
+      background-color: black;
+      color:white;
+      font-family: sans-serif;
+      
+
+    }
+    body{
+      margin: 0px;
+      padding: 0px;
+      height: 100%;
+      position: fixed;
+      width: 100%;
+    }
+    h1, li{
+      font-size: 30px;
+      font-weight: bolder;
+    }
+    p{
+      font-size: 17px;
+      font-weight: lighter;
+  
+    }
+    div#search-hits{
+      margin: 0px;
+      padding: 0px;
+      height: 100%;
+      background-color: orange;
+      transition: all 1s ease-in-out;
+      display: block;
+      transition: all 1s ease-in-out;
+    }
+    div#one{
+      height:100px;
+      width: 100px;
+      border-radius: 100px;
+      background-color: fuchsia;
+      display: inline-block;
+      /*margin: auto;*/
+      text-align: center;
+      vertical-align: text-bottom;
+/*      margin-top: 30%;
+      position: fixed;
+      margin-left: 45%;*/
+      transition: all 1s ease-in-out;
+    }
+    div#two{
+      height:100px;
+      width: 100px;
+      border-radius: 100px;
+      background-color: lime;
+      display: inline-block;
+/*      margin: auto;
+*/      text-align: center;
+      vertical-align: text-bottom;
+/*      margin-top: 30%;
+      position: fixed;
+      margin-left: 45%;*/
+      transition: all 1s ease-in-out;
+    }
+    div#three{
+      height:100px;
+      width: 100px;
+      border-radius: 100px;
+      background-color: black;
+      display: inline-block;
+/*      margin: auto;
+*/      text-align: center;
+      vertical-align: text-bottom;
+      margin-top: 30%;
+      position: fixed;
+      margin-left: 45%;
+      transition: all 1s ease-in-out;
+    }
+   
+  </style>
+
+</head> 
+<body>
+<!-- <p>press 1 multiple times each</p> -->
+<!-- <input type="text" id="search">
+ -->  
+  <div id="search-hits" >
+    
+<!--     <div id="one">1</div>
+    <div id="two">2</div> -->
+    <div id="three">use arrow keys-this is glitchy</div>
+    
+    
+  </div>
+
+
+
+<script>
+
+var window = document.getElementById('search');
+var count = 1;
+    window.addEventListener('keyup', function(e) {
+        var searchHits = document.getElementById('search-hits');
+        var one = document.getElementById('one');
+        var two = document.getElementById('two');
+        var three = document.getElementById('three');
+        var x = event.which || event.keyCode;
+
+        
+        if (x == 39) {
+            // blocks();
+            if (count % 2 === 0){
+              three.style.marginLeft = '0%';
+              
+            }else{
+              three.style.marginLeft = '91%';
+            }
+            count = count + 1;
+        }
+        if (x == 40) {
+            // blocks();
+            if (count % 2 === 0){
+              three.style.marginTop = '0%';
+              
+            }else{
+              three.style.marginTop = '81%';
+            }
+            count = count + 1;
+        }
+        if (x == 37) {
+            // blocks();
+            if (count % 2 === 0){
+              three.style.marginRight = '0%';
+              
+            }else{
+              three.style.marginRight = '91%';
+            }
+            count = count + 1;
+        }
+        if (x == 38) {
+            // blocks();
+            if (count % 2 === 0){
+              three.style.marginBottom = '0%';
+              
+            }else{
+              three.style.marginBottom = '81%';
+            }
+            count = count + 1;
+        }
+        // if (x == 50) {
+        //     // blocks();
+        //     if (count % 2 === 0){
+        //       searchHits.style.display = 'block'; 
+        //       searchHits.style.backgroundColor = 'orange';
+              
+        //     }else{
+        //       searchHits.style.backgroundColor = 'lime';
+        //       searchHits.style.display = 'block';
+        //     }
+        //     count = count + 1;
+        // }
+        // if (x == 51) {
+        //     // blocks();
+        //     if (count % 2 === 0){
+        //       searchHits.style.display = 'block'; 
+        //       searchHits.style.backgroundColor = 'orange';
+              
+        //     }else{
+        //       searchHits.style.backgroundColor = 'black';
+        //       searchHits.style.display = 'block';
+        //     }
+        //     count = count + 1;
+        // }
+       
+    });
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<html>
+	<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  		<link rel="stylesheet" href="/resources/demos/style.css">
+  		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
+		<title>Charette-49</title>
+		<style>
+		
+		body{
+			padding: 0px;
+			margin:0px;
+			border:0px;
+			position: relative;
+			background-color: black;
+		}
+	
+
+
+p{
+	position: fixed;
+	color: white;
+	font-family: sans-serif;
+}
+		
+		
+
+		</style>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	</head>
+	<body>
+	
+
+	<audio id="livin" preload="auto">
+      <source src="keeplivin.mp3"></source>
+  </audio>
+
+
+  <div class="image-wrapper" id="livin">
+  </div>
+  <p>press S and P to produce different audio outcomes</p>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+
+window.addEventListener("keyup", function(event){
+	var keycode = event.which;
+	if(keycode === 80){
+		new Audio('./keeplivin.mp3').play();
+	}else if (keycode === 83){
+		new Audio('./Slap-SoundMaster13-49669815.mp3').play();
+	}
+
+});
+
+	</script>
+	<!-- <script type="text/javascript">
+		$('*').on('click', function(event){
+			console.log("event");
+		});
+		
+	</script> -->
+	
+
+	</body>
+</html>

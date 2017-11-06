@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Charette-69-80</title>
+  <style type="text/css">
+    html, body{
+      background-color: black;
+      color:white;
+      font-family: sans-serif;
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      padding:0px;
+      margin: 0px;
+      
+
+    }
+
+    h1, li{
+      font-size: 30px;
+      font-weight: bolder;
+    }
+    p{
+      font-size: 17px;
+      position: fixed;
+      color: white;
+      font-family: sans-serif;
+      margin-left: 10px;
+    }
+    div{
+      padding: 0px;
+      margin-right: 0px;
+      margin-left: 0px;
+      margin-bottom: 0px;
+      width:7.5%;
+      height:100%;
+      border-radius: 0px;
+      display: none;
+      margin-top: 0px;
+    }
+    div#fuchsia{
+      background-color: fuchsia;
+    }
+    div#red{
+      background-color: red;
+    }
+    div#orange{
+      background-color: orange;
+    }
+    div#yellow{
+      background-color: yellow;
+    }
+    div#lime{
+      background-color: lime;
+    }
+    div#green{
+      background-color: green;
+    }
+    div#teal{
+      background-color: teal;
+    }
+    div#aqua{
+      background-color: aqua;
+    }
+    div#blue{
+      background-color: blue;
+    }
+    div#lavender{
+      background-color: lavender;
+    }
+    div#purple{
+      background-color: purple;
+    }
+    div#plum{
+      background-color: plum;
+    }
+    div.pink{
+      height:100px;
+      width: 100px;
+      border-radius: 100px;
+      background-color: pink;
+      display: inline-block;
+    }
+
+
+  </style>
+
+</head> 
+<body>
+<p>press "1 to =" on the keyboard to create a rainbow</p>
+<!-- <input type="text" id="search"> -->
+    <div id="fuchsia"></div>
+    <div id="red"></div>
+    <div id="orange"></div>
+    <div id="yellow"></div>
+    <div id="lime"></div>
+    <div id="green"></div>
+    <div id="aqua"></div>
+    <div id="teal"></div>
+    <div id="blue"></div>
+    <div id="lavender"></div>
+    <div id="plum"></div>
+    <div id="purple"></div>
+<script>
+window.addEventListener('keyup', function(e) {
+  var keycode = event.which;
+  var fuchsia = document.getElementById('fuchsia');
+  var red = document.getElementById('red');
+  var orange = document.getElementById('orange');
+  var yellow = document.getElementById('yellow');
+  var lime = document.getElementById('lime');
+  var green = document.getElementById('green');
+  var aqua = document.getElementById('aqua');
+  var teal = document.getElementById('teal');
+  var blue = document.getElementById('blue');
+  var lavender = document.getElementById('lavender');
+  var plum = document.getElementById('plum');
+  var purple = document.getElementById('purple');
+   
+   if (keycode === 49){
+    fuchsia.style.display="inline-block";
+   }else if (keycode === 50){
+    red.style.display="inline-block";
+   }else if (keycode === 51){
+    orange.style.display="inline-block";
+   }else if (keycode === 52){
+    yellow.style.display="inline-block";
+   }else if (keycode === 53){
+    lime.style.display="inline-block";
+   }else if (keycode === 54){
+    green.style.display="inline-block";
+   }else if (keycode === 55){
+    aqua.style.display="inline-block";
+   }else if (keycode === 56){
+    teal.style.display="inline-block";
+   }else if (keycode === 57){
+    blue.style.display="inline-block";
+   }else if (keycode === 48){
+    lavender.style.display="inline-block";
+   }else if (keycode === 189){
+    plum.style.display="inline-block";
+   }else if (keycode === 187){
+    purple.style.display="inline-block";
+   };
+
+
+
+  });
+
+</script>
+
+</body>
+</html>

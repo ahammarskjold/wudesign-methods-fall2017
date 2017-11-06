@@ -1,0 +1,57 @@
+
+
+<html>
+	<head>
+		<title>Charette-47</title>
+		<style>
+		p {
+    		color: black;
+    		margin: 5px;
+    		cursor: pointer;
+    		font-family: sans-serif;
+  		}
+  		.one {
+    		background: aliceblue;
+		}
+		.two {
+    		background: cornsilk;
+		}
+		.three {
+    		background: lavenderblush;
+		}
+
+
+	
+		</style>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	</head>
+	<body>
+
+	<div>
+		<p>PRESS DELETE</p>
+		<p class="one">90's la croix microdosing, slow-carb ramps migas shaman chillwave wolf you probably haven't heard of them poutine. Flexitarian microdosing coloring book twee polaroid. Plaid iPhone chambray blue bottle taiyaki snackwave. Raclette XOXO four loko portland mustache deep v ramps activated charcoal pickled. Messenger bag seitan ugh, helvetica mumblecore williamsburg vice vinyl poutine pork belly. Locavore kombucha mixtape gluten-free air plant bicycle rights pabst viral marfa occupy hoodie post-ironic sriracha. Cronut cornhole prism listicle la croix, food truck waistcoat mixtape umami small batch sartorial master cleanse kale chips four loko. Food truck hammock PBR&B 90's iPhone tattooed. Pinterest readymade hexagon synth iceland pok pok, asymmetrical bushwick activated charcoal tilde woke 8-bit mumblecore neutra iPhone. Ramps biodiesel la croix distillery, you probably haven't heard of them tumeric prism meditation health goth portland kogi authentic taxidermy pok pok. Activated charcoal authentic ennui taiyaki hashtag cliche pop-up. Actually jean shorts cornhole pinterest blue bottle adaptogen photo booth offal.</p>
+		<p class="two">Craft beer taiyaki bushwick, lo-fi typewriter DIY photo booth bespoke austin semiotics direct trade chia edison bulb. Ethical trust fund venmo, prism cardigan master cleanse cronut. Shabby chic vinyl art party brooklyn umami heirloom enamel pin. Palo santo mixtape mustache, helvetica microdosing paleo cloud bread. Celiac portland kitsch taiyaki cray cliche. Pour-over tacos coloring book, raw denim sriracha 3 wolf moon selfies fashion axe. Asymmetrical crucifix jianbing iPhone, DIY sartorial lyft polaroid godard thundercats banh mi. Cray normcore jianbing, hexagon sartorial retro coloring book tote bag adaptogen pour-over. Disrupt fashion axe jianbing cold-pressed, single-origin coffee cardigan godard waistcoat street art blog helvetica lomo copper mug. Tilde tote bag meh, coloring book marfa sustainable affogato VHS activated charcoal banjo tumeric hammock. Forage put a bird on it seitan subway tile twee beard tote bag heirloom. Kitsch 8-bit paleo, vape cardigan tbh kale chips bespoke plaid hoodie hot chicken hexagon glossier brooklyn. Drinking vinegar adaptogen distillery flexitarian, listicle viral tote bag heirloom normcore ramps neutra fixie four dollar toast man bun lo-fi. Jean shorts retro dreamcatcher vape woke fixie.</p>
+		<p class="three">Polaroid meh shoreditch kickstarter quinoa iceland truffaut locavore synth vape fingerstache put a bird on it intelligentsia 8-bit echo park. Yuccie tousled kickstarter tattooed artisan echo park taxidermy chillwave tbh austin small batch 90's. Man bun knausgaard brunch single-origin coffee, cold-pressed selvage hella sustainable man braid roof party small batch green juice la croix gentrify artisan. Etsy gentrify meditation next level. Copper mug asymmetrical venmo pug tofu etsy you probably haven't heard of them deep v kinfolk tacos glossier. Pickled vinyl swag adaptogen pork belly, fingerstache scenester copper mug messenger bag paleo cloud bread mustache distillery edison bulb photo booth. Seitan viral godard readymade, jean shorts letterpress green juice tumblr blue bottle lumbersexual. Single-origin coffee la croix mixtape gastropub, godard lo-fi XOXO bitters crucifix pork belly locavore everyday carry ethical chambray fingerstache. Cold-pressed roof party schlitz marfa tattooed raclette, taiyaki pabst brunch cronut hot chicken YOLO whatever. Enamel pin man braid farm-to-table polaroid, cold-pressed next level twee hexagon sartorial austin food truck health goth stumptown flexitarian etsy. Unicorn franzen man braid microdosing 8-bit. Occupy selfies viral crucifix, shaman literally iPhone twee whatever tofu. Keytar actually tilde vinyl, affogato cliche hot chicken lyft PBR&B raw denim tousled.</p>
+	</div>
+	<script type="text/javascript">
+		// $( "p" ).click(function() {
+  // 		$( this ).slideUp();
+		// });
+
+		$(window).on('keyup', function Nick(event){
+   var keycode = event.which;
+  
+   if (keycode === 8){
+    $(".one, .two, .three").slideUp();
+   };
+
+
+
+  });
+
+	</script>
+
+	
+
+	</body>
+</html>

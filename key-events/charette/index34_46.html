@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Charette-24-34</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <style type="text/css">
+body{
+  position: fixed;
+  height: 100%;
+  width:100%;
+  font-family: sans-serif;
+  color:black;
+  font-size: 15px;
+}
+div.name{
+  background-color: none;
+  display: block;
+  margin:0 auto;
+  width: auto;
+  transition: all 1s ease-in-out;
+  border:0px solid white;
+  font-size: 30px;
+}
+.name.selectedR{
+  background-color: none;
+  /*border: 10px solid lime;*/
+  color:fuchsia;
+}
+.name.selectedI{
+  background-color: none;
+  border: 10px solid lime;
+  color:fuchsia;
+}
+.name.selectedD{
+  background-color: aqua;
+  border: 10px solid lime;
+  color:fuchsia;
+}
+.name.selectedE{
+  background-color: white;
+  border: 100px dotted aqua;
+  color:black;
+  font-weight: bolder;
+}
+.name.selectedSPACE{
+  background-color: white;
+  border: 0px solid white;
+  color:red;
+  letter-spacing: 1em;
+}
+.name.selectedT{
+  background-color: white;
+  border: 0px solid white;
+  color:red;
+  letter-spacing: 0em;
+  font-style: italic;
+}
+.name.selectedH{
+  background-color: black;
+  border: 0px solid white;
+  color:white;
+  letter-spacing: 0em;
+  font-style: oblique;
+}
+.name.selectedS{
+  background-color: black;
+  border: 0px solid white;
+  color:white;
+  letter-spacing: 0em;
+  font-style: oblique;
+  font-variant: small-caps;
+}
+.name.selectedU{
+  background-color: black;
+  border: 0px solid white;
+  color:white;
+  letter-spacing: 0em;
+  font-style: oblique;
+  font-variant: normal;
+  text-decoration: underline;
+}
+.name.selectedG{
+  background-color: yellow;
+  border: 0px solid black;
+  color:black;
+  letter-spacing: 0em;
+  font-style: normal;
+  font-variant: normal;
+  text-decoration: underline;
+  letter-spacing: -4px;
+}
+.name.selectedL{
+  background-color: black;
+  border: 0px solid white;
+  color:white;
+  letter-spacing: 0em;
+  font-style: oblique;
+  font-variant: normal;
+  text-decoration: none;
+  font-size: 10px;
+}
+.name.selectedB{
+  background-color: black;
+  border: 0px solid white;
+  color:white;
+  letter-spacing: 0em;
+  font-style: oblique;
+  font-variant: normal;
+  text-decoration: underline;
+  font-size: 30px;
+}
+.name.selectedPERIOD{
+  background-color: black;
+  border: 0px solid white;
+  color:white;
+  letter-spacing: 0em;
+  font-style: oblique;
+  font-variant: normal;
+  text-decoration: underline;
+  font-size: 30px;
+  transform: rotate(180deg);
+}
+
+
+  </style>
+
+</head> 
+<body>
+<p>Type the following to modify the text with each letter you type (repeated letters do not work)</p>  
+<div class="name">ride the struggle bus.</div>
+
+<script type="text/javascript">
+  $(window).on('keyup', function Nick(event){
+   var keycode = event.which;
+  
+   if (keycode === 82){
+    $(".name").addClass("selectedR");
+   }else if(keycode===73){
+    $(".name").addClass("selectedI");
+   }else if(keycode===68){
+    $(".name").addClass("selectedD");
+   }else if(keycode===69){
+    $(".name").addClass("selectedE");
+   }else if(keycode===32){
+    $(".name").addClass("selectedSPACE");
+   }else if(keycode===84){
+    $(".name").addClass("selectedT");
+   }else if(keycode===72){
+    $(".name").addClass("selectedH");
+   }else if(keycode===83){
+    $(".name").addClass("selectedS");
+   }else if(keycode===85){
+    $(".name").addClass("selectedU");
+   }else if(keycode===71){
+    $(".name").addClass("selectedG");
+   }else if(keycode===76){
+    $(".name").addClass("selectedL"); 
+   }else if(keycode===66){
+    $(".name").addClass("selectedB");
+   }else if(keycode===190){
+    $(".name").addClass("selectedPERIOD");
+   }
+
+
+
+  });
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
+
+
+ <!-- $(window).on('keyup', function Nick(event){
+   var keycode = event.which;
+  
+   if (keycode > 49 && keycode<59){
+    console.log('red');
+   }else{
+    console.log('blue');
+   }
+
+
+  }); -->
+
+<!--   you dont need "else"
+ -->
+
+<!-- else if
+for stacking multiple if statements
+ -->
+

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Charette-9</title>
+  <style type="text/css">
+    html, body{
+      background-color: black;
+      color:white;
+      font-family: sans-serif;
+      
+
+    }
+    body{
+      padding-left: 50px;
+      padding-top: 20px;
+    }
+    h1, li{
+      font-size: 30px;
+      font-weight: bolder;
+    }
+    p{
+      font-size: 17px;
+      font-weight: lighter;
+  
+    }
+    div.yellow{
+      height:100px;
+      width: 100px;
+      border-radius: 100px;
+      background-color: yellow;
+      display: inline-block;
+    }
+    div.pink{
+      height:100px;
+      width: 100px;
+      border-radius: 100px;
+      background-color: pink;
+      display: inline-block;
+    }
+
+
+  </style>
+
+</head> 
+<body>
+<p>press 1 and 2 multiple times each</p>
+<input type="text" id="search">
+  
+  <div id="search-hits" style="display:none;">
+    
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    
+  </div>
+
+<!-- <div id="pink" style="display:none;">
+    <div class="pink"></div>
+    <div class="pink"></div>
+    <div class="pink"></div>
+    <div class="pink"></div>
+    <div class="pink"></div>
+    <div class="pink"></div>
+    <div class="pink"></div>
+    <div class="pink"></div>
+    <div class="pink"></div>
+    <div class="pink"></div>
+    <div class="pink"></div>
+    <div class="pink"></div>
+    <div class="pink"></div>
+    <div class="pink"></div>
+    <div class="pink"></div>
+    <div class="pink"></div>
+    <div class="pink"></div>
+    <div class="pink"></div>
+    <div class="pink"></div>
+    <div class="pink"></div>
+    <div class="pink"></div>
+    <div class="pink"></div>
+
+</div> -->
+
+<script>
+
+var input = document.getElementById('search');
+var count = 1;
+    input.addEventListener('keyup', function(e) {
+        var searchHits = document.getElementById('search-hits');
+        var pink = document.getElementById('pink');
+        var x = event.which || event.keyCode;
+
+        
+        if (x == 49) {
+            // blocks();
+            if 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              (count % 2 === 0){
+              searchHits.style.display = 'none'; 
+            }else{
+              searchHits.style.backgroundColor = 'none';
+              searchHits.style.display = 'block';
+            }
+            count = count + 1;
+        }
+        if (x == 50) {
+           // blocks();
+           if (count % 2 === 0){
+              searchHits.style.display = 'none'; 
+
+            }else{
+              // searchHits.style.display = 'block';
+              searchHits.style.backgroundColor = 'pink';
+              searchHits.style.display = 'block';
+            }
+            count = count + 1;
+        }
+       
+    });
+
+// function blocks(){
+//   var searchHits = document.getElementById('search-hits');
+
+//    if (count % 2 === 0){
+//               searchHits.style.display = 'none'; 
+//             }else{
+//               searchHits.style.display = 'block';
+//             }
+//             count = count + 1;
+// }
+
+
+</script>
+
+</body>
+</html>

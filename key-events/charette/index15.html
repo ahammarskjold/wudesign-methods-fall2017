@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Charette-15</title>
+  <style type="text/css">
+    html, body{
+      background-color: black;
+      color:grey;
+      font-family: sans-serif;
+      
+
+    }
+    body{
+      margin: 0px;
+      padding: 0px;
+      height: 100%;
+      position: fixed;
+      width: 100%;
+    }
+    h1, li{
+      font-size: 30px;
+      font-weight: bolder;
+    }
+    p{
+      font-size: 17px;
+      font-weight: lighter;
+  
+    }
+    div#yellow{
+      height:100px;
+      width: 100px;
+      border-radius: 100px;
+      background-color: yellow;
+      display: block;
+      margin: auto;
+      text-align: center;
+      vertical-align: text-bottom;
+      margin-top: 40%;
+      position: fixed;
+      margin-left: 45%;
+    }
+    /*div.pink{
+      height:100px;
+      width: 100px;
+      border-radius: 100px;
+      background-color: pink;
+      display: inline-block;
+    }*/
+
+    div#search-hits{
+      margin: 0px;
+      padding: 0px;
+      height: 100%;
+    }
+  </style>
+
+</head> 
+<body>
+<!-- <p>press 1 multiple times each</p> -->
+<!-- <input type="text" id="search">
+ -->  
+  <div id="search-hits" >
+    
+    <div id="yellow">1</div>
+    
+    
+  </div>
+
+
+
+<script>
+
+var window = document.getElementById('search');
+var count = 1;
+    window.addEventListener('keyup', function(e) {
+        var searchHits = document.getElementById('search-hits');
+        var yellow = document.getElementById('yellow');
+        var x = event.which || event.keyCode;
+
+        
+        // if (x == 49) {
+        //     // blocks();
+        //     if (count % 2 === 0){
+        //       searchHits.style.display = 'block'; 
+        //       searchHits.style.backgroundColor = 'yellow';
+        //     }else{
+        //       searchHits.style.backgroundColor = 'pink';
+        //       searchHits.style.display = 'block';
+        //     }
+        //     count = count + 1;
+        // }
+        if (x == 49) {
+           // blocks();
+           if (count % 2 === 0){
+              yellow.style.backgroundColor = 'orange';
+              searchHits.style.backgroundColor = 'aqua';
+
+            }else{
+              // searchHits.style.display = 'block';
+              yellow.style.backgroundColor = 'aqua';
+              searchHits.style.backgroundColor = 'orange';
+            }
+            count = count + 1;
+        }
+        // if (x == 50) {
+        //    // blocks();
+        //    if (count % 2 === 0){
+        //       yellow.style.display = 'block'; 
+        //       yellow.style.backgroundColor = 'pink';
+
+        //     }else{
+        //       // searchHits.style.display = 'block';
+        //       yellow.style.backgroundColor = 'lime';
+        //       yellow.style.display = 'block';
+        //     }
+        //     count = count + 1;
+        // }
+
+       
+    });
+
+// function blocks(){
+//   var searchHits = document.getElementById('search-hits');
+
+//    if (count % 2 === 0){
+//               searchHits.style.display = 'none'; 
+//             }else{
+//               searchHits.style.display = 'block';
+//             }
+//             count = count + 1;
+// }
+
+
+</script>
+
+</body>
+</html>

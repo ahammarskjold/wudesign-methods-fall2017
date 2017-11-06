@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Charette-5</title>
+  <style type="text/css">
+    html, body{
+      background-color: black;
+      color:white;
+      font-family: sans-serif;
+      
+
+    }
+    body{
+      padding-left: 50px;
+      padding-top: 20px;
+    }
+    h1, li{
+      font-size: 30px;
+      font-weight: bolder;
+    }
+    p{
+      font-size: 17px;
+      font-weight: lighter;
+  
+    }
+
+
+  </style>
+
+</head> 
+<body>
+
+<p>Press a key on the keyboard in the input field to get the Unicode character code of the pressed key.</p>
+
+<input type="text" onkeypress="myFunction(event)">
+
+<p id="demo"></p>
+
+
+<script>
+function myFunction(event) {
+    var x = event.which || event.keyCode;
+    document.getElementById("demo").innerHTML = "The Unicode value is: " + x;
+}
+</script>
+
+</body>
+</html>

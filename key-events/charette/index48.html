@@ -1,0 +1,59 @@
+
+<html>
+	<head>
+		<title>Charette-48</title>
+		<style>
+			a{
+				font-family: Impact, Charcoal, sans-serif;
+				font-size: 100px;
+				text-align: center;
+				margin: auto;
+				color: honeydew;
+				margin-top: 25%;
+				position: fixed;
+				margin-left: 40%;
+			}
+			/**{transition: all .9s ease-in-out;}
+			.rotate{
+				
+				letter-spacing: -40px;
+			}*/
+			body{
+				background-color: black;
+			}
+			p{
+      			font-size: 17px;
+      			color: white;
+      			position: fixed;
+      			font-family: sans-serif;
+      			margin-left: 10px;
+    		}
+		</style>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<p>press enter to activate the link</p>
+		<div>
+			<a href="http://alexhammarskjold.com/" id="Enter" onclick="dosomething()">ALEX</a>
+		</div>
+	<script type="text/javascript">
+//click>			// $(document).ready(function(){
+			// 	$("p").click(function(){
+			// 		$(this).addClass("rotate");
+			// 	})
+			// })
+
+$(document).keypress(function(event){
+
+    if(event.keyCode == 13){
+        $("#Enter").click();
+    }
+});
+
+function dosomething(){
+    location.href = "http://alexhammarskjold.com/";
+    //activate some code depends on the link.
+}
+	</script>
+	</body>
+</html>
