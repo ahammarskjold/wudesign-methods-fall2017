@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Charette-97-110</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <style type="text/css">
+body{
+  position: fixed;
+  height: 100%;
+  width:100%;
+  background-color: black;
+}
+ p{
+      font-size: 17px;
+      color: white;
+      font-family: sans-serif;
+      margin-left: 10px;
+    }
+div.circle{
+  height:100px;
+  width: 100px;
+  background-color: fuchsia;
+  border-radius:0%;
+  display: block;
+  margin:0 auto;
+  transition: all 1s ease-in-out;
+  border:0px solid black;
+}
+.circle.selected0{
+  height:100px;
+  width:100px;
+  transition: all 1s ease-in-out;
+  border-radius: 50%;
+  background-color: lime;
+} 
+.circle.selected1{
+  height:100px;
+  width:100px;
+  transition: all 1s ease-in-out;
+  border-radius: 0 50% 50% 50%;
+  background-color: aqua;
+} 
+.circle.selected2{
+  height:100px;
+  width:100px;
+  transition: all 1s ease-in-out;
+  background-color: yellow;
+  border-radius: 0 50% 0% 50%;
+} 
+.circle.selected3{
+  height:100px;
+  width:100px;
+  transition: all 1s ease-in-out;
+  background-color: fuchsia;
+  border-radius: 0px;
+  border-radius: 0 0% 0% 50%;
+} 
+.circle.selected4{
+  height:100px;
+  width:100px;
+  transition: all 1s ease-in-out;
+  background-color: lime;
+  border-radius: 0px;
+  border-radius: 0 0% 0% 0%;
+} 
+.circle.selected5{
+  height:100px;
+  width:100px;
+  transition: all 1s ease-in-out;
+  background-color: aqua;
+  border-radius:50%;
+} 
+.circle.selected6{
+  height:100px;
+  width:180px;
+  transition: all 1s ease-in-out;
+  background-color: yellow;
+  border-radius: 50%;
+} 
+.circle.selected7{
+  height:180px;
+  width:100px;
+  transition: all 1s ease-in-out;
+  background-color: fuchsia;
+  border-radius: 50%;
+} 
+.circle.selected8{
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid lime;
+  transition: all 1s ease-in-out;
+  background-color: black;
+  border-radius: 0%;
+} 
+.circle.selected9{
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 100px solid yellow;
+  border-bottom: 0px solid lime;
+  transition: all 1s ease-in-out;
+  background-color: black;
+  border-radius: 0%;
+} 
+.circle.selected10{
+  border-bottom: 100px solid fuchsia;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 0px solid yellow;
+  height: 0;
+  width: 100px;
+  transition: all 1s ease-in-out;
+  background-color: black;
+  border-radius: 0%;
+} 
+.circle.selected11{
+  border-bottom: 0px solid fuchsia;
+  border-left: 0px solid transparent;
+  border-right: 0px solid transparent;
+  width: 150px;
+  height: 100px;
+  -webkit-transform: skew(20deg);
+     -moz-transform: skew(20deg);
+       -o-transform: skew(20deg);
+  background: lime;
+  transition: all 1s ease-in-out;
+} 
+.circle.selected12{
+  width: 0px;
+  height: 0px;
+  border-right: 60px solid transparent;
+  border-top: 60px solid aqua;
+  border-left: 60px solid aqua;
+  border-bottom: 60px solid aqua;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  -webkit-transform: skew(0deg);
+     -moz-transform: skew(0deg);
+       -o-transform: skew(0deg);
+  background: black;
+} 
+.circle.selected-1{
+  border-right: 0px solid transparent;
+  border-top: 0px solid aqua;
+  border-left: 0px solid aqua;
+  border-bottom: 0px solid aqua;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  -webkit-transform: skew(0deg);
+     -moz-transform: skew(0deg);
+       -o-transform: skew(0deg);
+  background: black;
+  box-shadow:
+    0 0 0 1em yellow,
+    0 1em 0 1em yellow,
+    -2.5em 1.5em 0 .5em yellow,
+    2.5em 1.5em 0 .5em yellow,
+    -3em -3em 0 0 yellow,
+    3em -3em 0 0 yellow,
+    -2em -2em 0 0 yellow,
+    2em -2em 0 0 yellow,
+    -3em -1em 0 0 yellow,
+    -2em -1em 0 0 yellow,
+    2em -1em 0 0 yellow,
+    3em -1em 0 0 yellow,
+    -4em 0 0 0 yellow,
+    -3em 0 0 0 yellow,
+    3em 0 0 0 yellow,
+    4em 0 0 0 yellow,
+    -5em 1em 0 0 yellow,
+    -4em 1em 0 0 yellow,
+    4em 1em 0 0 yellow,
+    5em 1em 0 0 yellow,
+    -5em 2em 0 0 yellow,
+    5em 2em 0 0 yellow,
+    -5em 3em 0 0 yellow,
+    -3em 3em 0 0 yellow,
+    3em 3em 0 0 yellow,
+    5em 3em 0 0 yellow,
+    -2em 4em 0 0 yellow,
+    -1em 4em 0 0 yellow,
+    1em 4em 0 0 yellow,
+    2em 4em 0 0 yellow;
+
+    background: yellow;
+    width: 1em;
+    height: 1em;
+    overflow: hidden;
+
+} 
+.circle.selected13{
+  background: black;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 15px 15px 0 0 fuchsia;
+
+} 
+
+
+
+
+}
+
+  </style>
+
+</head> 
+<body>
+<p>IN ORDER, press `, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, -, =, delete (on the second top most row of your keyboard) and space to morph the shape</p>  
+<div class="circle"></div>
+
+<script type="text/javascript">
+  $(window).on('keyup', function Nick(event){
+   var keycode = event.which;
+  
+   if(keycode===8){
+    $(".circle").addClass("selected-1");
+   }else if(keycode===192){
+    $(".circle").addClass("selected0");
+   }else if(keycode===49){
+    $(".circle").addClass("selected1");
+   }else if(keycode===50){
+    $(".circle").addClass("selected2");
+   }else if(keycode===51){
+    $(".circle").addClass("selected3");
+   }else if(keycode===52){
+    $(".circle").addClass("selected4");
+   }else if(keycode===53){
+    $(".circle").addClass("selected5");
+   }else if(keycode===54){
+    $(".circle").addClass("selected6");
+   }else if(keycode===55){
+    $(".circle").addClass("selected7");
+   }else if(keycode===56){
+    $(".circle").addClass("selected8");
+   }else if (keycode === 57){
+    $(".circle").addClass("selected9");
+   }else if(keycode===48){
+    $(".circle").addClass("selected10");
+   }else if(keycode===189){
+    $(".circle").addClass("selected11");
+   }else if(keycode===187){
+    $(".circle").addClass("selected12");
+   }else if(keycode===32){
+    $(".circle").addClass("selected13");
+   }
+
+
+  });
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
+
+
+ <!-- $(window).on('keyup', function Nick(event){
+   var keycode = event.which;
+  
+   if (keycode > 49 && keycode<59){
+    console.log('red');
+   }else{
+    console.log('blue');
+   }
+
+
+  }); -->
+
+<!--   you dont need "else"
+ -->
+
+<!-- else if
+for stacking multiple if statements
+ -->
+

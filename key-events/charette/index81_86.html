@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
+  <title>Charette-81-86</title>
+  <style type="text/css">
+    html, body{
+      background-color: black;
+      color:white;
+      font-family: sans-serif;
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      padding:0px;
+      margin: 0px;
+      
+
+    }
+
+    h1, li{
+      font-size: 30px;
+      font-weight: bolder;
+    }
+    p{
+      font-size: 17px;
+      position: fixed;
+      color: white;
+      font-family: sans-serif;
+      margin-left: 10px;
+    }
+    div{
+      padding: 0px;
+      margin-right: 0px;
+      margin-left: 0px;
+      margin-bottom: 0px;
+      width:7.5%;
+      height:100%;
+      border-radius: 0px;
+      margin-top: 0px;
+    }
+    div.heregroup{
+        background-image: no-repeat;
+        height: 100px;
+        width: 100px;
+        z-index: 1;
+        opacity: 1;
+        background-size: cover;
+        display: none;
+        margin-top: 60px;
+  }
+div#here{
+  background-image: url("25b924f1d18fea2c7dfcb26a9905c1e8.png");
+}
+div#here2{
+  background-image: url("0240fc6e7b742f250cdcfe9d9061678f-wink-emoji-emoticon.png");
+}
+div#here3{
+  background-image: url("Disappointed_but_Relieved_Emoji_Icon.png");
+}
+div#here4{
+  background-image: url("download-heart-eyes-emoji-640.png");
+}
+div#here5{
+  background-image: url("fd8ca9d1df6e75ba8ac9f20cceec353b-emoji-emoticon-laugh-by-vexels.png");
+}
+div#here6{
+  background-image: url("ec55d1a1c13bd8f879b3257585ee0fe5-emoji-emoticon-angry-by-vexels.png");
+}
+
+  </style>
+
+</head> 
+<body>
+<p>press "1 to 6" on the keyboard to see some emojis</p>
+<!-- <input type="text" id="search"> -->
+    <div id="here" class="heregroup"></div>
+    <div id="here2" class="heregroup"></div>
+    <div id="here3" class="heregroup"></div>
+    <div id="here4" class="heregroup"></div>
+    <div id="here5" class="heregroup"></div>
+    <div id="here6" class="heregroup"></div>
+
+
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+window.addEventListener('keyup', function(e) {
+  var keycode = event.which;
+  var here = document.getElementById('here');
+  var here2 = document.getElementById('here2');
+  var here3 = document.getElementById('here3');
+  var here4 = document.getElementById('here4');
+  var here5 = document.getElementById('here5');
+  var here6 = document.getElementById('here6');
+  
+   
+   if (keycode === 49){
+    here.style.display="inline-block";
+   }else if (keycode === 50){
+    here2.style.display="inline-block";
+   }else if (keycode === 51){
+    here3.style.display="inline-block";
+   }else if (keycode === 52){
+    here4.style.display="inline-block";
+   }else if (keycode === 53){
+    here5.style.display="inline-block";
+   }else if (keycode === 54){
+    here6.style.display="inline-block";
+   };
+  });
+
+</script>
+
+</body>
+</html>

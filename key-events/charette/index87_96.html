@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Charette-87-96</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <style type="text/css">
+body{
+  position: fixed;
+  height: 100%;
+  width:100%;
+}
+/*div.circle{
+  height:100px;
+  width: 100px;
+  background-color: fuchsia;
+  border-radius: 50%;
+  display: block;
+  margin:0 auto;
+  transition: all 1s ease-in-out;
+  border:0px solid white;
+}*/
+.here.selected0{
+  height:100px;
+  width:100px;
+  transition: all 1s ease-in-out;
+  border:100px solid lime;
+} 
+.here.selected1{
+  height:50px;
+  width:50px;
+  transition: all 1s ease-in-out;
+  border:100px solid black;
+} 
+.here.selected2{
+  height:200px;
+  width:200px;
+  transition: all 1s ease-in-out;
+  border:10px dotted yellow;
+  background-color: black;
+} 
+.here.selected3{
+  height:400px;
+  width:400px;
+  transition: all 1s ease-in-out;
+  border:10px solid yellow;
+  background-color: blue;
+  border-radius: 0px;
+} 
+.here.selected4{
+  height:200px;
+  width:200px;
+  transition: all 1s ease-in-out;
+  border:10px dashed white;
+  background-color: black;
+  transform:rotate(90deg);
+  border-radius: 0px;
+} 
+.here.selected5{
+  height:200px;
+  width:200px;
+  transition: all 1s ease-in-out;
+  border:10px dashed white;
+  background-color: lime;
+  transform:rotate(90deg);
+  border-radius: 50%;
+} 
+.here.selected6{
+  height:600px;
+  width:600px;
+  transition: all 1s ease-in-out;
+  border:10px dotted black;
+  background-color: aqua;
+  border-radius: 50%;
+} 
+.here.selected7{
+  height:70px;
+  width:70px;
+  transition: all 1s ease-in-out;
+  border:10px solid black;
+  background-color: aqua;
+  border-radius: 0%;
+  transform:rotate(180deg);
+} 
+.here.selected8{
+  height:600px;
+  width:600px;
+  transition: all 1s ease-in-out;
+  border:10px solid purple;
+  background-color: lime;
+  border-radius: 0%;
+  transform:rotate(180deg);
+} 
+.here.selected9{
+  height:0px;
+  width:0px;
+  transition: all 1s ease-in-out;
+  border:10px solid orange;
+  background-color: yellow;
+  border-radius: 0%;
+  transform:rotate(180deg);
+} 
+div.here{
+  background-image: url("25b924f1d18fea2c7dfcb26a9905c1e8.png");
+  background-image: no-repeat;
+  height: 100px;
+  width: 100px;
+  z-index: 1;
+  opacity: 1;
+  background-size: cover;
+  margin-top: 60px;
+}
+  </style>
+
+</head> 
+<body>
+<p>Press keys 0-9 (in order) to produce different results</p>  
+ <div class="here"></div>
+
+<script type="text/javascript">
+  $(window).on('keyup', function Nick(event){
+   var keycode = event.which;
+  
+   if (keycode === 48){
+    $(".here").addClass("selected0");
+   }else if(keycode===49){
+    $(".here").addClass("selected1");
+   }else if(keycode===50){
+    $(".here").addClass("selected2");
+   }else if(keycode===51){
+    $(".here").addClass("selected3");
+   }else if(keycode===52){
+    $(".here").addClass("selected4");
+   }else if(keycode===53){
+    $(".here").addClass("selected5");
+   }else if(keycode===54){
+    $(".here").addClass("selected6");
+   }else if(keycode===55){
+    $(".here").addClass("selected7");
+   }else if(keycode===56){
+    $(".here").addClass("selected8");
+   }else if(keycode===57){
+    $(".here").addClass("selected9");
+   }
+
+
+
+  });
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
+
+
+ <!-- $(window).on('keyup', function Nick(event){
+   var keycode = event.which;
+  
+   if (keycode > 49 && keycode<59){
+    console.log('red');
+   }else{
+    console.log('blue');
+   }
+
+
+  }); -->
+
+<!--   you dont need "else"
+ -->
+
+<!-- else if
+for stacking multiple if statements
+ -->
+
