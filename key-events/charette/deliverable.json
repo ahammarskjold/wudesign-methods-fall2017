@@ -1,0 +1,174 @@
+{
+	"entrypoints" : [
+	{
+		"name" : "1: arrow keys-draw green line left and up",
+		"file" : "index.html"
+
+	},
+	{
+		"name" : "2: arrow keys to move yellow dot",
+		"file" : "index2.html"
+
+	},
+	{
+		"name" : "3: arrow keys to jump pixel",
+		"file" : "index3.html"
+
+	},
+	{
+		"name" : "4: key location",
+		"file" : "index4.html"
+
+	},
+	{
+		"name" : "5: unicode",
+		"file" : "index5.html"
+
+	},
+	{
+		"name" : "6: empty vs not empty",
+		"file" : "index6.html"
+
+	},
+	{
+		"name" : "7: appear dissapear- different keys",
+		"file" : "index7.html"
+
+	},
+	{
+		"name" : "8: appear dissapear- same key",
+		"file" : "index8.html"
+
+	},
+	{
+		"name" : "9: appear dissapear and change background color",
+		"file" : "index9.html"
+
+	},
+	{
+		"name" : "10: appear dissapear and add another circle with new key",
+		"file" : "index10.html"
+
+	},
+	{
+		"name" : "11: toggle circles not background",
+		"file" : "index11.html"
+
+	},
+	{
+		"name" : "12: change color",
+		"file" : "index12.html"
+
+	},
+	{
+		"name" : "13: different color toggles for different keys",
+		"file" : "index13.html"
+
+	},
+	{
+		"name" : "14: background and element color change with same key",
+		"file" : "index14.html"
+
+	},
+	{
+		"name" : "15: background and element color change with same key-2",
+		"file" : "index15.html"
+
+	},
+	{
+		"name" : "16: background and element color change with same key-gradients",
+		"file" : "index16.html"
+
+	},
+	{
+		"name" : "17: background and element color change with same key-slow transition",
+		"file" : "index17.html"
+
+	},
+	{
+		"name" : "18: background color change different keys",
+		"file" : "index18.html"
+
+	},
+	{
+		"name" : "19: slide color horizontally",
+		"file" : "index19.html"
+
+	},
+	{
+		"name" : "20: slide circle horizontally",
+		"file" : "index20.html"
+
+	},
+	{
+		"name" : "21: arrow keys to move circle, this is glitchy",
+		"file" : "index21.html"
+
+	},
+	{
+		"name" : "22: move ball with right and left arrow keys",
+		"file" : "index22.html"
+
+	},
+	{
+		"name" : "23: move ball with all arrow keys, not working",
+		"file" : "index23.html"
+
+	},
+	{
+		"name" : "24-33: changing visual properties of a div",
+		"file" : "index24_33.html"
+
+	},
+	{
+		"name" : "34-46: changing text properties",
+		"file" : "index34_46.html"
+
+	},
+	{
+		"name" : "47: delete text",
+		"file" : "index47.html"
+
+	},
+	{
+		"name" : "48: press enter to activate a link",
+		"file" : "index48.html"
+
+	},
+	{
+		"name" : "49: different sounds for 2 keys",
+		"file" : "index49.html"
+
+	},
+	{
+		"name" : "50-60: piano keyboard",
+		"file" : "index50_60.html"
+
+	},
+	{
+		"name" : "61-68: filters on a gradient",
+		"file" : "index61_68.html"
+
+	},
+	{
+		"name" : "69-80: making a rainbow",
+		"file" : "index69_80.html"
+
+	},
+	{
+		"name" : "81-86: making images appear (emoji)",
+		"file" : "index81_86.html"
+
+	},
+	{
+		"name" : "87-96: property changes to an image",
+		"file" : "index87_96.html"
+
+	},
+	{
+		"name" : "97-111: shape morphing",
+		"file" : "index97_111.html"
+
+	}
+	]
+}
