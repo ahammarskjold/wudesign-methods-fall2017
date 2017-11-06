@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+
+		<title>Charette-61-68</title>
+
+<style>
+
+html,body{
+  margin:0;
+  padding: 0;
+  height: 100%;
+}
+
+
+
+	#r_grad {
+		  height: 100%;
+  		position: fixed;
+ 		 z-index: -1;
+  		width: 100%;
+  		margin-top: 0%;
+  		background: repeating-radial-gradient(fuchsia 0%, cyan 33%, lime 66%, yellow  100%);
+
+	}
+p{
+	position: fixed;
+	color: black;
+	font-family: sans-serif;
+	margin-left: 10px;
+}
+
+</style>
+
+</head>
+
+<body> 
+<p>Press<br>A: greyscale<br>S: hue-rotate<br>D: saturate<br>F: blur<br>G:brightness<br>H: contrast<br>J: invert<br> K:opacity<br></p>
+
+
+<div id="r_grad" class="r_gradient"></div>
+
+<script type="text/javascript" src="skrollr.min.js"></script>
+
+	<script type="text/javascript">
+
+window.addEventListener("keyup", function(event){
+  var keycode = event.which;
+  if(keycode === 65){
+    document.getElementById("r_grad").style.filter = "grayscale(100%)";
+  }else if (keycode === 83){
+  	document.getElementById("r_grad").style.filter = "hue-rotate(90deg)";
+  }else if (keycode === 68){
+  	document.getElementById("r_grad").style.filter = "saturate(10)";
+  }else if (keycode === 70){
+  	document.getElementById("r_grad").style.filter = "blur(50px)";
+  }else if (keycode === 71){
+  	document.getElementById("r_grad").style.filter = "brightness(50%)";
+  }else if (keycode === 72){
+  	document.getElementById("r_grad").style.filter = "contrast(100%)";
+  }else if (keycode === 74){
+  	document.getElementById("r_grad").style.filter = "invert(100%)";
+  }else if (keycode === 75){
+  	document.getElementById("r_grad").style.filter = "opacity(20%)";
+  // }else if (keycode === 76){
+  // }else if (keycode === 186){
+  // }else if (keycode === 222){
+  }
+});
+	</script>
+
+</body>
+</html> 
+
+<!-- data-00="background:repeating-radial-gradient(fuchsia 0%, cyan 33%, lime 66%, yellow  100%);opacity:1;filter:contrast(100%)Brightness(100%)hue-rotate(0deg)saturate(1);" 
+data-4000="background:repeating-radial-gradient(fuchsia 100%, cyan 100%, lime 100%, yellow  100%);opacity:1;filter:contrast(500%)Brightness(100%)hue-rotate(720deg)saturate(10);" 
+data-8000="background:repeating-radial-gradient(fuchsia 0%, cyan 33%, lime 66%, yellow  100%);opacity:1;filter:contrast(100%)Brightness(100%)hue-rotate(0deg)saturate(1);" -->
