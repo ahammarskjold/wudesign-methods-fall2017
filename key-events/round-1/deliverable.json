@@ -1,0 +1,55 @@
+{
+	"entrypoints" : [
+	{
+		"name" : "1 - Shape Morphing",
+		"file" : "index.html"
+
+	},
+	{
+		"name" : "2 - Guessing Words",
+		"file" : "index2.html"
+
+	},
+	{
+		"name" : "3 - Guessing Words 2",
+		"file" : "index3.html"
+
+	},
+	{
+		"name" : "4 - Guessing Words 3",
+		"file" : "index4.html"
+
+	},
+	{
+		"name" : "5 - Flickering Guess Words",
+		"file" : "index5.html"
+
+	},
+	{
+		"name" : "6 - Letter shuffle",
+		"file" : "index6.html"
+
+	},
+	{
+		"name" : "7 - Letter Shuffle Guessing Words",
+		"file" : "index7.html"
+
+	},
+	{
+		"name" : "8 - Unexpected result on letter press",
+		"file" : "index8.html"
+
+	},
+	{
+		"name" : "9 - Flickering and Vibrating Letters Similar to Chosen Letter",
+		"file" : "index10.html"
+
+	},
+	{
+		"name" : "10 - Flickering and Vibrating Letters Similar to Chosen Letter",
+		"file" : "index11.html"
+
+	}
+
+	]
+}

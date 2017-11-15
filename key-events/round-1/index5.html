@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Round 1: 5 - Flickering Guess Words</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <style type="text/css">
+
+* {
+  box-sizing: border-box;
+  font-family: monospace;
+  color:white;
+  font-size: 20px;
+}
+html, body {
+  height: 100%;
+}
+body {
+  background: black;
+
+}
+div#changeText{
+  padding-left: 100px;
+}
+div{
+  display: inline-block;
+    padding-top: 100px;
+
+}
+
+
+
+  </style>
+
+</head> 
+<body>
+  Random letter generator on loop<br>
+<div id="changeText"></div>
+<div id="changeText"></div>
+
+
+<script type="text/javascript">
+  
+
+var text = "";
+var possible="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+var counter = 0;
+var elem = document.getElementById("changeText");
+setInterval(change, 100);
+
+function change() {
+  elem.innerHTML = text[counter];
+  counter++;
+  for (var i = 0; i < 5; i++)
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+  return text;
+  if (counter >= text.length) {
+    counter = 0;
+  }
+}
+
+</script>
+
+</body>
+</html>

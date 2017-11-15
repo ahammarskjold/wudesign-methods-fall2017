@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Round 1: 10 - Flickering and Vibrating Letters Similar to Chosen Letter</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+ <!--  <link rel="stylesheet" type="text/css" href="shake-horizontal.css"> -->
+ 
+  <style type="text/css">
+
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color:white;
+  font-size: 20px;
+}
+html, body {
+  height: 100%;
+}
+body {
+  background: black;
+
+}
+div#changeText{
+  padding-left: 100px;
+  padding-bottom: 50px;
+
+}
+div#changeTexttwo{
+  padding-left: 100px;
+}
+div{
+  display: inline-block;
+
+}
+p{
+  padding-left: 100px;
+}
+
+.shake-horizontal {
+  display: inline-block;
+  transform-origin: center center; }
+
+.shake-freeze,
+.shake-constant.shake-constant--hover,
+.shake-trigger .shake-constant.shake-constant--hover {
+  animation-play-state: running; }
+
+.shake-freeze,
+.shake-trigger .shake-freeze, .shake-horizontal,
+.shake-trigger .shake-horizontal {
+  animation-play-state: running; }
+
+@keyframes shake-horizontal {
+  10% {
+    transform: translate(2px, 0) rotate(0); }
+  20% {
+    transform: translate(-2px, 0) rotate(0); }
+  30% {
+    transform: translate(2px, 0) rotate(0); }
+  40% {
+    transform: translate(0px, 0) rotate(0); }
+  50% {
+    transform: translate(2px, 0) rotate(0); }
+  60% {
+    transform: translate(-2px, 0) rotate(0); }
+  70% {
+    transform: translate(2px, 0) rotate(0); }
+  80% {
+    transform: translate(-2px, 0) rotate(0); }
+  90% {
+    transform: translate(2px, 0) rotate(0); }
+  0%, 100% {
+    transform: translate(0, 0) rotate(0); } }
+
+.shake-horizontal,
+.shake-trigger .shake-horizontal, .shake-horizontal.shake-freeze, .shake-horizontal.shake-constant {
+  animation-name: shake-horizontal;
+  animation-duration: 100ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite; }
+
+
+
+
+  </style>
+
+</head> 
+<body>
+  Flashing similar looking letters and shaking to give illusion of being dyslexic<br>
+<p>A</p>  
+<div id="changeText" class="shake-horizontal"></div>
+<p>B</p>  
+<div id="changeTexttwo" class="shake-horizontal"></div>
+
+
+<script type="text/javascript">
+  
+
+var text = "";
+var possible="AEFHNR";
+var possibletwo="BDPEFHKR";
+var counter = 0;
+var elem = document.getElementById("changeText");
+setInterval(change, 200);
+var elemtwo = document.getElementById("changeTexttwo");
+setInterval(change, 200);
+
+function change() {
+  elem.innerHTML = text[counter];
+  counter++;
+  for (var i = 0; i < 5; i++)
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+  elemtwo.innerHTML = text[counter];
+  counter++;
+  for (var i = 0; i < 5; i++)
+    text += possibletwo.charAt(Math.floor(Math.random() * possibletwo.length));
+  return text;
+  if (counter >= text.length) {
+    counter = 0;
+  }
+}
+
+
+
+</script>
+
+</body>
+</html>

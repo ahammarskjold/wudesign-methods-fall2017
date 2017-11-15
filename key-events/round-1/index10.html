@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Round 1: 9 - Flickering and Vibrating Letters Similar to Chosen Letter</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <link rel="stylesheet" type="text/css" href="shake-horizontal.css">
+  <link rel="stylesheet" type="text/css" href="csshake.min.css">
+  <style type="text/css">
+
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color:white;
+  font-size: 20px;
+}
+html, body {
+  height: 100%;
+}
+body {
+  background: black;
+
+}
+div#changeText{
+  padding-left: 100px;
+}
+div{
+  display: inline-block;
+
+}
+p{
+  padding-left: 100px;
+}
+
+
+
+  </style>
+
+</head> 
+<body>
+  Flashing similar looking letters and shaking to give illusion of being dyslexic<br>
+<p>A</p>  
+<div id="changeText" class="shake-horizontal"></div>
+
+
+<script type="text/javascript">
+  
+
+var text = "";
+var possible="AEFHNR";
+var counter = 0;
+var elem = document.getElementById("changeText");
+setInterval(change, 200);
+
+function change() {
+  elem.innerHTML = text[counter];
+  counter++;
+  for (var i = 0; i < 5; i++)
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+  return text;
+  if (counter >= text.length) {
+    counter = 0;
+  }
+}
+
+</script>
+
+</body>
+</html>
