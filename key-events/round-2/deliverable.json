@@ -1,0 +1,55 @@
+{
+	"entrypoints" : [
+	{
+		"name" : "1 - Flickering and Vibrating Letters Similar to Chosen Letter",
+		"file" : "index.html"
+
+	},
+	{
+		"name" : "2 - Flickering and Vibrating Letters Similar to Chosen Letter 2",
+		"file" : "index2.html"
+
+	},
+	{
+		"name" : "3 - Word Vibration changes on keypress",
+		"file" : "index3.html"
+
+	},
+	{
+		"name" : "4 - Vibrating Letters on Keypress",
+		"file" : "index4.html"
+
+	},
+	{
+		"name" : "5 - Vibrating Letters on Keypress-Delay vibrate and letter change",
+		"file" : "index5.html"
+
+	},
+	{
+		"name" : "6 - Vibrating Letters, Keypress reveals correct letters",
+		"file" : "index6.html"
+
+	},
+	{
+		"name" : "7 - Fading Letters and Type to Replace-1",
+		"file" : "index7.html"
+
+	},
+	{
+		"name" : "8 - Fading Letters and Type to Replace-2",
+		"file" : "index8.html"
+
+	},
+	{
+		"name" : "9 - Cross-fade Letters and Type to Replace",
+		"file" : "index9.html"
+
+	},
+	{
+		"name" : "10 - Cross-fade Letters with Blur and Type to Replace",
+		"file" : "index10.html"
+
+	}
+
+	]
+}

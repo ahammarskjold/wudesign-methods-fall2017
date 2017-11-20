@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Round 2: 8 - Fading Letters and Type to Replace-2</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+ <!--  <link rel="stylesheet" type="text/css" href="shake-horizontal.css"> -->
+ 
+  <style type="text/css">
+
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color:white;
+  font-size: 20px;
+}
+html, body {
+  height: 100%;
+}
+body {
+  background: black;
+  margin-left: 50px;
+  position: fixed;
+
+}
+
+p{
+  margin: 0px;
+  display: block;
+  
+}
+h2{
+  letter-spacing: 1em;
+}
+h3{
+  letter-spacing: 1.15em;
+}
+h4{
+  letter-spacing: 1.09em;
+}
+textarea{
+  background: none;
+  border:none;
+  color:white;
+  font-family: sans-serif;
+  outline: none;
+  height:100%;
+  width: 100%;
+  font-size: 20px;
+  margin: 20px;
+  resize: none;
+}
+
+div{
+  position: static;
+}
+
+
+.shake-horizontal {
+  display: inline-block;
+  transform-origin: center center;
+  animation-name: shake-horizontal;
+  animation-duration: 700ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  position: relative;
+}
+
+@keyframes shake-horizontal {
+  10% {
+    transform: translate(7px, 0) rotate(0); }
+  20% {
+    transform: translate(-7px, 0) rotate(0); }
+  30% {
+    transform: translate(7px, 0) rotate(0); }
+  40% {
+    transform: translate(0px, 0) rotate(0); }
+  50% {
+    transform: translate(7px, 0) rotate(0); }
+  60% {
+    transform: translate(-7px, 0) rotate(0); }
+  70% {
+    transform: translate(7px, 0) rotate(0); }
+  80% {
+    transform: translate(-7px, 0) rotate(0); }
+  90% {
+    transform: translate(7px, 0) rotate(0); }
+  0%, 100% {
+    transform: translate(0, 0) rotate(0); } }
+/*#H{
+  display: none;
+}
+#H.visible{
+  display: inline-block;
+}*/
+
+.shake-horizontal-E {
+  display: inline-block;
+  transform-origin: center center;
+  animation-name: shake-horizontal;
+  animation-duration: 900ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  position: relative;
+}
+
+@keyframes shake-horizontal-E {
+  10% {
+    transform: translate(-2px, 0) rotate(0); }
+  20% {
+    transform: translate(2px, 0) rotate(0); }
+  30% {
+    transform: translate(-2px, 0) rotate(0); }
+  40% {
+    transform: translate(0px, 0) rotate(0); }
+  50% {
+    transform: translate(-2px, 0) rotate(0); }
+  60% {
+    transform: translate(2px, 0) rotate(0); }
+  70% {
+    transform: translate(-2px, 0) rotate(0); }
+  80% {
+    transform: translate(2px, 0) rotate(0); }
+  90% {
+    transform: translate(-2px, 0) rotate(0); }
+  0%, 100% {
+    transform: translate(0, 0) rotate(0); } }    
+
+.shake-horizontal-L {
+  display: inline-block;
+  transform-origin: center center;
+  animation-name: shake-horizontal;
+  animation-duration: 1100ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  position: relative;
+}
+
+@keyframes shake-horizontal-L {
+  10% {
+    transform: translate(-4px, 0) rotate(0); }
+  20% {
+    transform: translate(4px, 0) rotate(0); }
+  30% {
+    transform: translate(-4px, 0) rotate(0); }
+  40% {
+    transform: translate(0px, 0) rotate(0); }
+  50% {
+    transform: translate(-4px, 0) rotate(0); }
+  60% {
+    transform: translate(4px, 0) rotate(0); }
+  70% {
+    transform: translate(-4px, 0) rotate(0); }
+  80% {
+    transform: translate(4px, 0) rotate(0); }
+  90% {
+    transform: translate(-4px, 0) rotate(0); }
+  0%, 100% {
+    transform: translate(0, 0) rotate(0); } }        
+
+.shake-horizontal-Ltwo {
+  display: inline-block;
+  transform-origin: center center;
+  animation-name: shake-horizontal;
+  animation-duration: 1100ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  position: relative;
+}
+
+@keyframes shake-horizontal-Ltwo {
+  10% {
+    transform: translate(-4px, 0) rotate(0); }
+  20% {
+    transform: translate(4px, 0) rotate(0); }
+  30% {
+    transform: translate(-4px, 0) rotate(0); }
+  40% {
+    transform: translate(0px, 0) rotate(0); }
+  50% {
+    transform: translate(-4px, 0) rotate(0); }
+  60% {
+    transform: translate(4px, 0) rotate(0); }
+  70% {
+    transform: translate(-4px, 0) rotate(0); }
+  80% {
+    transform: translate(4px, 0) rotate(0); }
+  90% {
+    transform: translate(-4px, 0) rotate(0); }
+  0%, 100% {
+    transform: translate(0, 0) rotate(0); } }            
+
+
+.shake-horizontal-O {
+  display: inline-block;
+  transform-origin: center center;
+  animation-name: shake-horizontal;
+  animation-duration: 1100ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  position: relative;
+}
+
+@keyframes shake-horizontal-O {
+  10% {
+    transform: translate(-4px, 0) rotate(0); }
+  20% {
+    transform: translate(4px, 0) rotate(0); }
+  30% {
+    transform: translate(-4px, 0) rotate(0); }
+  40% {
+    transform: translate(0px, 0) rotate(0); }
+  50% {
+    transform: translate(-4px, 0) rotate(0); }
+  60% {
+    transform: translate(4px, 0) rotate(0); }
+  70% {
+    transform: translate(-4px, 0) rotate(0); }
+  80% {
+    transform: translate(4px, 0) rotate(0); }
+  90% {
+    transform: translate(-4px, 0) rotate(0); }
+  0%, 100% {
+    transform: translate(0, 0) rotate(0); } }        
+
+#answ{
+  display:none;
+  margin-top: 100px;
+  font-weight: lighter;
+  font-size: 12px;
+}
+#answ.showme{
+  display:block;
+}
+
+@-webkit-keyframes fade-in{
+    from{
+        opacity:1;
+    }
+    to{
+        opacity:0;
+    }
+}
+
+#Hmov{
+    opacity:0;
+    display:inline;
+    position:relative;
+    /*margin-left:-56px;*/
+    -webkit-animation:fade-in .7s infinite;
+    -webkit-animation-delay:-0.55s;
+}
+
+#Emov{
+    opacity:0;
+    display:inline;
+    position:relative;
+    /*margin-left:-56px;*/
+    -webkit-animation:fade-in .7s infinite;
+    -webkit-animation-delay:-0.15s;
+}
+
+#Lmov{
+    opacity:0;
+    display:inline;
+    position:relative;
+    /*margin-left:-56px;*/
+    -webkit-animation:fade-in .7s infinite;
+    -webkit-animation-delay:-0.35s;
+}
+#Ltwomov{
+    opacity:0;
+    display:inline;
+    position:relative;
+    /*margin-left:-56px;*/
+    -webkit-animation:fade-in .7s infinite;
+    -webkit-animation-delay:-0.25s;
+}
+#Omov{
+    opacity:0;
+    display:inline;
+    position:relative;
+    /*margin-left:-56px;*/
+    -webkit-animation:fade-in .7s infinite;
+    -webkit-animation-delay:-0.45s;
+}
+
+  </style>
+
+
+</head> 
+<body>
+  
+  <h1>Try to decipher the word (press enter for the answer)<br><br></h1>
+  <div contenteditable id="area">
+    <span id="H" style="display: none;"></span>
+    <span id="Hmov"></span>
+    <span id="E" style="display: none;"></span>
+    <span id="Emov"></span>
+    <span id="L" style="display: none;"></span>
+    <span id="Lmov"></span>
+    <span id="Ltwo" style="display: none;"></span>
+    <span id="Ltwomov"></span>
+    <span id="O" style="display: none;"></span>
+    <span id="Omov"></span>
+</div>
+<h1 id="answ">Answer: HELLO</h1>
+
+
+
+<script type="text/javascript">
+var elemH=document.getElementById("H");
+var elemHmov=document.getElementById("Hmov");setInterval(changeH, 1000);
+
+var elemE=document.getElementById("E");
+var elemEmov=document.getElementById("Emov");setInterval(changeE, 1300);
+
+var elemL=document.getElementById("L");
+var elemLmov=document.getElementById("Lmov");setInterval(changeL, 1100);
+
+var elemLtwo=document.getElementById("Ltwo");
+var elemLtwomov=document.getElementById("Ltwomov");setInterval(changeLtwo, 1400);
+
+var elemO=document.getElementById("O");
+var elemOmov=document.getElementById("Omov");setInterval(changeO, 1200);
+
+var answ=document.getElementById("answ");
+
+var text = "";
+var possibleH="HkAEKH8hXBT3";
+var possibleE="E6RZ8EekHLbP5B3hEK0tTD#";
+var possibleL="L]tIB[L1Ef!7\LTH/2P|liF(";
+var possibleLtwo="f!L7\|liTH/L]tIB[1E2LPF(";
+var possibleO="O@Uc(o)G3aC8Q)PnDeORu0";
+var counter = 0;
+var count = 0;
+
+$(window).on('keyup', function (event){
+   var keycode = event.which;
+   
+   if(keycode===72){
+    typeletterH();
+    changeH();
+    setTimeout(
+       function(){
+          $('#Hmov').replaceWith($('#H'));
+          $('#H').show();
+       },
+       000
+    );
+   }else if(keycode===69){
+    typeletterE();
+    changeE();
+    setTimeout(
+       function(){
+          $('#Emov').replaceWith($('#E'));
+          $('#E').show();
+       },
+       000
+    );
+   }if(keycode===76){
+      if (count === 0){
+        count++;
+        typeletterL();
+        changeL();
+        setTimeout(
+           function(){
+              $('#Lmov').replaceWith($('#L'));
+              $('#L').show();
+           },
+           000
+        );
+      }else if (count===1){
+        event.preventDefault();
+        typeletterLtwo();
+        changeLtwo();
+        setTimeout(
+           function(){
+              $('#Ltwomov').replaceWith($('#Ltwo'));
+              $('#Ltwo').show();
+           },
+           000
+        );
+      }
+   }else if(keycode===79){
+    typeletterO();
+    changeO();
+    setTimeout(
+       function(){
+          $('#Omov').replaceWith($('#O'));
+          $('#O').show();
+       },
+       000
+    );
+  }else if(keycode===13){
+      answer();
+    }
+  });
+
+function answer(){
+  $("#answ").addClass("showme");
+}
+
+
+function typeletterH(){
+  elemH.innerHTML = "H";
+}
+function changeH() {
+  elemHmov.innerHTML = text[counter];
+  counter++;
+  for (var i = 0; i < 5; i++)
+    text += possibleH.charAt(Math.floor(Math.random() * possibleH.length));
+}
+
+
+function typeletterE(){
+  elemE.innerHTML = "E";
+}
+function changeE(){
+  elemEmov.innerHTML = text[counter];
+  counter++;
+  for (var i = 0; i < 5; i++)
+    text += possibleE.charAt(Math.floor(Math.random() * possibleE.length));
+}
+
+
+function typeletterL(){
+  elemL.innerHTML = "L";
+}
+function changeL(){
+  elemLmov.innerHTML = text[counter];
+  counter++;
+  for (var i = 0; i < 5; i++)
+    text += possibleL.charAt(Math.floor(Math.random() * possibleL.length));
+}
+
+
+function typeletterLtwo(){
+  elemLtwo.innerHTML = "L";
+}
+function changeLtwo(){
+  elemLtwomov.innerHTML = text[counter];
+  counter++;
+  for (var i = 0; i < 5; i++)
+    text += possibleLtwo.charAt(Math.floor(Math.random() * possibleLtwo.length));
+}
+
+
+
+function typeletterO(){
+  elemO.innerHTML = "O";
+}
+function changeO(){
+  elemOmov.innerHTML = text[counter];
+  counter++;
+  for (var i = 0; i < 5; i++)
+    text += possibleO.charAt(Math.floor(Math.random() * possibleO.length));
+}
+ 
+
+</script>
+
+</body>
+</html>
