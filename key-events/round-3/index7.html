@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Round 3: 7 - letters blending together</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+ <!--  <link rel="stylesheet" type="text/css" href="shake-horizontal.css"> -->
+ 
+  <style type="text/css">
+
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color:white;
+  font-size: 20px;
+}
+html, body {
+  height: 100%;
+}
+body {
+  background: black;
+  margin: 50px;
+
+}
+
+p{
+  margin: 0px;
+  display: block; 
+  /*font-family: "Comic Sans MS", cursive, sans-serif;*/
+}
+h1{
+  color: grey;
+  font-weight: bold;
+
+
+}
+h2{
+  color: grey;
+  font-weight: normal;
+}
+h3{
+  letter-spacing: 1.15em;
+}
+h4{
+  letter-spacing: 1.09em;
+}
+textarea{
+  background: white;
+  border:none;
+  color:black;
+  font-family: sans-serif;
+  outline: none;
+  height:20%;
+  width: 100%;
+  font-size: 20px;
+  resize: none;
+}
+
+div{
+  position: static;
+}
+
+</style>
+
+</head> 
+<body>
+  NEED HELP MAKING THIS HAPPEN
+  <h1>Reading with Dyslexia<br><br></h1><h2>Dyslexic people tend to have a hard time differentiating between groups of letters. Here, you can see that some letters are getting closer to eachother<br><br></h2>
+  <p id = "text">The earliest screen-based systems of interaction were operated solely via keyboard, using command-line interfaces. Command-line interaction continues to be a powerful tool of computing since it blurs the line between 'input' and 'programming', and keyed input in all its forms — commands, shortcuts, forms, word-processing, email, texting, etc. — is a critical component of most device interaction.</p><br><br>
+
+  <h2>Attempt to rewrite the origional, correct paragraph</h2>
+
+  <textarea></textarea>
+
+</div>
+
+
+<script type="text/javascript">
+function randompar(){
+  var paragraph=document.getElementById("text").innerHTML;
+  var index = Math.floor(Math.random() * paragraph.length);
+  var Letter = paragraph.charAt(index);
+  document.getElementById('text').innerHTML = paragraph.substr(0, index) + pickLetterFor(Letter) + paragraph.substr(index+1, paragraph.length);
+
+}
+function random(Letterset){
+  return Letterset.charAt(Math.floor(Math.random() * Letterset.length));
+}
+
+function pickLetterFor(Letter){
+  if(Letter==="a") return random("ea");
+  else if(Letter==="b") return random("db");
+  else if(Letter==="c") return random("oce");
+  else if(Letter==="d") return random("bd");
+  else if(Letter==="e") return random("ceos");
+  else if(Letter==="f") return random("tfl");
+  else if(Letter==="g") return random("ygj");
+  else if(Letter==="h") return random("nhupu");
+  else if(Letter==="i") return random("jil");
+  else if(Letter==="j") return random("ijl");
+  else if(Letter==="k") return random("hky");
+  else if(Letter==="l") return random("ijl");
+  else if(Letter==="m") return random("nmhuw");
+  else if(Letter==="n") return random("unhm");
+  else if(Letter==="o") return random("eocs");
+  else if(Letter==="p") return random("qp");
+  else if(Letter==="q") return random("pq");
+  else if(Letter==="r") return random("nrci");
+  else if(Letter==="s") return random("cseo");
+  else if(Letter==="t") return random("ltfh");
+  else if(Letter==="u") return random("vuhnw");
+  else if(Letter==="v") return random("yuwv");
+  else if(Letter==="w") return random("mwvu");
+  else if(Letter==="x") return random("yx");
+  else if(Letter==="y") return random("xy");
+  else if(Letter==="z") return random("z");
+  else if(Letter===" ") return random(" ");
+  else return random(" ");
+}
+$(window).ready(function(e){
+  setInterval(
+    randompar,400);
+});
+
+
+
+
+
+</script>
+
+</body>
+</html>

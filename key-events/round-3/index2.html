@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Round 2: 2 - random letters being added</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+ <!--  <link rel="stylesheet" type="text/css" href="shake-horizontal.css"> -->
+ 
+  <style type="text/css">
+
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color:white;
+  font-size: 20px;
+}
+html, body {
+  height: 100%;
+}
+body {
+  background: black;
+  margin: 50px;
+
+}
+
+p{
+  margin: 0px;
+  display: block;
+  
+}
+h2{
+  letter-spacing: 1em;
+}
+h3{
+  letter-spacing: 1.15em;
+}
+h4{
+  letter-spacing: 1.09em;
+}
+textarea{
+  background: none;
+  border:none;
+  color:white;
+  font-family: sans-serif;
+  outline: none;
+  height:100%;
+  width: 100%;
+  font-size: 20px;
+  margin: 20px;
+  resize: none;
+}
+
+div{
+  position: static;
+}
+
+</style>
+
+</head> 
+<body>
+  
+  <h1>Can you read this?<br><br></h1>
+  <p id = "text">The earliest screen-based systems of interaction were operated solely via keyboard, using command-line interfaces. Command-line interaction continues to be a powerful tool of computing since it blurs the line between 'input' and 'programming', and keyed input in all its forms — commands, shortcuts, forms, word-processing, email, texting, etc. — is a critical component of most device interaction.</p>
+
+
+</div>
+
+
+<script type="text/javascript">
+
+
+function randompar(){
+  var paragraph=document.getElementById("text").innerHTML;
+  var Letter = paragraph.charAt(Math.floor(Math.random() * paragraph.length));
+  var index = Math.floor(Math.random() * paragraph.length);
+  document.getElementById('text').innerHTML = paragraph.substr(0, index) + pickLetterFor(Letter) + paragraph.substr(index, paragraph.length);
+
+}
+function random(Letterset){
+  return Letterset.charAt(Math.floor(Math.random() * Letterset.length));
+}
+
+function pickLetterFor(Letter){
+  if(Letter=="a") return random("ea");
+  if(Letter=="b") return random("db");
+  if(Letter=="c") return random("oce");
+  if(Letter=="d") return random("bd");
+  if(Letter=="e") return random("ceos");
+  if(Letter=="f") return random("tfl");
+  if(Letter=="g") return random("ygj");
+  if(Letter=="h") return random("nhupu");
+  if(Letter=="i") return random("jil");
+  if(Letter=="j") return random("ijl");
+  if(Letter=="k") return random("hky");
+  if(Letter=="l") return random("ijl");
+  if(Letter=="m") return random("nmhuw");
+  if(Letter=="n") return random("unhm");
+  if(Letter=="o") return random("eocs");
+  if(Letter=="p") return random("qp");
+  if(Letter=="q") return random("pq");
+  if(Letter=="r") return random("nrci");
+  if(Letter=="s") return random("cseo");
+  if(Letter=="t") return random("ltfh");
+  if(Letter=="u") return random("vuhnw");
+  if(Letter=="v") return random("yuwv");
+  if(Letter=="w") return random("mwvu");
+  if(Letter=="x") return random("yx");
+  if(Letter=="y") return random("xy");
+  if(Letter=="z") return random("z");
+}
+$(window).ready(function(e){
+  
+  setInterval(
+    randompar, 200);
+
+
+});
+
+
+// $(window).on("keyup", function(e){
+//   var newspan=$("<span>"+e.key+"</span>");
+//   $("body").append(newspan);
+//   console.log(pickLetterFor);
+//   setInterval(function(){
+//     newspan.html(pickLetterFor(e.key));
+//   }, 1000);
+  
+// });
+
+
+</script>
+
+</body>
+</html>

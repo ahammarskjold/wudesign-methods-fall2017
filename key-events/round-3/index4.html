@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Round 3: 4 - switching to a similar looking letter</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+ <!--  <link rel="stylesheet" type="text/css" href="shake-horizontal.css"> -->
+ 
+  <style type="text/css">
+
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color:white;
+  font-size: 20px;
+}
+html, body {
+  height: 100%;
+}
+body {
+  background: black;
+  margin: 50px;
+
+}
+
+p{
+  margin: 0px;
+  display: block;
+  
+}
+h2{
+  letter-spacing: 1em;
+}
+h3{
+  letter-spacing: 1.15em;
+}
+h4{
+  letter-spacing: 1.09em;
+}
+textarea{
+  background: none;
+  border:none;
+  color:white;
+  font-family: sans-serif;
+  outline: none;
+  height:100%;
+  width: 100%;
+  font-size: 20px;
+  margin: 20px;
+  resize: none;
+}
+
+div{
+  position: static;
+}
+
+
+.shake-horizontal {
+  display: inline-block;
+  transform-origin: center center;
+  animation-name: shake-horizontal;
+  animation-duration: 700ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  position: relative;
+}
+
+@keyframes shake-horizontal {
+  10% {
+    transform: translate(7px, 0) rotate(0); }
+  20% {
+    transform: translate(-7px, 0) rotate(0); }
+  30% {
+    transform: translate(7px, 0) rotate(0); }
+  40% {
+    transform: translate(0px, 0) rotate(0); }
+  50% {
+    transform: translate(7px, 0) rotate(0); }
+  60% {
+    transform: translate(-7px, 0) rotate(0); }
+  70% {
+    transform: translate(7px, 0) rotate(0); }
+  80% {
+    transform: translate(-7px, 0) rotate(0); }
+  90% {
+    transform: translate(7px, 0) rotate(0); }
+  0%, 100% {
+    transform: translate(0, 0) rotate(0); } }
+/*#H{
+  display: none;
+}
+#H.visible{
+  display: inline-block;
+}*/
+
+.shake-horizontal-E {
+  display: inline-block;
+  transform-origin: center center;
+  animation-name: shake-horizontal;
+  animation-duration: 900ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  position: relative;
+}
+
+@keyframes shake-horizontal-E {
+  10% {
+    transform: translate(-2px, 0) rotate(0); }
+  20% {
+    transform: translate(2px, 0) rotate(0); }
+  30% {
+    transform: translate(-2px, 0) rotate(0); }
+  40% {
+    transform: translate(0px, 0) rotate(0); }
+  50% {
+    transform: translate(-2px, 0) rotate(0); }
+  60% {
+    transform: translate(2px, 0) rotate(0); }
+  70% {
+    transform: translate(-2px, 0) rotate(0); }
+  80% {
+    transform: translate(2px, 0) rotate(0); }
+  90% {
+    transform: translate(-2px, 0) rotate(0); }
+  0%, 100% {
+    transform: translate(0, 0) rotate(0); } }    
+
+.shake-horizontal-L {
+  display: inline-block;
+  transform-origin: center center;
+  animation-name: shake-horizontal;
+  animation-duration: 1100ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  position: relative;
+}
+
+@keyframes shake-horizontal-L {
+  10% {
+    transform: translate(-4px, 0) rotate(0); }
+  20% {
+    transform: translate(4px, 0) rotate(0); }
+  30% {
+    transform: translate(-4px, 0) rotate(0); }
+  40% {
+    transform: translate(0px, 0) rotate(0); }
+  50% {
+    transform: translate(-4px, 0) rotate(0); }
+  60% {
+    transform: translate(4px, 0) rotate(0); }
+  70% {
+    transform: translate(-4px, 0) rotate(0); }
+  80% {
+    transform: translate(4px, 0) rotate(0); }
+  90% {
+    transform: translate(-4px, 0) rotate(0); }
+  0%, 100% {
+    transform: translate(0, 0) rotate(0); } }        
+
+.shake-horizontal-Ltwo {
+  display: inline-block;
+  transform-origin: center center;
+  animation-name: shake-horizontal;
+  animation-duration: 1100ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  position: relative;
+}
+
+@keyframes shake-horizontal-Ltwo {
+  10% {
+    transform: translate(-4px, 0) rotate(0); }
+  20% {
+    transform: translate(4px, 0) rotate(0); }
+  30% {
+    transform: translate(-4px, 0) rotate(0); }
+  40% {
+    transform: translate(0px, 0) rotate(0); }
+  50% {
+    transform: translate(-4px, 0) rotate(0); }
+  60% {
+    transform: translate(4px, 0) rotate(0); }
+  70% {
+    transform: translate(-4px, 0) rotate(0); }
+  80% {
+    transform: translate(4px, 0) rotate(0); }
+  90% {
+    transform: translate(-4px, 0) rotate(0); }
+  0%, 100% {
+    transform: translate(0, 0) rotate(0); } }            
+
+
+.shake-horizontal-O {
+  display: inline-block;
+  transform-origin: center center;
+  animation-name: shake-horizontal;
+  animation-duration: 1100ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  position: relative;
+}
+
+@keyframes shake-horizontal-O {
+  10% {
+    transform: translate(-4px, 0) rotate(0); }
+  20% {
+    transform: translate(4px, 0) rotate(0); }
+  30% {
+    transform: translate(-4px, 0) rotate(0); }
+  40% {
+    transform: translate(0px, 0) rotate(0); }
+  50% {
+    transform: translate(-4px, 0) rotate(0); }
+  60% {
+    transform: translate(4px, 0) rotate(0); }
+  70% {
+    transform: translate(-4px, 0) rotate(0); }
+  80% {
+    transform: translate(4px, 0) rotate(0); }
+  90% {
+    transform: translate(-4px, 0) rotate(0); }
+  0%, 100% {
+    transform: translate(0, 0) rotate(0); } }        
+
+  </style>
+
+</head> 
+<body>
+  
+  <h1>Type anything<br><br></h1>
+
+
+</div>
+
+
+<script type="text/javascript">
+function random(Letterset){
+  return Letterset.charAt(Math.random(Math.random() * Letterset.length));
+}
+
+function pickLetterFor(Letter){
+  if(Letter=="a") return random("ea");
+  if(Letter=="b") return random("db");
+  if(Letter=="c") return random("oce");
+  if(Letter=="d") return random("bd");
+  if(Letter=="e") return random("ceos");
+  if(Letter=="f") return random("tfl");
+  if(Letter=="g") return random("ygj");
+  if(Letter=="h") return random("nhupu");
+  if(Letter=="i") return random("jil");
+  if(Letter=="j") return random("ijl");
+  if(Letter=="k") return random("hky");
+  if(Letter=="l") return random("ijl");
+  if(Letter=="m") return random("nmhuw");
+  if(Letter=="n") return random("unhm");
+  if(Letter=="o") return random("eocs");
+  if(Letter=="p") return random("qp");
+  if(Letter=="q") return random("pq");
+  if(Letter=="r") return random("nrci");
+  if(Letter=="s") return random("cseo");
+  if(Letter=="t") return random("ltfh");
+  if(Letter=="u") return random("vuhnw");
+  if(Letter=="v") return random("yuwv");
+  if(Letter=="w") return random("mwvu");
+  if(Letter=="x") return random("yx");
+  if(Letter=="y") return random("xy");
+  if(Letter=="z") return random("z");
+}
+var counter = 0;
+var text=""
+
+
+$(window).on("keyup", function(e){
+  var newspan=$("<span>"+e.key+"</span>");
+  $("body").append(newspan);
+  console.log(pickLetterFor);
+  setInterval(function(){
+    newspan.html(pickLetterFor(e.key));
+  }, 250);
+  
+});
+
+// $(window).on("keyup", function(e){
+//   var newspan=$("<span>"+e.key+"</span>");
+//   setInterval(function(){
+//     newspan.html(pickLetterFor(e.key));
+//   }, 250);
+//   $("body").append(newspan);
+// });
+
+// =[counter];
+//         counter++;
+//         for (var i = 0; i < 5; i++)
+//           text += possibleH.charAt(Math.floor(Math.random() * possibleH.length));
+//         // $("#H").addClass("shake-horizontal");
+//       }, 150;
+
+
+
+// $(window).on('keyup', function (event){
+//    console.log(event);
+//    var keycode = event.which;
+   
+//    if(keycode===72){
+//     typeletterH();
+//     setTimeout(function(){
+//       setInterval(function changeH(){
+//         elemH.innerHTML = text[counter];
+//         counter++;
+//         for (var i = 0; i < 5; i++)
+//           text += possibleH.charAt(Math.floor(Math.random() * possibleH.length));
+//         $("#H").addClass("shake-horizontal");
+//       }, 150);
+//     }, 2000);
+    
+//     }
+
+
+</script>
+
+</body>
+</html>

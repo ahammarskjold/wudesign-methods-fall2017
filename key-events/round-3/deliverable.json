@@ -1,0 +1,55 @@
+{
+	"entrypoints" : [
+	{
+		"name" : "1 - cross-fade letters and type to replace",
+		"file" : "index.html"
+
+	},
+	{
+		"name" : "2 - random letters being added",
+		"file" : "index2.html"
+
+	},
+	{
+		"name" : "3 - mirroring",
+		"file" : "index3.html"
+
+	},
+	{
+		"name" : "4 - switching to a similar looking letter",
+		"file" : "index4.html"
+
+	},
+	{
+		"name" : "5 - switching to a similar looking letters",
+		"file" : "index5.html"
+
+	},
+	{
+		"name" : "6 - random letters changing to similar looking alternatives",
+		"file" : "index6.html"
+
+	},
+	{
+		"name" : "7 - letters blending together",
+		"file" : "index7.html"
+
+	},
+	{
+		"name" : "8 - rotating",
+		"file" : "index8.html"
+
+	},
+	{
+		"name" : "9 - 3D",
+		"file" : "index9.html"
+
+	},
+	{
+		"name" : "10 - word confusion",
+		"file" : "index10.html"
+
+	}
+
+	]
+}

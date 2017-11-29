@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Round 3: 10 - word confusion</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+ <!--  <link rel="stylesheet" type="text/css" href="shake-horizontal.css"> -->
+ 
+  <style type="text/css">
+
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color:white;
+  font-size: 20px;
+}
+html, body {
+  height: 100%;
+}
+body {
+  background: black;
+  margin: 50px;
+  letter-spacing: 1em;
+
+}
+
+p{
+  margin: 0px;
+  display: block; 
+  letter-spacing: 0em;
+}
+h1{
+  font-weight: lighter;
+  letter-spacing: 0em;
+}
+h2{
+  letter-spacing: 1em;
+}
+h3{
+  letter-spacing: 1.15em;
+}
+h4{
+  letter-spacing: 1.09em;
+}
+textarea{
+  background: none;
+  border:none;
+  color:white;
+  font-family: sans-serif;
+  outline: none;
+  height:100%;
+  width: 100%;
+  font-size: 20px;
+  margin: 20px;
+  resize: none;
+}
+
+div{
+  position: static;
+}
+
+
+.flip{
+  display: inline-block;
+  transform-origin: center center;
+  animation-name: flip;
+  animation-duration: 3000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  position: relative;
+}
+
+@keyframes flip{
+  0% {
+    transform: rotateY(0deg); }
+  100%{
+    transform: rotateY(180deg); }  
+  
+
+  </style>
+
+</head> 
+<body>
+  
+  <h1>Dyslexia: reversing word lettering. most commonly occurring with "saw" and "was"<br><br>Type in "saw" or "was" and press space to see the effect</h1>
+  <div class="sawwas"></div>
+
+<p><br>HOW CAN I MAKE THE SPACE GO AWAY WHEN IT FLIPS??</p>
+
+</div>
+
+
+<script type="text/javascript">
+$(window).on('keyup', function (event){
+   var keycode = event.which;
+    if(keycode===32){
+      flip();
+    }
+});
+
+function flip(){
+  $("div.sawwas").addClass("flip");
+
+}
+
+$(window).on("keyup", function(e){
+  // var newspan=$("<span>"+e.key+"</span>");
+  $("div.sawwas").append(e.key);
+
+});
+
+</script>
+
+</body>
+</html>
