@@ -65,7 +65,8 @@ div{
 <body>
   NEED HELP MAKING THIS HAPPEN
   <h1>Reading with Dyslexia<br><br></h1><h2>Dyslexic people tend to have a hard time differentiating between groups of letters. Here, you can see that some letters are getting closer to eachother<br><br></h2>
-  <p id = "text">The earliest screen-based systems of interaction were operated solely via keyboard, using command-line interfaces. Command-line interaction continues to be a powerful tool of computing since it blurs the line between 'input' and 'programming', and keyed input in all its forms — commands, shortcuts, forms, word-processing, email, texting, etc. — is a critical component of most device interaction.</p><br><br>
+  
+  <p id = "text"><span>The earliest</span> <span>screen-based systems</span> <span>of interaction</span> were operated solely via keyboard, using command-line interfaces. Command-line interaction continues to be a powerful tool of computing since it blurs the line between 'input' and 'programming', and keyed input in all its forms — commands, shortcuts, forms, word-processing, email, texting, etc. — is a critical component of most device interaction.</p><br><br>
 
   <h2>Attempt to rewrite the origional, correct paragraph</h2>
 
@@ -73,17 +74,35 @@ div{
 
 </div>
 
+<script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous">
+  </script>
 
 <script type="text/javascript">
 function randompar(){
   var paragraph=document.getElementById("text").innerHTML;
   var index = Math.floor(Math.random() * paragraph.length);
   var Letter = paragraph.charAt(index);
-  document.getElementById('text').innerHTML = paragraph.substr(0, index) + pickLetterFor(Letter) + paragraph.substr(index+1, paragraph.length);
-
+  jQuery('#text span').each(function(){
+    var span=jQuery(this).text();
+    var index = Math.floor(Math.random() * span.length);
+    var Letter = span.charAt(index);
+    jQuery(this).text(span.substr(0, index) + pickLetterFor(Letter) + span.substr(index+1, span.length));
+  })
 }
 function random(Letterset){
   return Letterset.charAt(Math.floor(Math.random() * Letterset.length));
+}
+
+
+
+function randomlettspac(){
+  jQuery('#text span').each(function(){
+    var span=jQuery(this);
+    span.css("letter-spacing", ((Math.random() * 0.4)-0.2)+ "em");
+  })
 }
 
 function pickLetterFor(Letter){
@@ -117,8 +136,8 @@ function pickLetterFor(Letter){
   else return random(" ");
 }
 $(window).ready(function(e){
-  setInterval(
-    randompar,400);
+  setInterval(randompar,400);
+  setInterval(randomlettspac,800);
 });
 
 

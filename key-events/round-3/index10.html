@@ -56,6 +56,7 @@ textarea{
 
 div{
   position: static;
+  letter-spacing: 0em;
 }
 
 
@@ -85,18 +86,12 @@ div{
   <h1>Dyslexia: reversing word lettering. most commonly occurring with "saw" and "was"<br><br>Type in "saw" or "was" and press space to see the effect</h1>
   <div class="sawwas"></div>
 
-<p><br>HOW CAN I MAKE THE SPACE GO AWAY WHEN IT FLIPS??</p>
+
 
 </div>
 
 
 <script type="text/javascript">
-$(window).on('keyup', function (event){
-   var keycode = event.which;
-    if(keycode===32){
-      flip();
-    }
-});
 
 function flip(){
   $("div.sawwas").addClass("flip");
@@ -105,8 +100,12 @@ function flip(){
 
 $(window).on("keyup", function(e){
   // var newspan=$("<span>"+e.key+"</span>");
-  $("div.sawwas").append(e.key);
-
+  var keycode = event.which;
+    if(keycode===13){
+      flip();
+    }else{
+    $("div.sawwas").append(e.key);
+    }
 });
 
 </script>
