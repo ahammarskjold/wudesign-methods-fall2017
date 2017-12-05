@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Round 4: 5 - decoding test-4</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+ <!--  <link rel="stylesheet" type="text/css" href="shake-horizontal.css"> -->
+ 
+  <style type="text/css">
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color:white;
+  font-size: 20px;
+}
+html, body {
+  height: 100%;
+}
+body {
+  background: black;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width:800px;
+  height:1275px;
+
+
+}
+
+p{
+  margin: 0px;
+  display: block; 
+  font-family: monospace;
+}
+
+span{
+  font-family: monospace;
+}
+
+h1{
+  color: grey;
+  font-weight: bold;
+
+
+}
+h2{
+  color: grey;
+  font-weight: normal;
+}
+h3{
+  letter-spacing: 1.15em;
+}
+h4{
+  letter-spacing: 1.09em;
+}
+textarea{
+  background: white;
+  border:none;
+  color:black;
+  font-family: monospace;
+  outline: none;
+  height:10%;
+  width: 100%;
+  font-size: 20px;
+  resize: none;
+}
+
+/*div{
+  position: static;
+}*/
+textarea.green{
+  background: lime;
+}
+
+.rotate{
+  display: inline-block;
+  transform-origin: center center;
+  animation-name: rotate;
+  animation-duration: 3000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  position: relative;
+}
+
+@keyframes rotate{
+  0% {
+    transform: rotateZ(0deg); }
+  50% {
+    transform: rotateZ(180deg); }
+  100%{
+    transform: rotateZ(0deg); }  
+}
+
+.flip{
+  display: inline-block;
+  transform-origin: center center;
+  animation-name: flip;
+  animation-duration: 3000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  position: relative;
+}
+
+@keyframes flip{
+  0% {
+    transform: rotateY(0deg); }
+  50%{
+    transform: rotateY(180deg); } 
+  100%{
+    transform: rotateY(360deg); } 
+}     
+.threedim{
+  text-shadow: 1px -1px dimgrey, 
+                  2px -2px dimgrey, 
+                  3px -3px dimgrey, 
+                  4px -4px dimgrey, 
+                  5px -5px dimgrey;
+  animation-name: threedim;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+  /*animation-iteration-count: infinite;
+  animation-play-state: running;*/
+}
+@keyframes threedim{
+  0% {text-shadow: 0px -0px dimgrey;}
+  100% {text-shadow: 1px -1px dimgrey,2px -2px dimgrey,3px -3px dimgrey,4px -4px dimgrey,5px -5px dimgrey;}
+} 
+p.threeD{
+  animation-name: threeD;
+  animation-duration: 3000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  
+}
+@keyframes threeD{
+  0% {text-shadow: 0px -0px dimgrey;}
+  50% {text-shadow: 1px -1px dimgrey,2px -2px dimgrey,3px -3px dimgrey,4px -4px dimgrey,5px -5px dimgrey;}
+  100% {text-shadow: 0px -0px dimgrey;}
+}  
+.mirror{
+  display: inline-block;
+  transform-origin: center center;
+  animation-name: mirror;
+  animation-duration: 3000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  position: relative;
+}
+
+@keyframes mirror{
+  0% {
+    transform: rotateY(0deg); }
+  50% {
+    transform: rotateY(180deg); }
+  100%{
+    transform: rotateY(360deg); }  
+}  
+#change{
+  display: inline-block;
+}
+div.typeinhere{
+  height: 20px;
+}
+span.switch{
+  letter-spacing: 0.278em;
+}
+
+div.yay{
+  position: fixed;
+  background: linear-gradient(#99FF66, #7FFFD4);
+  z-index: 10;
+  color: black;
+  top:50px;
+  font-family: monospace;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 35px;
+  padding-top: 35px;
+  width: 600px;
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top:15%; 
+  /*opacity: 0.85;*/
+
+}
+a{
+  color: black;
+  font-family: monospace;
+}
+a:hover{
+/*  font-weight: bold;
+*/  color: grey;
+}
+strong{
+  color: black;
+  font-family: monospace;
+  font-size: 25px;
+  font-weight: normal;
+}
+button{
+  background: transparent;
+  color: black;
+  font-family: sans-serif;
+  border: none;
+  position: absolute;
+  margin-top:15%; 
+  left:5px;
+  bottom: 190px;
+  font-size: 10px;
+}
+button:hover{
+  color: grey;
+
+}
+
+</style>
+
+</head> 
+<body>
+  <h1 style="color: white;">DYSLEXIA<br><br></h1>
+  
+  <h1>Rotating letters is common, most common with d / p and b / q. <br><br></h1>
+  <p class="rotate">d</p>&nbsp;&nbsp;&nbsp;&nbsp;
+  <p class="rotate">b</p>&nbsp;&nbsp;<br><br>
+
+  <h1>Mirroring letters occurs most with d / b and p / q. <br><br></h1>
+  <p class="mirror">d</p>&nbsp;&nbsp;&nbsp;&nbsp;
+  <p class="mirror">p</p>&nbsp;&nbsp;<br><br>
+
+  <h1>Reversing word lettering, most commonly occurring with "saw" and "was"<br><br></h1>
+  <p class="flip">saw</p><br><br>
+  <p class="flip">was</p><br><br>
+
+  <h1>Confusion with similar looking letters. Type a letter to see the possibilities.<br><br></h1>
+  <span>a</span>
+  <span>b</span>
+  <span>c</span>
+  <span>d</span>
+  <span>e</span>
+  <span>f</span>
+  <span>g</span>
+  <span>h</span>
+  <span>i</span>
+  <span>j</span>
+  <span>k</span>
+  <span>l</span>
+  <span>m</span>
+  <span>n</span>
+  <span>o</span>
+  <span>p</span>
+  <span>q</span>
+  <span>r</span>
+  <span>s</span>
+  <span>t</span>
+  <span>u</span>
+  <span>v</span>
+  <span>w</span>
+  <span>x</span>
+  <span>y</span>
+  <span>z</span>
+  <div class="typeinhere"></div><br><br>
+
+
+  <h1>Dyslexic people think three-dimensionally. 3-D letters forms makes reading easier. <br><br></h1>
+  <p class="threeD">Hello</p><br><br>
+
+
+
+
+  <h1>Reading with Dyslexia<br><br></h1><h2>Dyslexic people tend to have a hard time differentiating between individual letters and groups of letters,they also skip over punctuation. In the nonsensical sentences below, you can see that some letters are changing to similar looking alternatives, punctuation is going away, and that the letter spacing is affected.<br><br></h2>
+
+  <p id="text"><span>The rate contributes</span> <span>the abrasive wood.</span> <span>The political process</span> <span>automates</span> <span>the river.</span> <span>The reaction founds</span> <span>the approval.</span></p>
+
+  <br><br>
+
+  <h2>Decode the sentence above, see if you can get the correct answer!</h2>
+  <h2 style="font-style: italic;">If you are still having trouble, press enter to make the letter's 3D</h2>
+
+  <textarea></textarea><br><br>
+
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous">
+  </script>
+<script type="text/javascript">
+$(window).on('keyup', function (event){
+   var keycode = event.which;
+   
+   if(keycode===13){
+    $("p#text").toggleClass("threedim")
+    }
+});
+
+
+$(window).ready(function(e){
+
+$(window).on("keyup", function(e){
+  var newspan=$("<span>"+e.key+"</span>");
+  $("div.typeinhere").append(newspan);
+  console.log(pickLetterFor);
+  newspan.addClass("switch");
+  setInterval(function(){
+    newspan.html(pickLetterFor(e.key));
+  }, 250);
+  
+});
+
+function randompar(){
+  // var paragraph=document.getElementById("text").innerHTML;
+  // var index = Math.floor(Math.random() * paragraph.length);
+  // var Letter = paragraph.charAt(index);
+  var thiscopy=sourcetext.clone();
+  thiscopy.children("span").each(function(){
+    var span=jQuery(this).text();
+    for (var i = 0; i <= 2; i++) {
+      var index = Math.floor(Math.random() * span.length);
+      var Letter = span.charAt(index);
+
+      span=(span.substr(0, index) + pickLetterFor(Letter) + span.substr(index+1, span.length));
+    }
+    $(this).text(span);
+  })
+  jQuery("#text").html(thiscopy.html());
+}
+function random(Letterset){
+  return Letterset.charAt(Math.floor(Math.random() * Letterset.length));
+}
+
+function randomlettspac(){
+  jQuery('#text span').each(function(){
+    var span=jQuery(this);
+    span.css("letter-spacing", ((Math.random() * 0.2)-0.1)+ "em");
+  })
+}
+
+function pickLetterFor(Letter){
+  if(Letter.toLowerCase()==="a") return random("ea");
+  else if(Letter.toLowerCase()==="b") return random("db");
+  else if(Letter.toLowerCase()==="c") return random("oce");
+  else if(Letter.toLowerCase()==="d") return random("bd");
+  else if(Letter.toLowerCase()==="e") return random("ceos");
+  else if(Letter.toLowerCase()==="f") return random("tfl");
+  else if(Letter.toLowerCase()==="g") return random("ygj");
+  else if(Letter.toLowerCase()==="h") return random("nhupu");
+  else if(Letter.toLowerCase()==="i") return random("jil");
+  else if(Letter.toLowerCase()==="j") return random("ijl");
+  else if(Letter.toLowerCase()==="k") return random("hky");
+  else if(Letter.toLowerCase()==="l") return random("ijl");
+  else if(Letter.toLowerCase()==="m") return random("nmhuw");
+  else if(Letter.toLowerCase()==="n") return random("unhm");
+  else if(Letter.toLowerCase()==="o") return random("eocs");
+  else if(Letter.toLowerCase()==="p") return random("qp");
+  else if(Letter.toLowerCase()==="q") return random("pq");
+  else if(Letter.toLowerCase()==="r") return random("nrci");
+  else if(Letter.toLowerCase()==="s") return random("cseo");
+  else if(Letter.toLowerCase()==="t") return random("ltfh");
+  else if(Letter.toLowerCase()==="u") return random("vuhnw");
+  else if(Letter.toLowerCase()==="v") return random("yuwv");
+  else if(Letter.toLowerCase()==="w") return random("mwvu");
+  else if(Letter.toLowerCase()==="x") return random("yx");
+  else if(Letter.toLowerCase()==="y") return random("xy");
+  else if(Letter.toLowerCase()==="z") return random("z");
+  else if(Letter.toLowerCase()===" ") return random(" ");
+  else return random(" ");
+}
+
+  var sourcetext=jQuery("#text").clone();
+  setInterval(randompar,200);
+  setInterval(randomlettspac,1800);
+
+$("textarea").on("keyup", function(e){
+  e.stopImmediatePropagation()
+  if ($(this).val()==sourcetext.text()){
+    // $("textarea").addClass("green");
+    $( "body" ).append( '<div class="yay" id="remove"><strong>Correct!</strong><br><br>Now imagine doing that every time you read.<br><br>To learn more about dyslexia please visit <br>the <a href="https://dyslexiaida.org/" target="_blank">International Dyslexic Association</a>.<button onclick="myFunction()">&#x2715;</button></div>' );
+  }
+  console.log(sourcetext.text())
+});
+
+
+});
+
+function myFunction() {
+  var correct=document.getElementById("remove");
+    correct.remove();
+}
+
+
+</script>
+
+</body>
+</html>

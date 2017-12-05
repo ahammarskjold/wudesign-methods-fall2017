@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Round 3: 8 - Rotating</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+ <!--  <link rel="stylesheet" type="text/css" href="shake-horizontal.css"> -->
+ 
+  <style type="text/css">
+
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color:white;
+  font-size: 20px;
+}
+html, body {
+  height: 100%;
+}
+body {
+  background: black;
+  margin: 50px;
+
+}
+
+p{
+  margin: 0px;
+  display: block; 
+}
+h1{
+  font-weight: lighter;
+  letter-spacing: 0em;
+}
+h2{
+  letter-spacing: 1em;
+}
+h3{
+  letter-spacing: 1.15em;
+}
+h4{
+  letter-spacing: 1.09em;
+}
+textarea{
+  background: none;
+  border:none;
+  color:white;
+  font-family: sans-serif;
+  outline: none;
+  height:100%;
+  width: 100%;
+  font-size: 20px;
+  margin: 20px;
+  resize: none;
+}
+
+div{
+  position: static;
+}
+
+
+.rotate{
+  display: inline-block;
+  transform-origin: center center;
+  animation-name: rotate;
+  animation-duration: 3000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  position: relative;
+}
+
+@keyframes rotate{
+  0% {
+    transform: rotateZ(0deg); }
+  50% {
+    transform: rotateZ(180deg); }
+  100%{
+    transform: rotateZ(0deg); }  
+  
+
+  </style>
+
+</head> 
+<body>
+  
+  <h1>Dyslexia: rotating letters is common. Try typing the following letters to understand why dyslexics easily confuse them: b, p, b, q <br><br></h1>
+  
+
+
+</div>
+
+
+<script type="text/javascript">
+function random(Letterset){
+  return Letterset.charAt(Math.random(Math.random() * Letterset.length));
+}
+
+function pickLetterFor(Letter){
+  if(Letter=="a") return random("ae");
+  if(Letter=="b") return random("bd");
+  if(Letter=="c") return random("ceo");
+  if(Letter=="d") return random("db");
+  if(Letter=="e") return random("ecos");
+  if(Letter=="f") return random("ftl");
+  if(Letter=="g") return random("gjy");
+  if(Letter=="h") return random("hunpu");
+  if(Letter=="i") return random("ijl");
+  if(Letter=="j") return random("jil");
+  if(Letter=="k") return random("khy");
+  if(Letter=="l") return random("ijl");
+  if(Letter=="m") return random("mnhuw");
+  if(Letter=="n") return random("nhmu");
+  if(Letter=="o") return random("ocse");
+  if(Letter=="p") return random("pq");
+  if(Letter=="q") return random("qp");
+  if(Letter=="r") return random("rcin");
+  if(Letter=="s") return random("seco");
+  if(Letter=="t") return random("tflh");
+  if(Letter=="u") return random("uvhnw");
+  if(Letter=="v") return random("vuwy");
+  if(Letter=="w") return random("wmvu");
+  if(Letter=="x") return random("xy");
+  if(Letter=="y") return random("yx");
+  if(Letter=="z") return random("z");
+}
+var counter = 0;
+var text=""
+
+
+$(window).on("keyup", function(e){
+  var newspan=$("<span>"+e.key+"</span>");
+  $("body").append(newspan);
+  newspan.addClass("rotate");
+
+  // console.log(pickLetterFor);
+  // setInterval(function(){
+  //   newspan.html(pickLetterFor(e.key));
+  // }, 250);
+  
+});
+
+// $(window).on("keyup", function(e){
+//   var newspan=$("<span>"+e.key+"</span>");
+//   setInterval(function(){
+//     newspan.html(pickLetterFor(e.key));
+//   }, 250);
+//   $("body").append(newspan);
+// });
+
+// =[counter];
+//         counter++;
+//         for (var i = 0; i < 5; i++)
+//           text += possibleH.charAt(Math.floor(Math.random() * possibleH.length));
+//         // $("#H").addClass("shake-horizontal");
+//       }, 150;
+
+
+
+// $(window).on('keyup', function (event){
+//    console.log(event);
+//    var keycode = event.which;
+   
+//    if(keycode===72){
+//     typeletterH();
+//     setTimeout(function(){
+//       setInterval(function changeH(){
+//         elemH.innerHTML = text[counter];
+//         counter++;
+//         for (var i = 0; i < 5; i++)
+//           text += possibleH.charAt(Math.floor(Math.random() * possibleH.length));
+//         $("#H").addClass("shake-horizontal");
+//       }, 150);
+//     }, 2000);
+    
+//     }
+
+
+</script>
+
+</body>
+</html>

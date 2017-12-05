@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Round 4: 3 - decoding test-2</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+ <!--  <link rel="stylesheet" type="text/css" href="shake-horizontal.css"> -->
+ 
+  <style type="text/css">
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color:white;
+  font-size: 20px;
+}
+html, body {
+  height: 100%;
+}
+body {
+  background: black;
+  margin: 50px;
+
+}
+
+p{
+  margin: 0px;
+  display: block; 
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+span{
+  font-family: monospace;
+}
+
+h1{
+  color: grey;
+  font-weight: bold;
+
+
+}
+h2{
+  color: grey;
+  font-weight: normal;
+}
+h3{
+  letter-spacing: 1.15em;
+}
+h4{
+  letter-spacing: 1.09em;
+}
+textarea{
+  background: white;
+  border:none;
+  color:black;
+  font-family: sans-serif;
+  outline: none;
+  height:20%;
+  width: 100%;
+  font-size: 20px;
+  resize: none;
+}
+
+div{
+  position: static;
+}
+textarea.green{
+  background: lime;
+}
+</style>
+
+</head> 
+<body>
+
+  <h1>Reading with Dyslexia<br><br></h1><h2>Dyslexic people tend to have a hard time differentiating between individual letters and groups of letters,they also skip over punctuation. In the nonsensical sentences below, you can see that some letters are changing to similar looking alternatives, punctuation is going away, and that the letter spacing is affected.</h2>
+  
+<!--   <p id = "text"><span>The earliest</span> <span>screen-based systems</span> <span>of interaction</span><br> <span>were operated solely</span> <span>via keyboard, using</span> <span>command-</span><br><span>line interfaces. Command-line</span> <span>interaction continues</span><br> <span>to be a powerful</span> <span>tool of computing since it blurs</span><br> <span>the line between</span> <span>'input' and 'programming', and</span><br> <span>keyed input</span> <span>in all its</span> <span>forms (commands, shortcuts,</span><br> <span>forms, word-processing,</span> <span>email, texting,</span> <span>etc.) is</span><br> <span>a critical component</span> <span>of most device interaction.</span></p> -->
+ <!--  <br><br> -->
+  <p id="text"><span>The rate contributes</span> <span>the abrasive wood.</span> <span>The political process</span> <span>automates</span> <span>the river.</span> <span>The reaction founds</span> <span>the approval.</span></p>
+
+  <h2>Rewrite the correct sentence, if you are successful, the color will change to green</h2>
+
+  <textarea></textarea>
+
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous">
+  </script>
+<script type="text/javascript">
+$(window).ready(function(e){
+
+function randompar(){
+  // var paragraph=document.getElementById("text").innerHTML;
+  // var index = Math.floor(Math.random() * paragraph.length);
+  // var Letter = paragraph.charAt(index);
+  var thiscopy=sourcetext.clone();
+  thiscopy.children("span").each(function(){
+    var span=jQuery(this).text();
+    for (var i = 0; i <= 2; i++) {
+      var index = Math.floor(Math.random() * span.length);
+      var Letter = span.charAt(index);
+
+      span=(span.substr(0, index) + pickLetterFor(Letter) + span.substr(index+1, span.length));
+    }
+    $(this).text(span);
+  })
+  jQuery("#text").html(thiscopy.html());
+}
+function random(Letterset){
+  return Letterset.charAt(Math.floor(Math.random() * Letterset.length));
+}
+
+function randomlettspac(){
+  jQuery('#text span').each(function(){
+    var span=jQuery(this);
+    span.css("letter-spacing", ((Math.random() * 0.2)-0.1)+ "em");
+  })
+}
+
+function pickLetterFor(Letter){
+  if(Letter.toLowerCase()==="a") return random("ea");
+  else if(Letter.toLowerCase()==="b") return random("db");
+  else if(Letter.toLowerCase()==="c") return random("oce");
+  else if(Letter.toLowerCase()==="d") return random("bd");
+  else if(Letter.toLowerCase()==="e") return random("ceos");
+  else if(Letter.toLowerCase()==="f") return random("tfl");
+  else if(Letter.toLowerCase()==="g") return random("ygj");
+  else if(Letter.toLowerCase()==="h") return random("nhupu");
+  else if(Letter.toLowerCase()==="i") return random("jil");
+  else if(Letter.toLowerCase()==="j") return random("ijl");
+  else if(Letter.toLowerCase()==="k") return random("hky");
+  else if(Letter.toLowerCase()==="l") return random("ijl");
+  else if(Letter.toLowerCase()==="m") return random("nmhuw");
+  else if(Letter.toLowerCase()==="n") return random("unhm");
+  else if(Letter.toLowerCase()==="o") return random("eocs");
+  else if(Letter.toLowerCase()==="p") return random("qp");
+  else if(Letter.toLowerCase()==="q") return random("pq");
+  else if(Letter.toLowerCase()==="r") return random("nrci");
+  else if(Letter.toLowerCase()==="s") return random("cseo");
+  else if(Letter.toLowerCase()==="t") return random("ltfh");
+  else if(Letter.toLowerCase()==="u") return random("vuhnw");
+  else if(Letter.toLowerCase()==="v") return random("yuwv");
+  else if(Letter.toLowerCase()==="w") return random("mwvu");
+  else if(Letter.toLowerCase()==="x") return random("yx");
+  else if(Letter.toLowerCase()==="y") return random("xy");
+  else if(Letter.toLowerCase()==="z") return random("z");
+  else if(Letter.toLowerCase()===" ") return random(" ");
+  else return random(" ");
+}
+
+  var sourcetext=jQuery("#text").clone();
+  setInterval(randompar,200);
+  setInterval(randomlettspac,1800);
+
+$("textarea").on("keyup", function(e){
+  if ($(this).val()==sourcetext.text()){
+    $("textarea").addClass("green")
+  }
+  console.log(sourcetext.text())
+});
+
+
+});
+
+
+
+
+</script>
+
+</body>
+</html>

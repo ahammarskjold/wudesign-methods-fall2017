@@ -1,0 +1,45 @@
+{
+	"entrypoints" : [
+	{
+		"name" : "1 - switching letters and changing letter spacing",
+		"file" : "index.html"
+
+	},
+	{
+		"name" : "2 - decoding test-1",
+		"file" : "index2.html"
+
+	},
+	{
+		"name" : "3 - decoding test-2",
+		"file" : "index3.html"
+
+	},
+	{
+		"name" : "4 - decoding test-3",
+		"file" : "index4.html"
+
+	},
+	{
+		"name" : "5 - decoding test-4",
+		"file" : "index5.html"
+
+	},
+	{
+		"name" : "6 - decoding test-5",
+		"file" : "index6.html"
+
+	},
+	{
+		"name" : "7 - formatting",
+		"file" : "index7.html"
+
+	},
+	{
+		"name" : "8 - final",
+		"file" : "index8.html"
+
+	}
+
+	]
+}
