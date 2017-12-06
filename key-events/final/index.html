@@ -177,9 +177,13 @@ p.threeD{
   display: inline-block;
 }
 div.typeinhere{
-  height: 25px;
-  width:373px;
+  height: 45px;
+  width:395px;
   overflow: hidden;
+  background-color: rgb(180, 180, 180);
+  padding: 10px;
+  margin-top: 10px;
+  border-right:11px solid rgb(180, 180, 180);
 }
 span.switch{
   letter-spacing: 0.175em;
@@ -248,11 +252,14 @@ div.example{
 div.alphabet span{
     letter-spacing: 0.12em;
 }
+div.alphabet{
+	width:420px;
+}
 div.decodetext{
   float: left;
   width: 355px;
 }
-div.box{
+/*div.box{
   width:420px;
   background-color: rgb(180, 180, 180);
   z-index:-1;
@@ -267,7 +274,7 @@ div.box2{
   height:25px;
   margin-left: 380px;
   margin-top: 23px;
-}
+}*/
 </style>
 
 </head> 
@@ -301,7 +308,7 @@ div.box2{
   <div class="container anotherbox">
     <h1>Letter Confusion: difficulty differentiating between similar looking letterforms. Type a letter to see the possibilities.</h1>
     <div class="example alphabet">
-      <span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span><span>i</span><span>j</span><span>k</span><span>l</span><span>m</span><span>n</span><span>o</span><span>p</span><span>q</span><span>r</span><span>s</span><span>t</span><span>u</span><span>v</span><span>w</span><span>x</span><span>y</span><span>z</span>
+      <span style="margin-left: 10px;">a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span><span>i</span><span>j</span><span>k</span><span>l</span><span>m</span><span>n</span><span>o</span><span>p</span><span>q</span><span>r</span><span>s</span><span>t</span><span>u</span><span>v</span><span>w</span><span>x</span><span>y</span><span>z</span>
       <div class="typeinhere"></div>
     </div>  
   </div>
@@ -439,8 +446,8 @@ $("textarea").on("keyup", function(e){
     //   "color": "#99FF66"});
     // $("span").css("color","black");
     // $("span.switch").css("color","white");
-    $("div.blackbox").append('<div class="box"></div>');
-    $("div.anotherbox").append('<div class="box2"></div>');
+    // $("div.blackbox").append('<div class="box"></div>');
+    // $("div.anotherbox").append('<div class="box2"></div>');
 
   }
   console.log(sourcetext.text())
